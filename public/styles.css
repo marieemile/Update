@@ -118,7 +118,10 @@ img { display: block; }
 }
 .topbar-inner { height: 60px; padding: 0 12px 0 var(--margin); display: flex; align-items: center; gap: 8px; }
 .brand { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.brand img { border-radius: 9px; }
+.wordmark img { display: block; width: auto; }
+.brand { gap: 10px; }
+.brand .wordmark img { height: 36px; }
+.brand small { align-self: center; padding-left: 10px; border-left: 1px solid var(--line-2); }
 .brand span, .sidenav-brand span { display: flex; flex-direction: column; min-width: 0; }
 .brand b { font-size: 18px; line-height: 20px; font-weight: 700; letter-spacing: -0.015em; }
 .brand small, .sidenav-brand small { font-size: 10px; line-height: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); }
@@ -533,7 +536,8 @@ input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius
     padding: 20px 16px; background: var(--surface); border-right: 1px solid var(--line);
   }
   .sidenav-brand { display: flex; align-items: center; gap: 10px; padding: 4px 8px; }
-  .sidenav-brand img { border-radius: 10px; }
+  .sidenav-brand { padding: 6px 10px 2px; }
+  .sidenav-brand .wordmark img { height: 64px; }
   .sidenav-brand b { font-size: 20px; line-height: 22px; font-weight: 700; letter-spacing: -0.02em; }
   .sidenav-links { display: grid; gap: 4px; }
   .sidenav-links a { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 999px; color: var(--ink-2); font-size: 14px; font-weight: 600; }

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f8f9ff" />
-  <title>Pulse</title>
+  <title>Daily Bite</title>
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,9 +15,8 @@
 <body>
   <!-- Side navigation: tablet and desktop -->
   <aside class="sidenav" aria-label="Main">
-    <a class="sidenav-brand" href="#/briefing">
-      <img src="/logo.svg" alt="" width="36" height="36" />
-      <span><b>Pulse</b><small>Intelligence</small></span>
+    <a class="sidenav-brand" href="#/briefing" aria-label="Daily Bite home">
+      <picture class="wordmark"><source srcset="/wordmark-dark.svg" media="(prefers-color-scheme: dark)" /><img src="/wordmark.svg" alt="Daily Bite" height="64" /></picture>
     </a>
     <nav class="sidenav-links" data-nav></nav>
   </aside>
@@ -25,9 +24,9 @@
   <header class="topbar" id="topbar">
     <div class="topbar-inner">
       <button class="icon-btn back" id="back" aria-label="Back" hidden><span class="ms">arrow_back</span></button>
-      <a class="brand" href="#/briefing" id="brand">
-        <img src="/logo.svg" alt="" width="32" height="32" />
-        <span><b>Pulse</b><small id="section-label">Briefing</small></span>
+      <a class="brand" href="#/briefing" id="brand" aria-label="Daily Bite home">
+        <picture class="wordmark"><source srcset="/wordmark-dark.svg" media="(prefers-color-scheme: dark)" /><img src="/wordmark.svg" alt="Daily Bite" height="36" /></picture>
+        <small id="section-label">Briefing</small>
       </a>
       <div class="topbar-title" id="topbar-title" hidden></div>
       <div class="topbar-actions">

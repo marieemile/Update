@@ -1,4 +1,4 @@
-// Pulse - personal intelligence feed. Hash routes:
+// Daily Bite - personal intelligence feed. Hash routes:
 //   #/briefing  #/radar  #/analysis  #/signal  #/story/<id>  #/market/<id>  #/signal-detail/<n>
 import { esc, safeUrl, firstSentence, ago, markdown } from "/lib.js";
 
@@ -194,7 +194,7 @@ function emptyView() {
   return `<div class="wrap">${progressCard()}<div class="empty">
     <img src="/logo.svg" alt="" width="64" height="64" />
     <h1>No briefing yet</h1>
-    <p>Pulse reads dozens of news, research and market feeds, groups duplicate coverage into single stories, scores them for importance rather than popularity, and writes up what's worth knowing. It takes a few minutes.</p>
+    <p>Daily Bite reads dozens of news, research and market feeds, groups duplicate coverage into single stories, scores them for importance rather than popularity, and writes up what's worth knowing. It takes a few minutes.</p>
     ${state.static ? `<p>No briefing has been published yet.</p>` : ""}<button ${state.static ? "hidden" : ""} class="btn-primary narrow" data-action="refresh" ${refresh.active && !refresh.error ? "disabled" : ""}>${ms("bolt")}Generate today's briefing</button>
   </div></div>`;
 }
@@ -401,7 +401,7 @@ const VIEWS = {
           ${bars.map(([l, v]) => `<div class="bar-row"><span>${l}</span><div class="bar"><i style="width:${v * 20}%"></i></div><b>${v}</b></div>`).join("")}</div>
 
         <div class="kicker">Why it matters</div>
-        <div class="quote">${ms("lightbulb")}<p>${esc(s.why_it_matters)}</p><small>Pulse analysis</small></div>
+        <div class="quote">${ms("lightbulb")}<p>${esc(s.why_it_matters)}</p><small>Daily Bite analysis</small></div>
 
         <div class="kicker">What changed</div>
         <div class="changed"><div class="card"><small>Before</small>${esc(s.whats_new.before)}</div><div class="card now"><small>Now</small>${esc(s.whats_new.now)}</div></div>

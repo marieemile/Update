@@ -1,4 +1,4 @@
-# Pulse: Personal Intelligence Feed
+# Daily Bite: Personal Intelligence Feed
 
 A personal news intelligence system. It doesn't try to tell you everything. It tells you what changed in the world and in technology, why it matters, and what to watch.
 

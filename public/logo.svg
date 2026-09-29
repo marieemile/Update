@@ -1,11 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="1.6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="#0b1c30"/>
-  <path d="M8 32 C17 18, 47 18, 56 32 C47 46, 17 46, 8 32 Z" fill="none" stroke="#1f7bff" stroke-width="3.2" stroke-linejoin="round" filter="url(#glow)"/>
-  <path d="M17 33 L26 32 L30 24 L35 41 L39 31 L48 31" fill="none" stroke="#7fb2ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420">
+  <defs><mask id="mi"><rect width="420" height="420" fill="#fff"/><g transform="translate(88 79)"><circle cx="126.1" cy="-24.6" r="43.1" fill="#000"/><circle cx="180.1" cy="29.4" r="49.0" fill="#000"/><circle cx="234.2" cy="83.5" r="43.1" fill="#000"/></g></mask></defs>
+  <rect width="420" height="420" rx="96" fill="#0066ff"/>
+  <g mask="url(#mi)"><path transform="translate(88 79)" fill-rule="evenodd" fill="#fff" stroke="#fff" stroke-width="12" stroke-linejoin="round" d="M0.0 0.0 L142.4 0.0 L195.1 18.3 L218.8 62.9 L205.6 112.7 L232.0 149.3 L237.3 204.4 L210.9 246.3 L152.9 262.0 L0.0 262.0 Z M71.2 55.0 L126.5 55.0 L145.0 76.0 L129.2 99.6 L71.2 99.6 Z M71.2 152.0 L139.7 152.0 L160.8 178.2 L139.7 207.0 L71.2 207.0 Z"/></g></svg>
