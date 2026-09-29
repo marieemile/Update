@@ -239,6 +239,32 @@ img { display: block; }
 .seg { display: inline-flex; background: var(--surface-low); border-radius: 999px; padding: 3px; }
 .seg button { padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--ink-2); }
 .seg button.on { background: var(--surface); color: var(--primary); box-shadow: 0 1px 3px rgba(11, 28, 48, 0.12); }
+/* Sliding 5/15 switch: a thumb that travels between the two halves. */
+.seg.slider { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; isolation: isolate; }
+.seg.slider::before {
+  content: ""; position: absolute; z-index: -1; top: 3px; bottom: 3px; left: 3px; width: calc(50% - 3px);
+  border-radius: 999px; background: var(--primary-bright); box-shadow: 0 2px 6px rgba(0, 102, 255, 0.35);
+  transition: transform 0.35s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+.seg.slider.fifteen::before { transform: translateX(100%); }
+.seg.slider button { min-width: 62px; background: none; box-shadow: none; transition: color 0.25s; }
+.seg.slider button.on { color: #fff; background: none; box-shadow: none; }
+
+/* Expanding "Today in brief" inside the top card. */
+.capsule-more { display: grid; grid-template-rows: 0fr; opacity: 0; margin-top: -12px; transition: grid-template-rows 0.4s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.3s, margin-top 0.4s; }
+.capsule-more > div { overflow: hidden; min-height: 0; }
+.capsule.open .capsule-more { grid-template-rows: 1fr; opacity: 1; margin-top: 0; }
+.brief { border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 14px; }
+.brief-head { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); }
+.brief-head .ms { font-size: 16px; }
+.brief-group h2 { display: flex; align-items: center; gap: 6px; margin: 0 0 6px; font-size: 13px; font-weight: 700; color: var(--ink); }
+.brief-group h2 .ms { font-size: 16px; color: var(--ink-3); }
+.brief-group ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.brief-group li, .brief-group p { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-2); }
+.brief-group b { color: var(--ink); font-weight: 600; }
+.brief-group a:hover b { color: var(--primary); }
+.brief-group li a, .brief-group p a { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+@media (prefers-reduced-motion: reduce) { .seg.slider::before, .capsule-more { transition: none; } }
 
 /* ---------- hero carousel ---------- */
 .carousel { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--margin); scroll-padding-inline: var(--margin); scrollbar-width: none; }

@@ -73,7 +73,7 @@ npm run chat:finish   # attach images/times, merge trends, save the briefing
 - **5 min:** a text-first, numbered list of the essential stories (headline plus a one-sentence summary), the market cards, the top signal, the top three watchlist items, and a button to open the full edition. No image carousel.
 - **15 min:** the full edition: the image carousel, filter pills, every story with the full write-up (what happened, why it matters, what changed), all signals and the full watchlist.
 
-The read-time label is calculated from the words each mode actually shows.
+The 5/15 control is a sliding switch. Sliding it to 15 min expands the top card in place with a "Today in brief" summary: the essential world and tech stories, the lead story for each tracked market, and the main signal, each with why it matters. The rest of the page then changes to the full edition. The read-time label is calculated from the words each mode actually shows.
 
 ## Publishing (Vercel)
 

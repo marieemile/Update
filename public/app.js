@@ -117,6 +117,27 @@ function sectionHead(title, { icon, live, sub, action } = {}) {
   return `<div class="section-head"><div><h2>${live ? `<span class="live-dot"></span>` : ""}${icon ? ms(icon) : ""}${esc(title)}</h2>${sub ? `<p>${esc(sub)}</p>` : ""}</div>${action ?? ""}</div>`;
 }
 
+// The expanded "Today in brief" inside the top card (15-minute mode):
+// the essentials by domain, the lead story per tracked market, and the main signal.
+function todayInBrief() {
+  const b = state.briefing;
+  const firstSentence = (t) => (t.match(/^.*?[.!?](?=\s+[A-Z(“"']|$)/)?.[0] ?? t).trim();
+  const byScore = (a, b) => b.signal_score - a.signal_score;
+  const item = (s) => `<li><a href="#/story/${s.id}"><b>${esc(s.headline)}.</b> ${esc(firstSentence(s.why_it_matters))}</a></li>`;
+  const group = (label, icon, list) => (list.length ? `<div class="brief-group"><h2>${ms(icon)}${label}</h2><ul>${list.map(item).join("")}</ul></div>` : "");
+  const world = stories((s) => s.domain === "world" && s.level === "essential").sort(byScore);
+  const tech = stories((s) => s.domain === "tech" && s.level === "essential").sort(byScore);
+  const markets = marketIds().map((m) => stories((s) => (s.markets ?? []).includes(m)).sort(byScore)[0]).filter(Boolean);
+  const sig = b.signals[0];
+  return `<div class="brief">
+    <div class="brief-head">${ms("auto_awesome")}Today in brief</div>
+    ${group("World", "public", world)}
+    ${group("Technology", "memory", tech)}
+    ${group("Your markets", "bookmark_star", markets)}
+    ${sig ? `<div class="brief-group"><h2>${ms("radar")}The bigger picture</h2><p><a href="#/signal-detail/0"><b>${esc(sig.title)}.</b> ${esc(firstSentence(sig.why_it_matters))}</a></p></div>` : ""}
+  </div>`;
+}
+
 // The 5-minute edition: a numbered, text-first list of the essential stories.
 function essentialsList(list) {
   return `<ol class="five-list">${list.map((s, i) => {
@@ -201,15 +222,16 @@ const VIEWS = {
     const minutes = Math.max(1, Math.round(shownWords / 230));
     const sigs = b.signals.slice(0, state.mode === "five" ? 1 : b.signals.length);
 
-    const capsule = `<section class="pad"><div class="card capsule">
+    const capsule = `<section class="pad"><div class="card capsule ${state.mode === "fifteen" ? "open" : ""}" id="capsule">
         <div class="capsule-top">
           <div><span class="chip status-chip"><i></i>${esc(fmtDate(b.date, { weekday: "long" }))} briefing</span>
             <span class="meta">${ms("schedule")}≈${minutes} min read</span></div>
-          <div class="seg" role="group" aria-label="Briefing length">
-            <button data-mode="five" class="${state.mode === "five" ? "on" : ""}">5 min</button>
-            <button data-mode="fifteen" class="${state.mode === "fifteen" ? "on" : ""}">15 min</button></div>
+          <div class="seg slider ${state.mode}" role="radiogroup" aria-label="Briefing length">
+            <button role="radio" aria-checked="${state.mode === "five"}" data-mode="five" class="${state.mode === "five" ? "on" : ""}">5 min</button>
+            <button role="radio" aria-checked="${state.mode === "fifteen"}" data-mode="fifteen" class="${state.mode === "fifteen" ? "on" : ""}">15 min</button></div>
         </div>
         <div><h1>If you only read one thing</h1><p class="topline">${esc(b.top_line)}</p></div>
+        <div class="capsule-more" aria-hidden="${state.mode !== "fifteen"}"><div>${todayInBrief()}</div></div>
         <div class="capsule-foot">
           <span><span class="avatars">${sourceNames.slice(0, 3).map((n) => avatar(n)).join("")}</span>Synthesized from ${b.stats.items} items across ${b.stats.sources_ok} sources</span>
           <span>${visible.length} stories · ${b.stats.clusters} clusters reviewed</span>
@@ -629,10 +651,20 @@ document.addEventListener("click", (e) => {
     toast(saved.has(d.save) ? "Saved" : "Removed from saved");
     render({ keepScroll: true });
   } else if (d.mode) {
+    if (d.mode === state.mode) return;
     state.mode = d.mode;
     store.set("pulse-mode", d.mode);
-    render({ keepScroll: !d.top });
-    if (d.top) window.scrollTo({ top: 0 });
+    const cap = document.getElementById("capsule");
+    if (d.top) window.scrollTo({ top: 0, behavior: "smooth" });
+    if (!cap || matchMedia("(prefers-reduced-motion: reduce)").matches) return render({ keepScroll: !d.top });
+    // Slide the switch and open/close the top card in place, then swap the rest of the page.
+    const seg = cap.querySelector(".seg");
+    seg.classList.remove("five", "fifteen");
+    seg.classList.add(d.mode);
+    seg.querySelectorAll("button").forEach((btn) => { btn.classList.toggle("on", btn.dataset.mode === d.mode); btn.setAttribute("aria-checked", btn.dataset.mode === d.mode); });
+    cap.classList.toggle("open", d.mode === "fifteen");
+    cap.querySelector(".capsule-more").setAttribute("aria-hidden", d.mode !== "fifteen");
+    setTimeout(() => render({ keepScroll: true }), d.top ? 500 : 420);
   }
   else if (d.filter) { state.filter = d.filter; render({ keepScroll: true }); }
   else if (d.radar) { state.radarFilter = d.radar; render({ keepScroll: true }); }
