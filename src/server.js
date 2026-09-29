@@ -6,7 +6,7 @@ import { runPipeline, deepDive } from "./pipeline.js";
 import { listBriefingDates, loadBriefing, loadConfig, saveInterests } from "./store.js";
 
 const PUBLIC = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../public");
-const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json" };
+const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png", ".ico": "image/png", ".webmanifest": "application/manifest+json" };
 
 // One refresh at a time; the UI polls /api/status for progress.
 const refresh = { running: false, log: [], error: null, finished_at: null };

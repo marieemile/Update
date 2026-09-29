@@ -1,0 +1,12 @@
+{
+  "name": "Daily Bite",
+  "short_name": "Daily Bite",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9ff",
+  "theme_color": "#0066ff",
+  "icons": [
+    { "src": "/apple-touch-icon.png?v=2", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png?v=2", "sizes": "512x512", "type": "image/png" }
+  ]
+}
