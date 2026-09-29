@@ -21,6 +21,7 @@
     }
   },
   "surprise_me": 2,
+  "surprise_max": 4,
   "port": 4747,
   "markets": {
     "ip": "Intellectual Property",

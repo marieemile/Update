@@ -1,5 +1,7 @@
 // Pulse - personal intelligence feed. Hash routes:
-//   #/briefing  #/radar  #/analysis  #/signal  #/story/<id>  #/signal-detail/<n>
+//   #/briefing  #/radar  #/analysis  #/signal  #/story/<id>  #/market/<id>  #/signal-detail/<n>
+import { esc, safeUrl, firstSentence, ago, markdown } from "/lib.js";
+
 const state = { briefing: null, dates: [], config: null, mode: "five", filter: "top", radarFilter: "all", query: "", deepdive: {} };
 const view = document.getElementById("view");
 const $ = (s) => document.querySelector(s);
@@ -10,10 +12,10 @@ const store = {
 };
 state.mode = store.get("pulse-mode", "five");
 let saved = new Set(store.get("pulse-saved", []));
+// Progress of a server-side refresh; the UI polls /api/status while active.
+const refresh = { active: false, log: [], error: null };
 
 // ---------- utils ----------
-const esc = (s = "") => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? u : "#");
 const ms = (name, cls = "") => `<span class="ms ${cls}" aria-hidden="true">${name}</span>`;
 
 async function api(url, opts) {
@@ -23,13 +25,6 @@ async function api(url, opts) {
   return body;
 }
 
-function ago(iso) {
-  if (!iso) return "";
-  const mins = Math.max(1, Math.round((Date.now() - new Date(iso)) / 60000));
-  if (mins < 60) return `${mins}m ago`;
-  const h = Math.round(mins / 60);
-  return h < 24 ? `${h}h ago` : `${Math.round(h / 24)}d ago`;
-}
 const fmtDate = (d, opts = { weekday: "long", month: "long", day: "numeric" }) => new Date(`${d}T12:00:00`).toLocaleDateString(undefined, opts);
 
 const AVATAR_COLORS = ["#0050cb", "#565e74", "#007aa5", "#0d9488", "#6366f1", "#ba1a1a", "#ea580c", "#0b1c30"];
@@ -42,13 +37,16 @@ function avatar(name, cls = "") {
 const TIER_LABEL = { 1: "Primary source", 2: "Established journalism", 3: "Specialist publication", 4: "Discovery source" };
 const verified = (tier) => (tier <= 2 ? ms("verified", "verified") : "");
 const lead = (s) => [...s.sources].sort((a, b) => a.tier - b.tier)[0] ?? { name: "Unknown", tier: 4 };
-const topCategory = (s) => (s.categories[0] || (s.domain === "world" ? "World" : "Tech")).split("/")[0].trim();
+const domainLabel = (d) => (d === "world" ? "World" : "Tech");
+const topCategory = (s) => (s.categories[0] || domainLabel(s.domain)).split("/")[0].trim();
+const bySignal = (a, b) => b.signal_score - a.signal_score;
+const inMarket = (m) => (s) => (s.markets ?? []).includes(m);
 
 function media(s) {
   const fallback = `<div class="placeholder ${s.domain}">${ms(s.domain === "world" ? "public" : "memory")}</div>`;
   if (!s.image) return fallback;
-  // On load failure swap in the placeholder rather than showing a broken image.
-  return `<img src="${esc(s.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML=this.nextElementSibling.innerHTML"><template>${fallback}</template>`;
+  // On load failure the delegated error listener swaps in the placeholder.
+  return `<img src="${esc(s.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-fallback><template>${fallback}</template>`;
 }
 
 function badge(s) {
@@ -63,7 +61,8 @@ function badge(s) {
 const MARKET_STYLE = { ip: { icon: "copyright", short: "IP" }, real_estate: { icon: "apartment", short: "Real Estate" } };
 const marketName = (id) => state.config?.markets?.[id] ?? id;
 const marketIds = () => Object.keys(state.config?.markets ?? MARKET_STYLE);
-const marketChips = (s, cls = "") => (s.markets ?? []).map((m) => `<span class="chip mk ${m} ${cls}">${ms(MARKET_STYLE[m]?.icon ?? "sell")}${esc(MARKET_STYLE[m]?.short ?? m)}</span>`).join("");
+const marketShort = (id) => MARKET_STYLE[id]?.short ?? marketName(id);
+const marketChips = (s, cls = "") => (s.markets ?? []).map((m) => `<span class="chip mk ${m} ${cls}">${ms(MARKET_STYLE[m]?.icon ?? "sell")}${esc(marketShort(m))}</span>`).join("");
 
 const stories = (f = () => true) => (state.briefing?.stories ?? []).filter(f);
 const byId = (id) => state.briefing?.stories.find((s) => s.id === id);
@@ -88,11 +87,21 @@ function heroCard(s) {
 }
 
 // First sentence of what_happened: the 5-minute "gist".
-const gist = (s) => (s.what_happened.match(/^.*?[.!?](?=\s+[A-Z(“"']|$)/)?.[0] ?? s.what_happened).trim();
+const gist = (s) => firstSentence(s.what_happened);
+
+// Lead source avatar, name, verified tick, "+N" more sources and age.
+function srcRow(s) {
+  const src = lead(s);
+  return `<div class="src-row">${avatar(src.name)}<b>${esc(src.name)}</b>${verified(src.tier)}${s.sources.length > 1 ? `<span>+${s.sources.length - 1}</span>` : ""}<span class="time">${esc(ago(s.published))}</span></div>`;
+}
+
+// "Signal detected" banners; `blurb` gives the line under each title.
+const signalBanners = (sigs, blurb) => (sigs.length ? `<section class="section pad banners">${sigs.map((sig, i) => `<a class="banner" href="#/signal-detail/${i}">
+  <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>${esc(blurb(sig))}</span></div>
+  <span class="round">${ms("arrow_forward")}</span></a>`).join("")}</section>` : "");
 
 // 5-min tiles carry a one-sentence gist; 15-min tiles carry the full write-up.
 function tile(s, { timeRight = false, depth = state.mode } = {}) {
-  const src = lead(s);
   const rich = depth === "fifteen";
   return `
   <a class="card tile ${rich ? "rich" : ""}" href="#/story/${s.id}">
@@ -101,8 +110,7 @@ function tile(s, { timeRight = false, depth = state.mode } = {}) {
       <div class="tile-top"><span class="tile-tags">${marketChips(s, "sm")}<span class="cat ${s.domain}">${esc(s.categories.join(" · "))}</span></span>${timeRight ? "" : badge(s)}</div>
       <h3>${esc(s.headline)}</h3>
       ${rich ? "" : `<p class="gist">${esc(gist(s))}</p>`}
-      <div class="src-row">${avatar(src.name)}<b>${esc(src.name)}</b>${verified(src.tier)}
-        ${s.sources.length > 1 ? `<span>+${s.sources.length - 1}</span>` : ""}<span class="time">${esc(ago(s.published))}</span></div>
+      ${srcRow(s)}
     </div>
     ${rich ? `<div class="tile-more">
       <p>${esc(s.what_happened)}</p>
@@ -121,13 +129,11 @@ function sectionHead(title, { icon, live, sub, action } = {}) {
 // the essentials by domain, the lead story per tracked market, and the main signal.
 function todayInBrief() {
   const b = state.briefing;
-  const firstSentence = (t) => (t.match(/^.*?[.!?](?=\s+[A-Z(“"']|$)/)?.[0] ?? t).trim();
-  const byScore = (a, b) => b.signal_score - a.signal_score;
   const item = (s) => `<li><a href="#/story/${s.id}"><b>${esc(s.headline)}.</b> ${esc(firstSentence(s.why_it_matters))}</a></li>`;
   const group = (label, icon, list) => (list.length ? `<div class="brief-group"><h2>${ms(icon)}${label}</h2><ul>${list.map(item).join("")}</ul></div>` : "");
-  const world = stories((s) => s.domain === "world" && s.level === "essential").sort(byScore);
-  const tech = stories((s) => s.domain === "tech" && s.level === "essential").sort(byScore);
-  const markets = marketIds().map((m) => stories((s) => (s.markets ?? []).includes(m)).sort(byScore)[0]).filter(Boolean);
+  const world = stories((s) => s.domain === "world" && s.level === "essential").sort(bySignal);
+  const tech = stories((s) => s.domain === "tech" && s.level === "essential").sort(bySignal);
+  const markets = marketIds().map((m) => stories(inMarket(m)).sort(bySignal)[0]).filter(Boolean);
   const sig = b.signals[0];
   return `<div class="brief">
     <div class="brief-head">${ms("auto_awesome")}Today in brief</div>
@@ -140,17 +146,14 @@ function todayInBrief() {
 
 // The 5-minute edition: a numbered, text-first list of the essential stories.
 function essentialsList(list) {
-  return `<ol class="five-list">${list.map((s, i) => {
-    const src = lead(s);
-    return `<li><a class="card five-item" href="#/story/${s.id}">
+  return `<ol class="five-list">${list.map((s, i) => `<li><a class="card five-item" href="#/story/${s.id}">
       <span class="five-num">${i + 1}</span>
       <div class="five-body">
-        <div class="tile-tags"><span class="dom-chip ${s.domain}">${s.domain === "world" ? "World" : "Tech"}</span>${marketChips(s, "sm")}${s.positive ? `<span class="chip good sm">${ms("trending_up")}Progress</span>` : ""}</div>
+        <div class="tile-tags"><span class="dom-chip ${s.domain}">${domainLabel(s.domain)}</span>${marketChips(s, "sm")}${s.positive ? `<span class="chip good sm">${ms("trending_up")}Progress</span>` : ""}</div>
         <h3>${esc(s.headline)}</h3>
         <p>${esc(gist(s))}</p>
-        <div class="src-row">${avatar(src.name)}<b>${esc(src.name)}</b>${verified(src.tier)}${s.sources.length > 1 ? `<span>+${s.sources.length - 1}</span>` : ""}<span class="time">${esc(ago(s.published))}</span></div>
-      </div></a></li>`;
-  }).join("")}</ol>`;
+        ${srcRow(s)}
+      </div></a></li>`).join("")}</ol>`;
 }
 
 // Large filter cards for the tracked markets, shown on the Briefing tab.
@@ -159,7 +162,7 @@ function marketCards() {
   if (!ids.length) return "";
   return `<section class="section">${sectionHead("Your markets", { icon: "bookmark_star", sub: "Tracked closely in every briefing" })}
     <div class="market-grid">${ids.map((m) => {
-      const list = stories((s) => (s.markets ?? []).includes(m)).sort((a, b) => b.signal_score - a.signal_score);
+      const list = stories(inMarket(m)).sort(bySignal);
       const st = MARKET_STYLE[m] ?? { icon: "sell" };
       return `<a class="market-card ${m}" href="#/market/${m}">
         <span class="market-icon">${ms(st.icon)}</span>
@@ -191,8 +194,8 @@ function emptyView() {
   return `<div class="wrap">${progressCard()}<div class="empty">
     <img src="/logo.svg" alt="" width="64" height="64" />
     <h1>No briefing yet</h1>
-    <p>Pulse reads about 35 sources, groups duplicate coverage into single stories, scores them for importance rather than popularity, and writes up what's worth knowing. It takes a few minutes.</p>
-    ${state.static ? `<p>No briefing has been published yet.</p>` : ""}<button ${state.static ? "hidden" : ""} class="btn-primary" style="max-width:320px" data-action="refresh" ${refresh.active && !refresh.error ? "disabled" : ""}>${ms("bolt")}Generate today's briefing</button>
+    <p>Pulse reads dozens of news, research and market feeds, groups duplicate coverage into single stories, scores them for importance rather than popularity, and writes up what's worth knowing. It takes a few minutes.</p>
+    ${state.static ? `<p>No briefing has been published yet.</p>` : ""}<button ${state.static ? "hidden" : ""} class="btn-primary narrow" data-action="refresh" ${refresh.active && !refresh.error ? "disabled" : ""}>${ms("bolt")}Generate today's briefing</button>
   </div></div>`;
 }
 
@@ -200,7 +203,7 @@ const VIEWS = {
   briefing() {
     const b = state.briefing;
     const visible = stories(inMode);
-    const featured = stories((s) => s.level === "essential").sort((a, b) => b.signal_score - a.signal_score).slice(0, 3);
+    const featured = stories((s) => s.level === "essential").sort(bySignal).slice(0, 3);
     const featuredIds = new Set(featured.map((s) => s.id));
     const filters = [
       ["top", "Top signal", (s) => !featuredIds.has(s.id)],
@@ -208,12 +211,12 @@ const VIEWS = {
       ["tech", "Tech", (s) => s.domain === "tech"],
       ["positive", "Progress", (s) => s.positive],
       ["missed", "Missed", (s) => s.under_the_radar || s.outside_interests],
-      ...marketIds().map((m) => [`m:${m}`, MARKET_STYLE[m]?.short ?? marketName(m), (s) => (s.markets ?? []).includes(m)]),
+      ...marketIds().map((m) => [`m:${m}`, marketShort(m), inMarket(m)]),
     ];
     const [, , active] = filters.find(([k]) => k === state.filter) ?? filters[0];
     // Market pills show every story for that market, whatever the length mode.
     const base = state.filter.startsWith("m:") ? stories() : visible;
-    const list = base.filter(active).sort((a, b) => b.signal_score - a.signal_score);
+    const list = base.filter(active).sort(bySignal);
     const sourceNames = [...new Set(b.stories.flatMap((s) => s.sources.map((x) => x.name)))];
     // Read time from the text this mode actually shows (~230 words per minute).
     const words = (t) => (t.match(/\S+/g) ?? []).length;
@@ -240,18 +243,16 @@ const VIEWS = {
 
     // 5-minute edition: text-first essentials, markets, one signal, short watchlist.
     if (state.mode === "five") {
-      const essentials = stories((s) => s.level === "essential").sort((a, b) => (a.domain === b.domain ? b.signal_score - a.signal_score : a.domain === "world" ? -1 : 1));
+      const essentials = stories((s) => s.level === "essential").sort((a, b) => (a.domain === b.domain ? bySignal(a, b) : a.domain === "world" ? -1 : 1));
       return `<div class="wrap">
         ${progressCard()}
         ${capsule}
         <section class="section">${sectionHead("The essentials", { live: true, sub: `${essentials.length} things worth knowing today` })}${essentialsList(essentials)}</section>
         ${marketCards()}
-        ${sigs.length ? `<section class="section pad banners">${sigs.map((sig, i) => `<a class="banner" href="#/signal-detail/${i}">
-          <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>Something bigger may be happening. See the evidence.</span></div>
-          <span class="round">${ms("arrow_forward")}</span></a>`).join("")}</section>` : ""}
+        ${signalBanners(sigs, () => "Something bigger may be happening. See the evidence.")}
         ${watchlist(3)}
         <section class="section pad"><button class="btn-primary" data-mode="fifteen" data-top="1">${ms("menu_book")}Read the full 15-minute briefing</button>
-          <p class="meta" style="justify-content:center;margin-top:10px;display:flex">${b.stories.length} stories with full context, all signals and every market story</p></section>
+          <p class="meta note">${b.stories.length} stories with full context, all signals and every market story</p></section>
       </div>`;
     }
 
@@ -269,15 +270,13 @@ const VIEWS = {
 
       <section class="section">
         <div class="pills" role="tablist">${filters.map(([k, label, f]) => `<button class="pill ${k === state.filter ? "on" : ""}" data-filter="${k}">${label} (${visible.filter(f).length})</button>`).join("")}</div>
-        <div style="height:16px"></div>
+        <div class="gap-16"></div>
         ${sectionHead(state.filter === "missed" ? "You might have missed" : "Worth knowing", { sub: state.filter === "missed" ? "Under-covered, or outside your usual interests" : "Ranked by importance, not popularity" })}
         ${list.length || state.filter !== "top" ? tileList(list) : `<div class="card empty-note">That's everything essential today.
-          <div style="margin-top:12px"><button class="btn-secondary" data-mode="fifteen">${ms("add")}Show the 15-minute briefing</button></div></div>`}
+          <div class="gap-top"><button class="btn-secondary" data-mode="fifteen">${ms("add")}Show the 15-minute briefing</button></div></div>`}
       </section>
 
-      ${sigs.length ? `<section class="section pad banners">${sigs.map((sig, i) => `<a class="banner" href="#/signal-detail/${i}">
-        <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>${esc(sig.what)}</span></div>
-        <span class="round">${ms("arrow_forward")}</span></a>`).join("")}</section>` : ""}
+      ${signalBanners(sigs, (sig) => sig.what)}
 
       ${watchlist()}
     </div>`;
@@ -285,35 +284,26 @@ const VIEWS = {
 
   radar() {
     const b = state.briefing;
-    const q = state.query.trim().toLowerCase();
     const cats = [...new Set(b.stories.map(topCategory))].slice(0, 8);
-    const filterFn = (s) =>
-      (state.radarFilter === "all" || s.domain === state.radarFilter || topCategory(s) === state.radarFilter ||
-        (state.radarFilter.startsWith("m:") && (s.markets ?? []).includes(state.radarFilter.slice(2)))) &&
-      (!q || `${s.headline} ${s.categories.join(" ")} ${s.what_happened} ${s.sources.map((x) => x.name).join(" ")}`.toLowerCase().includes(q));
-    const list = stories(filterFn).sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
     return `<div class="wrap">
       <label class="search">${ms("search")}<span class="sr">Search stories</span>
         <input id="search" type="search" placeholder="Search stories, sources, topics" value="${esc(state.query)}" autocomplete="off" /></label>
-      <div style="height:14px"></div>
-      <div class="pills">${[["all", "All signals"], ["world", "World"], ["tech", "Tech"], ...marketIds().map((m) => [`m:${m}`, MARKET_STYLE[m]?.short ?? marketName(m)]), ...cats.map((c) => [c, c])]
+      <div class="gap-14"></div>
+      <div class="pills">${[["all", "All signals"], ["world", "World"], ["tech", "Tech"], ...marketIds().map((m) => [`m:${m}`, marketShort(m)]), ...cats.map((c) => [c, c])]
         .map(([k, l]) => `<button class="pill ${state.radarFilter === k ? "on" : ""}" data-radar="${esc(k)}">${esc(l)}</button>`).join("")}</div>
 
       <section class="section">
         ${sectionHead("Emerging signals", { icon: "radar", sub: "Patterns across several stories", action: `<a class="link" href="#/analysis">Trends</a>` })}
         ${b.signals.length ? `<div class="signal-row">${b.signals.map((sig, i) => `
           <a class="card signal-card" href="#/signal-detail/${i}">
-            <div class="row"><span class="chip ${sig.domain === "cross" ? "solid" : sig.domain}">${sig.domain === "cross" ? "Cross-domain" : sig.domain === "world" ? "World" : "Tech"}</span>
+            <div class="row"><span class="chip ${sig.domain === "cross" ? "solid" : sig.domain}">${sig.domain === "cross" ? "Cross-domain" : domainLabel(sig.domain)}</span>
               <span class="count">${ms("trending_up")}${sig.evidence_story_ids.length} stories</span></div>
             <h3>${esc(sig.title)}</h3><p>${esc(sig.what)}</p>
             <div class="foot">${ms("fact_check")}<span>What would confirm it</span><span>${ms("chevron_right")}</span></div>
           </a>`).join("")}</div>` : `<div class="card empty-note">No cross-story patterns stood out today. That's allowed.</div>`}
       </section>
 
-      <section class="section">
-        ${sectionHead("Live wire", { live: true, action: `<span class="meta">${list.length} stories</span>` })}
-        ${tileList(list, { timeRight: true })}
-      </section>
+      ${liveWire()}
     </div>`;
   },
 
@@ -365,9 +355,9 @@ const VIEWS = {
       ${state.dates.length > 1 ? `<section class="section">${sectionHead("Past briefings", { icon: "history" })}
         <div class="date-list">${state.dates.map((d) => `<button class="pill ${d === b?.date ? "on" : ""}" data-date="${d}">${esc(fmtDate(d, { weekday: "short", month: "short", day: "numeric" }))}</button>`).join("")}</div></section>` : ""}
 
-      ${state.static ? `<section class="section pad"><p class="meta" style="justify-content:center;display:flex;text-align:center">Interest weights can be edited in the local app. This published copy is read-only.</p></section>`
+      ${state.static ? `<section class="section pad"><p class="meta note">Interest weights can be edited in the local app. This published copy is read-only.</p></section>`
         : `<section class="section pad"><button class="btn-primary" id="save-interests" disabled>${ms("tune")}Save interests</button>
-        <p class="meta" style="justify-content:center;margin-top:10px;display:flex">Applies from the next briefing.</p></section>`}
+        <p class="meta note">Applies from the next briefing.</p></section>`}
     </div>`;
   },
 
@@ -429,7 +419,7 @@ const VIEWS = {
         <div class="tags-row">${s.categories.map((c) => `<button class="hashtag" data-topic-search="${esc(c.split("/").pop().trim())}">#${esc(c.replace(/\s*\/\s*/g, " "))}</button>`).join("")}</div>
 
         <div id="research">${dd ? researchBlock(dd) : ""}</div>
-        <div style="height:90px"></div>
+        <div class="gap-90"></div>
       </div>
       ${dd?.markdown || state.static ? "" : `<button class="float-pill ${dd?.loading ? "busy" : ""}" data-explain="${s.id}">
         <span class="ms eq" aria-hidden="true">graphic_eq</span>
@@ -441,11 +431,10 @@ const VIEWS = {
   market(id) {
     if (!state.config?.markets?.[id] && !MARKET_STYLE[id]) return `<div class="wrap"><div class="card empty-note">Unknown market.</div></div>`;
     const b = state.briefing;
-    const inMarket = (x) => (x.markets ?? []).includes(id);
-    const list = stories(inMarket).sort((a, b) => b.signal_score - a.signal_score);
+    const list = stories(inMarket(id)).sort(bySignal);
     const ids = new Set(list.map((s) => s.id));
     const sigs = b.signals.map((sig, i) => ({ sig, i })).filter(({ sig }) => sig.evidence_story_ids.some((x) => ids.has(x)));
-    const trends = b.trends.filter(inMarket);
+    const trends = b.trends.filter(inMarket(id));
     const st = MARKET_STYLE[id] ?? { icon: "sell" };
     return `<div class="wrap">
       <section class="pad"><div class="market-hero ${id}">
@@ -462,25 +451,40 @@ const VIEWS = {
     </div>`;
   },
 
-  signalDetail(i) {
+  "signal-detail"(i) {
     const sig = state.briefing.signals[Number(i)];
     if (!sig) return `<div class="wrap"><div class="card empty-note">Signal not found.</div></div>`;
     return `<div class="wrap">
       <section class="pad"><div class="card capsule">
-        <div class="capsule-top"><span class="chip ${sig.domain === "cross" ? "solid" : sig.domain}">${sig.domain === "cross" ? "Cross-domain signal" : sig.domain === "world" ? "World signal" : "Tech signal"}</span>
+        <div class="capsule-top"><span class="chip ${sig.domain === "cross" ? "solid" : sig.domain}">${sig.domain === "cross" ? "Cross-domain signal" : `${domainLabel(sig.domain)} signal`}</span>
           <span class="meta">${ms("trending_up")}${sig.evidence_story_ids.length} stories</span></div>
-        <div><h1 style="font-size:22px;line-height:28px;font-weight:700">${esc(sig.title)}</h1><p class="topline">${esc(sig.what)}</p></div>
+        <div><h1 class="signal-title">${esc(sig.title)}</h1><p class="topline">${esc(sig.what)}</p></div>
       </div></section>
       <div class="kicker">Why it may matter</div>
       <div class="quote">${ms("lightbulb")}<p>${esc(sig.why_it_matters)}</p><small>Signal detector · not a prediction</small></div>
       <div class="duo">
-        <div class="card"><small>Would confirm</small><p style="font-size:14px;line-height:20px;color:var(--ink)">${esc(sig.would_confirm)}</p></div>
-        <div class="card"><small>Would invalidate</small><p style="font-size:14px;line-height:20px;color:var(--ink)">${esc(sig.would_invalidate)}</p></div>
+        <div class="card"><small>Would confirm</small><p class="strong">${esc(sig.would_confirm)}</p></div>
+        <div class="card"><small>Would invalidate</small><p class="strong">${esc(sig.would_invalidate)}</p></div>
       </div>
       <section class="section">${sectionHead("Evidence", { icon: "fact_check" })}${tileList(sig.evidence_story_ids.map(byId).filter(Boolean))}</section>
     </div>`;
   },
 };
+
+// The Radar "Live wire" list. Re-rendered on its own while typing in search so
+// the input keeps focus.
+function liveWire() {
+  const q = state.query.trim().toLowerCase();
+  const f = state.radarFilter;
+  const filterFn = (s) =>
+    (f === "all" || s.domain === f || topCategory(s) === f || (f.startsWith("m:") && inMarket(f.slice(2))(s))) &&
+    (!q || `${s.headline} ${s.categories.join(" ")} ${s.what_happened} ${s.sources.map((x) => x.name).join(" ")}`.toLowerCase().includes(q));
+  const list = stories(filterFn).sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
+  return `<section class="section" id="live-wire">
+        ${sectionHead("Live wire", { live: true, action: `<span class="meta">${list.length} stories</span>` })}
+        ${tileList(list, { timeRight: true })}
+      </section>`;
+}
 
 function trendCard(x) {
   return `
@@ -501,32 +505,13 @@ function researchBlock(dd) {
     ${dd.citations?.length ? `<h2>Cited while researching</h2><ul>${dd.citations.map((c) => `<li><a href="${esc(safeUrl(c.url))}" target="_blank" rel="noopener">${esc(c.title)}</a></li>`).join("")}</ul>` : ""}</div>`;
 }
 
-function markdown(md) {
-  const inline = (t) => esc(t)
-    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
-    .replace(/(^|[^*])\*([^*]+)\*/g, "$1<i>$2</i>");
-  let html = "", list = null;
-  const close = () => { if (list) { html += `</${list}>`; list = null; } };
-  for (const line of md.split("\n")) {
-    let m;
-    if ((m = line.match(/^(#{1,4})\s+(.*)/))) { close(); const l = m[1].length <= 2 ? 2 : 3; html += `<h${l}>${inline(m[2])}</h${l}>`; }
-    else if ((m = line.match(/^\s*[-*]\s+(.*)/))) { if (list !== "ul") { close(); html += "<ul>"; list = "ul"; } html += `<li>${inline(m[1])}</li>`; }
-    else if ((m = line.match(/^\s*\d+\.\s+(.*)/))) { if (list !== "ol") { close(); html += "<ol>"; list = "ol"; } html += `<li>${inline(m[1])}</li>`; }
-    else if (line.trim()) { close(); html += `<p>${inline(line)}</p>`; }
-    else close();
-  }
-  close();
-  return html;
-}
-
 // ---------- routing & chrome ----------
 const NAV = [["briefing", "home", "Briefing"], ["radar", "explore", "Radar"], ["analysis", "newspaper", "Analysis"], ["signal", "tune", "My Signal"]];
 const SECTION = { briefing: "Briefing", radar: "Radar", analysis: "Analysis", signal: "My Signal" };
 
 function route() {
   const [, name = "briefing", arg] = location.hash.match(/^#\/([\w-]+)(?:\/(.+))?/) ?? [];
-  return { name: VIEWS[name] || name === "signal-detail" ? name : "briefing", arg };
+  return { name: VIEWS[name] ? name : "briefing", arg };
 }
 
 function render({ keepScroll = false } = {}) {
@@ -536,7 +521,7 @@ function render({ keepScroll = false } = {}) {
   document.querySelectorAll("[data-nav]").forEach((nav) => {
     nav.innerHTML = NAV.map(([k, icon, label]) => `<a href="#/${k}" class="${k === navKey ? "on" : ""}" ${k === navKey ? 'aria-current="page"' : ""}>${ms(icon, k === navKey ? "fill" : "")}<span>${label}</span></a>`).join("");
   });
-  $("#section-label").textContent = name === "market" ? (MARKET_STYLE[arg]?.short ?? marketName(arg)) : SECTION[name] ?? "Briefing";
+  $("#section-label").textContent = name === "market" ? marketShort(arg) : SECTION[name] ?? "Briefing";
   $("#back").hidden = !detail;
   $("#brand").hidden = detail;
   $("#topbar-title").hidden = !detail;
@@ -549,7 +534,6 @@ function render({ keepScroll = false } = {}) {
 
   const y = window.scrollY;
   if (!state.briefing && name !== "signal") view.innerHTML = emptyView();
-  else if (name === "signal-detail") view.innerHTML = VIEWS.signalDetail(arg);
   else view.innerHTML = VIEWS[name](arg);
   if (keepScroll) window.scrollTo(0, y);
   wireCarousel();
@@ -598,7 +582,6 @@ async function load(date) {
   render();
 }
 
-const refresh = { active: false, log: [], error: null };
 async function startRefresh() {
   try {
     await api("/api/refresh", { method: "POST" });
@@ -674,7 +657,7 @@ document.addEventListener("click", (e) => {
   else if (d.date) load(d.date).then(() => (location.hash = "#/briefing"));
   else if (d.step) {
     const out = $("#surprise");
-    const v = Math.max(0, Math.min(4, Number(out.value || out.textContent) + Number(d.step)));
+    const v = Math.max(0, Math.min(state.config.surprise_max ?? 4, Number(out.value || out.textContent) + Number(d.step)));
     out.textContent = v;
     pendingInterests.surprise_me = v;
     $("#save-interests").disabled = false;
@@ -698,11 +681,7 @@ document.addEventListener("input", (e) => {
   const el = e.target;
   if (el.id === "search") {
     state.query = el.value;
-    const pos = el.selectionStart;
-    render({ keepScroll: true });
-    const again = $("#search");
-    again.focus();
-    again.setSelectionRange(pos, pos);
+    $("#live-wire").outerHTML = liveWire();
   } else if (el.type === "range") {
     el.style.setProperty("--pct", `${el.value * 10}%`);
     el.closest(".stream-body").querySelector("output").textContent = `${el.value}/10`;
@@ -710,6 +689,12 @@ document.addEventListener("input", (e) => {
     $("#save-interests").disabled = false;
   }
 });
+
+// Image load failures don't bubble, so listen in the capture phase.
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (img.tagName === "IMG" && img.hasAttribute("data-fallback")) img.replaceWith(img.nextElementSibling.content.cloneNode(true));
+}, true);
 
 window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
 

@@ -9,7 +9,8 @@
     "ingest": "node src/run.js --ingest-only",
     "start": "node src/server.js",
     "chat:fetch": "node src/chat-mode.js fetch",
-    "chat:finish": "node src/chat-mode.js finish"
+    "chat:finish": "node src/chat-mode.js finish",
+    "test": "node --test"
   },
   "engines": {
     "node": ">=20"

@@ -81,7 +81,7 @@ The live site is a static deployment of `public/` (see `vercel.json`); `src/serv
 
 ## Configuration
 
-- **`config.json`**: interest weights (these nudge selection but never override importance), the number of "surprise me" stories outside your interests, the lookback window and the port.
+- **`config.json`**: interest weights (these nudge selection but never override importance), the number of "surprise me" stories outside your interests (`surprise_me`, capped at `surprise_max`), the tracked `markets`, the lookback window and the port. Market ids here drive the agents' output schemas; give a new market an icon in `MARKET_STYLE` (`public/app.js`), colours in `styles.css` and a description in `MARKETS_RULES` (`src/prompts.js`).
 - **`src/sources.js`**: add or remove feeds and set their tier. Reuters, AP, FT, Bloomberg and WSJ don't offer open RSS; add a feed there if you have one.
 - **`PIF_MODEL`** env var: overrides the model (default `claude-opus-5-5`).
 
@@ -93,12 +93,16 @@ A briefing makes four model calls with roughly 60–100K input tokens in total, 
 
 ```
 src/sources.js    feed registry with tiers
-src/ingest.js     fetch + exact dedupe
+src/ingest.js     fetch + exact dedupe, URL normalising
 src/prompts.js    editorial charter and per-agent instructions
-src/schemas.js    structured-output schemas
+src/schemas.js    structured-output schemas (built from config.json markets)
 src/claude.js     API wrapper (structured output, research loop, refusal fallback)
 src/pipeline.js   triage → world/tech agents → signal detector; deep dive
-src/store.js      briefings, trend history, deep-dive cache (data/)
+src/store.js      briefings, trend history, deep-dive cache (data/), static publish
 src/server.js     local HTTP server + API
-public/           web app (index.html, styles.css, app.js, logo.svg)
+src/run.js        CLI entry for `npm run brief` / `npm run ingest`
+src/chat-mode.js  API-key-free pipeline driven from a Claude chat
+public/           web app (index.html, styles.css, app.js, lib.js, logo.svg)
+public/briefings/ static copies of briefings for the Vercel site
+test/             `npm test` (node:test, no extra dependencies)
 ```

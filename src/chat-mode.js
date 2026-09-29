@@ -7,15 +7,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ingest } from "./ingest.js";
-import { enrich } from "./pipeline.js";
-import { DATA_DIR, loadConfig, saveBriefing, saveTrends } from "./store.js";
+import { enrich, sumScores } from "./pipeline.js";
+import { DATA_DIR, localDate, loadConfig, saveBriefing, saveTrends } from "./store.js";
 
 const INBOX = path.join(DATA_DIR, "inbox");
 fs.mkdirSync(INBOX, { recursive: true });
-const date = process.argv[3] || new Date().toISOString().slice(0, 10);
+const date = process.argv[3] || localDate();
 const itemsFile = path.join(INBOX, `${date}-items.json`);
 const draftFile = path.join(INBOX, `${date}-draft.json`);
-const sum = (s) => s.importance + s.impact + s.novelty + s.credibility + s.long_term;
 
 async function fetchItems() {
   const config = loadConfig();
@@ -37,7 +36,7 @@ async function finish() {
       return it ? { name: it.source, url: it.link, tier: it.tier, adds: src.adds } : src;
     }),
     markets: s.markets ?? [],
-    signal_score: sum(s.scores),
+    signal_score: sumScores(s.scores),
   }));
   await enrich(stories, items);
   const briefing = {

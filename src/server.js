@@ -6,7 +6,7 @@ import { runPipeline, deepDive } from "./pipeline.js";
 import { listBriefingDates, loadBriefing, loadConfig, saveInterests } from "./store.js";
 
 const PUBLIC = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../public");
-const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml" };
+const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json" };
 
 // One refresh at a time; the UI polls /api/status for progress.
 const refresh = { running: false, log: [], error: null, finished_at: null };
@@ -50,6 +50,7 @@ async function api(req, res, url) {
     }
     case "POST /api/deepdive": {
       const { date, id } = await readBody(req);
+      if (typeof date !== "string" || typeof id !== "string") return send(res, 400, { error: "date and id are required" });
       const key = `${date}/${id}`;
       if (!deepdivesInFlight.has(key)) {
         deepdivesInFlight.set(key, deepDive(date, id).finally(() => deepdivesInFlight.delete(key)));
@@ -70,12 +71,15 @@ const server = http.createServer(async (req, res) => {
   try {
     if (url.pathname.startsWith("/api/")) return await api(req, res, url);
     const file = path.join(PUBLIC, url.pathname === "/" ? "index.html" : path.normalize(url.pathname));
-    if (!file.startsWith(PUBLIC) || !fs.existsSync(file)) {
+    // Directories exist too, but streaming one fails with EISDIR.
+    if (!file.startsWith(PUBLIC + path.sep) || !fs.statSync(file, { throwIfNoEntry: false })?.isFile()) {
       res.writeHead(404);
       return res.end("Not found");
     }
     res.writeHead(200, { "Content-Type": TYPES[path.extname(file)] ?? "application/octet-stream", "Cache-Control": "no-cache" });
-    fs.createReadStream(file).pipe(res);
+    fs.createReadStream(file)
+      .on("error", (err) => (console.error(err), res.destroy()))
+      .pipe(res);
   } catch (err) {
     console.error(err);
     send(res, 500, { error: err.message });

@@ -16,7 +16,8 @@ function clean(text = "") {
   return text.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function normalizeUrl(url = "") {
+// Canonical link for an ingested item: drops tracking params and the fragment.
+export function normalizeUrl(url = "") {
   try {
     const u = new URL(url);
     for (const key of [...u.searchParams.keys()]) {
@@ -28,6 +29,10 @@ function normalizeUrl(url = "") {
     return url;
   }
 }
+
+// Looser key for matching a URL an agent cites back to an ingested item: also
+// ignores the scheme, "www." and the whole query string.
+export const urlKey = (u = "") => u.replace(/^https?:\/\/(www\.)?/, "").replace(/[?#].*$/, "").replace(/\/$/, "");
 
 // Feeds carry images in several places; take the first usable one.
 function pickImage(item) {

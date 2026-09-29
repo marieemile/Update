@@ -1,17 +1,16 @@
-import { ingest } from "./ingest.js";
+import { ingest, urlKey } from "./ingest.js";
 import { structured, research } from "./claude.js";
 import {
   CHARTER, MARKETS_RULES, TRIAGE_TASK, WORLD_TASK, TECH_TASK, DOMAIN_OUTPUT_RULES, SIGNAL_TASK, DEEPDIVE_TASK,
 } from "./prompts.js";
-import { TRIAGE_SCHEMA, DOMAIN_SCHEMA, SIGNAL_SCHEMA } from "./schemas.js";
+import { buildSchemas } from "./schemas.js";
 import {
-  loadConfig, saveBriefing, recentStories, loadTrends, saveTrends, loadBriefing, loadDeepdive, saveDeepdive,
+  localDate, loadConfig, saveBriefing, recentStories, loadTrends, saveTrends, loadBriefing, loadDeepdive, saveDeepdive,
 } from "./store.js";
 
 // Stories come back from the agents with source URLs; map them to the ingested
 // items to recover an image and a publish time. Articles without a feed image
 // fall back to the page's og:image.
-const normKey = (u = "") => u.replace(/^https?:\/\/(www\.)?/, "").replace(/[?#].*$/, "").replace(/\/$/, "");
 
 async function ogImage(url) {
   try {
@@ -26,10 +25,10 @@ async function ogImage(url) {
 }
 
 export async function enrich(stories, items) {
-  const byUrl = new Map(items.map((it) => [normKey(it.link), it]));
+  const byUrl = new Map(items.map((it) => [urlKey(it.link), it]));
   await Promise.all(
     stories.map(async (s) => {
-      const matched = s.sources.map((src) => byUrl.get(normKey(src.url))).filter(Boolean);
+      const matched = s.sources.map((src) => byUrl.get(urlKey(src.url))).filter(Boolean);
       const dates = matched.map((it) => it.published).filter(Boolean).sort();
       s.published = dates.at(-1) ?? null;
       s.image = matched.sort((a, b) => a.tier - b.tier).find((it) => it.image)?.image ?? null;
@@ -38,8 +37,7 @@ export async function enrich(stories, items) {
   );
 }
 
-const today = () => new Date().toISOString().slice(0, 10);
-const sumScores = (s) => s.importance + s.impact + s.novelty + s.credibility + s.long_term;
+export const sumScores = (s) => s.importance + s.impact + s.novelty + s.credibility + s.long_term;
 
 function formatItems(items) {
   return items
@@ -50,14 +48,14 @@ function formatItems(items) {
 // Pick candidates for a domain agent: strongest clusters by story signal, plus
 // narrow-coverage and positive clusters that would otherwise be crowded out -
 // those feed "You might have missed" and "Positive developments".
-function pickCandidates(clusters, domain, n) {
+export function pickCandidates(clusters, domain, n, marketIds) {
   const pool = clusters.filter((c) => c.domain === domain).sort((a, b) => sumScores(b.scores) - sumScores(a.scores));
   const chosen = new Set(pool.slice(0, n));
   for (const c of pool.filter((c) => c.coverage === "narrow" && c.scores.importance >= 3).slice(0, 4)) chosen.add(c);
   for (const c of pool.filter((c) => c.positive).slice(0, 4)) chosen.add(c);
   // Tracked-market clusters are judged within their market, so keep the best
   // few of each even if they'd fall below the general cut.
-  for (const m of ["ip", "real_estate"]) for (const c of pool.filter((c) => c.markets.includes(m)).slice(0, 6)) chosen.add(c);
+  for (const m of marketIds) for (const c of pool.filter((c) => c.markets.includes(m)).slice(0, 6)) chosen.add(c);
   return [...chosen];
 }
 
@@ -81,7 +79,7 @@ function formatInterests(interests) {
     .join("\n");
 }
 
-async function domainAgent({ domain, task, candidates, itemsById, config, history, date }) {
+async function domainAgent({ domain, task, candidates, itemsById, config, history, date, schema }) {
   const prefix = domain === "world" ? "w" : "t";
   const user = `Today is ${date}.
 
@@ -103,7 +101,7 @@ Use story ids ${prefix}1, ${prefix}2, ... in order of importance.`;
     label: `${domain} agent`,
     system: `${CHARTER}\n\n${MARKETS_RULES}\n\n${task}\n\n${DOMAIN_OUTPUT_RULES}`,
     user,
-    schema: DOMAIN_SCHEMA,
+    schema,
     effort: "high",
   });
   return out.stories.map((s) => ({ ...s, domain, signal_score: sumScores(s.scores) }));
@@ -111,7 +109,9 @@ Use story ids ${prefix}1, ${prefix}2, ... in order of importance.`;
 
 export async function runPipeline({ ingestOnly = false, log = console.log } = {}) {
   const config = loadConfig();
-  const date = today();
+  const date = localDate();
+  const marketIds = Object.keys(config.markets ?? {});
+  const schemas = buildSchemas(marketIds);
 
   log("1/4 Ingesting sources...");
   const { items, report } = await ingest({
@@ -129,7 +129,7 @@ export async function runPipeline({ ingestOnly = false, log = console.log } = {}
     label: "triage",
     system: `${CHARTER}\n\n${MARKETS_RULES}\n\n${TRIAGE_TASK}`,
     user: `Today is ${date}. ${items.length} feed items:\n\n${formatItems(items)}`,
-    schema: TRIAGE_SCHEMA,
+    schema: schemas.triage,
     effort: "medium",
   });
   const itemsById = new Map(items.map((it) => [it.id, it]));
@@ -138,10 +138,11 @@ export async function runPipeline({ ingestOnly = false, log = console.log } = {}
 
   log("3/4 World and Tech agents writing stories...");
   const history = recentStories(date);
-  const shared = { itemsById, config, history, date };
+  const shared = { itemsById, config, history, date, schema: schemas.domain };
+  const candidates = (domain) => pickCandidates(clusters, domain, config.candidates_per_domain, marketIds);
   const [world, tech] = await Promise.all([
-    domainAgent({ domain: "world", task: WORLD_TASK, candidates: pickCandidates(clusters, "world", config.candidates_per_domain), ...shared }),
-    domainAgent({ domain: "tech", task: TECH_TASK, candidates: pickCandidates(clusters, "tech", config.candidates_per_domain), ...shared }),
+    domainAgent({ domain: "world", task: WORLD_TASK, candidates: candidates("world"), ...shared }),
+    domainAgent({ domain: "tech", task: TECH_TASK, candidates: candidates("tech"), ...shared }),
   ]);
   const stories = [...world, ...tech];
   await enrich(stories, items);
@@ -157,7 +158,7 @@ ${JSON.stringify(stories.map(({ id, domain, headline, categories, markets, what_
 
 CURRENT TREND DASHBOARD
 ${JSON.stringify(loadTrends().map(({ name, domain, markets, status, direction, summary, recent_developments, first_detected }) => ({ name, domain, markets, status, direction, summary, recent_developments, first_detected })), null, 1)}`,
-    schema: SIGNAL_SCHEMA,
+    schema: schemas.signal,
     effort: "high",
   });
 

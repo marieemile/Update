@@ -18,6 +18,7 @@
     }
   },
   "surprise_me": 2,
+  "surprise_max": 4,
   "markets": {
     "ip": "Intellectual Property",
     "real_estate": "Real Estate"

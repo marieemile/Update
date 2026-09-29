@@ -76,6 +76,7 @@ export async function research({ label, system, user, effort = "high" }) {
   }
   logUsage(label, msg, started);
   checkStop(label, msg);
+  if (msg.stop_reason === "pause_turn") console.warn(`  [${label}] still paused after 6 turns; returning partial research`);
 
   let markdown = "";
   const citations = new Map();

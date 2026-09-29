@@ -10,6 +10,13 @@ const TRENDS = path.join(DATA_DIR, "trends.json");
 
 for (const dir of [DATA_DIR, BRIEFINGS, DEEPDIVES]) fs.mkdirSync(dir, { recursive: true });
 
+// Briefings are dated in the machine's local time zone, not UTC, so an early
+// morning run isn't filed under yesterday.
+export function localDate(d = new Date()) {
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
 export function loadConfig() {
   return JSON.parse(fs.readFileSync(path.join(root, "config.json"), "utf8"));
 }
@@ -24,7 +31,8 @@ export function saveInterests({ interests, surprise_me }) {
       if (topic in config.interests[area]) config.interests[area][topic] = clamp(w);
     }
   }
-  if (surprise_me != null) config.surprise_me = Math.max(0, Math.min(4, Math.round(Number(surprise_me) || 0)));
+  const max = config.surprise_max ?? 4;
+  if (surprise_me != null) config.surprise_me = Math.max(0, Math.min(max, Math.round(Number(surprise_me) || 0)));
   fs.writeFileSync(path.join(root, "config.json"), JSON.stringify(config, null, 2) + "\n");
   return config;
 }
@@ -65,8 +73,8 @@ export function publishStatic() {
   const dates = listBriefingDates();
   for (const d of dates) fs.copyFileSync(path.join(BRIEFINGS, `${d}.json`), path.join(STATIC_DIR, `${d}.json`));
   writeJson(path.join(STATIC_DIR, "index.json"), dates);
-  const { interests, surprise_me, markets } = loadConfig();
-  writeJson(path.join(STATIC_DIR, "config.json"), { interests, surprise_me, markets });
+  const { interests, surprise_me, surprise_max, markets } = loadConfig();
+  writeJson(path.join(STATIC_DIR, "config.json"), { interests, surprise_me, surprise_max, markets });
 }
 
 // Headlines from the last few briefings, so agents can spot continuing stories
@@ -86,13 +94,17 @@ export function loadTrends() {
 
 // The signal agent returns the whole updated dashboard; we only preserve
 // first_detected so a trend's age survives renames of its summary.
-export function saveTrends(updated, date) {
-  const previous = new Map(loadTrends().map((t) => [t.name.toLowerCase(), t]));
-  const merged = updated.map((t) => ({
+export function mergeTrends(previous, updated, date) {
+  const byName = new Map(previous.map((t) => [t.name.toLowerCase(), t]));
+  return updated.map((t) => ({
     ...t,
-    first_detected: previous.get(t.name.toLowerCase())?.first_detected ?? date,
+    first_detected: byName.get(t.name.toLowerCase())?.first_detected ?? date,
     last_updated: date,
   }));
+}
+
+export function saveTrends(updated, date) {
+  const merged = mergeTrends(loadTrends(), updated, date);
   writeJson(TRENDS, merged);
   return merged;
 }

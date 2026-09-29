@@ -163,6 +163,16 @@ img { display: block; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes pulse { 50% { opacity: 0.4; } }
 
+/* spacing and text utilities used by app.js templates */
+.gap-14 { height: 14px; }
+.gap-16 { height: 16px; }
+.gap-90 { height: 90px; }
+.gap-top { margin-top: 12px; }
+.meta.note { display: flex; justify-content: center; text-align: center; margin-top: 10px; }
+.btn-primary.narrow { max-width: 320px; }
+.capsule h1.signal-title { font-size: 22px; line-height: 28px; font-weight: 700; }
+.duo p.strong { font-size: 14px; line-height: 20px; color: var(--ink); }
+
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-1); }
 
 /* ---------- chips & badges ---------- */
@@ -176,7 +186,6 @@ img { display: block; }
 .chip.muted { background: var(--secondary-soft); color: var(--secondary); }
 .chip.good { background: var(--good-soft); color: var(--good); }
 .chip.warn { background: var(--warn-soft); color: var(--warn); }
-.chip.bad { background: var(--error-soft); color: var(--error); }
 .verified { color: var(--primary-bright); font-size: 14px; font-variation-settings: "FILL" 1; }
 .avatar { width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; color: #fff; font-size: 8px; font-weight: 700; flex-shrink: 0; }
 .avatar.lg { width: 36px; height: 36px; font-size: 13px; border-radius: 10px; }
@@ -451,8 +460,6 @@ input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius
 .bar { height: 6px; border-radius: 999px; background: var(--surface-high); overflow: hidden; }
 .bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); }
 .bar-row b { color: var(--ink); text-align: right; }
-.prose { padding-inline: var(--margin); font-size: 16px; line-height: 26px; letter-spacing: -0.005em; }
-.prose p { margin: 0 0 16px; }
 .quote { margin: 4px var(--margin) 20px; padding: 16px 18px; border-radius: var(--r-lg); background: var(--surface-low); border-left: 3px solid var(--primary-bright); }
 .quote .ms { color: var(--primary-bright); font-size: 26px; font-variation-settings: "FILL" 1; }
 .quote p { margin: 4px 0 8px; font-size: 16px; line-height: 24px; font-style: italic; font-weight: 600; }
@@ -514,7 +521,6 @@ input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius
 .progress pre { margin: 0; font: 12px/18px ui-monospace, Menlo, monospace; color: var(--ink-2); white-space: pre-wrap; max-height: 140px; overflow: auto; }
 .progress.failed .progress-top .ms { animation: none; color: var(--error); }
 .error-text { color: var(--error); }
-.spinner { width: 18px; height: 18px; border: 2px solid var(--surface-high); border-top-color: var(--primary-bright); border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; vertical-align: -3px; margin-right: 8px; }
 .toast { position: fixed; z-index: 40; left: 50%; transform: translateX(-50%); top: calc(72px + env(safe-area-inset-top, 0px)); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; box-shadow: var(--shadow-2); }
 
 /* ================= tablet & desktop ================= */
