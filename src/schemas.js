@@ -14,6 +14,9 @@ const bool = { type: "boolean" };
 const arr = (items) => ({ type: "array", items });
 const oneOf = (...values) => ({ type: "string", enum: values });
 
+// Tracked markets (config.json "markets"). A story can belong to zero or more.
+const markets = arr(oneOf("ip", "real_estate"));
+
 const scores = obj({ importance: int, impact: int, novelty: int, credibility: int, long_term: int });
 
 export const TRIAGE_SCHEMA = obj({
@@ -24,6 +27,7 @@ export const TRIAGE_SCHEMA = obj({
       category: str,
       item_ids: arr(str),
       scores,
+      markets,
       coverage: oneOf("wide", "narrow"),
       positive: bool,
       reason: str,
@@ -38,6 +42,7 @@ export const DOMAIN_SCHEMA = obj({
       headline: str,
       level: oneOf("essential", "context"),
       categories: arr(str),
+      markets,
       what_happened: str,
       why_it_matters: str,
       whats_new: obj({ before: str, now: str }),
@@ -72,6 +77,7 @@ export const SIGNAL_SCHEMA = obj({
     obj({
       name: str,
       domain: oneOf("world", "tech"),
+      markets,
       status: oneOf("emerging", "developing", "accelerating", "established", "cooling", "unclear"),
       direction: oneOf("up", "steady", "down"),
       summary: str,

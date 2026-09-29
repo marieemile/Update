@@ -52,6 +52,24 @@ export const SOURCES = [
   { name: "The Register", url: "https://www.theregister.com/headlines.atom", tier: 3, domain: "tech" },
   { name: "Krebs on Security", url: "https://krebsonsecurity.com/feed/", tier: 3, domain: "tech" },
 
+  // ---- Market: Intellectual Property ----
+  { name: "WIPO", url: "https://www.wipo.int/pressroom/en/rss.xml", tier: 1, domain: "world", market: "ip" },
+  { name: "IAM", url: "https://www.iam-media.com/rss", tier: 3, domain: "tech", market: "ip" },
+  { name: "World Trademark Review", url: "https://www.worldtrademarkreview.com/rss", tier: 3, domain: "world", market: "ip" },
+  { name: "JUVE Patent", url: "https://www.juve-patent.com/feed/", tier: 3, domain: "tech", market: "ip" },
+  { name: "Patently-O", url: "https://patentlyo.com/feed", tier: 3, domain: "tech", market: "ip" },
+  { name: "IPKat", url: "https://ipkitten.blogspot.com/feeds/posts/default?alt=rss", tier: 3, domain: "world", market: "ip" },
+  { name: "TorrentFreak", url: "https://torrentfreak.com/feed/", tier: 3, domain: "tech", market: "ip" },
+  { name: "IPWatchdog", url: "https://ipwatchdog.com/feed/", tier: 3, domain: "tech", market: "ip" },
+
+  // ---- Market: Real Estate ----
+  { name: "The Guardian Property", url: "https://www.theguardian.com/money/property/rss", tier: 2, domain: "world", market: "real_estate" },
+  { name: "CNBC Real Estate", url: "https://www.cnbc.com/id/10000115/device/rss/rss.html", tier: 2, domain: "world", market: "real_estate" },
+  { name: "HousingWire", url: "https://www.housingwire.com/feed/", tier: 3, domain: "world", market: "real_estate" },
+  { name: "Bisnow", url: "https://www.bisnow.com/rss-feed/home", tier: 3, domain: "world", market: "real_estate" },
+  { name: "Commercial Observer", url: "https://commercialobserver.com/feed/", tier: 3, domain: "world", market: "real_estate" },
+  { name: "Inman", url: "https://feeds.feedburner.com/inmannews", tier: 3, domain: "world", market: "real_estate" },
+
   // ---- Discovery ----
   { name: "Hacker News (200+ points)", url: "https://hnrss.org/frontpage?points=200", tier: 4, domain: "tech" },
 ];

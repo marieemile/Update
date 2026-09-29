@@ -36,6 +36,7 @@ async function finish() {
       if (src.id && !it) throw new Error(`${s.id}: unknown item ${src.id}`);
       return it ? { name: it.source, url: it.link, tier: it.tier, adds: src.adds } : src;
     }),
+    markets: s.markets ?? [],
     signal_score: sum(s.scores),
   }));
   await enrich(stories, items);
@@ -46,7 +47,7 @@ async function finish() {
     stories,
     signals: draft.signals,
     watchlist: draft.watchlist,
-    trends: saveTrends(draft.trends, date),
+    trends: saveTrends(draft.trends.map((t) => ({ ...t, markets: t.markets ?? [] })), date),
     stats: {
       items: items.length,
       sources_ok: report.filter((r) => r.ok).length,

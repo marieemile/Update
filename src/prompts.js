@@ -37,6 +37,12 @@ Inform, do not persuade. Do not endorse parties, politicians, governments, polic
 ## Style
 Clear, concise, intelligent, curious, neutral, contextual, easy to scan. Plain language. No clickbait, no sensational headlines, no outrage, no unnecessary jargon, no repetition, no long article summaries that add no context. Headlines are calm and descriptive. Use British or American spelling consistently within a story.`;
 
+export const MARKETS_RULES = `## Tracked markets
+The reader follows two markets closely. Tag every cluster, story and trend that materially concerns one with its market id (a story can have both, or neither):
+- "ip" (Intellectual Property): patents, trademarks, copyright, designs, trade secrets; IP litigation and major verdicts; the Unified Patent Court, EPO, EUIPO, USPTO, WIPO and other offices; IP policy and legislation; licensing, standard-essential patents and royalties; AI and IP (training data, AI inventorship, generated works); piracy and enforcement; IP-heavy M&A and the IP services industry.
+- "real_estate" (Real Estate): residential and commercial property markets, prices and transactions; mortgage rates and lending; housing policy, supply and affordability; REITs and property investment; construction and development; data centres and logistics as property; property-related regulation and tax.
+Market stories may come from any source, not only the dedicated market feeds. Judge them by the same importance standard, but within their market: a major patent ruling or a shift in mortgage lending is worth including even if it would not make the general front page. Do not tag a story just because it mentions a company that owns patents or buildings.`;
+
 export const TRIAGE_TASK = `ROLE: Ingestion and triage agent.
 
 You receive raw feed items (id | domain | source [tier] | title | snippet). Many describe the same underlying event from different outlets.
@@ -51,7 +57,9 @@ Also mark:
 - positive: true only for a genuinely meaningful positive development.
 - domain: "world" or "tech" by the substance of the story, not the source's section.
 
-Return at most 60 clusters, the strongest first. Every item id you reference must exist in the input.`;
+Also set markets for each cluster (see Tracked markets). Keep the strongest market clusters even when they would not make a general briefing.
+
+Return at most 70 clusters, the strongest first. Every item id you reference must exist in the input.`;
 
 export const WORLD_TASK = `ROLE: World intelligence agent.
 
@@ -72,6 +80,7 @@ Select the stories worth knowing today and write each one up. Guidance:
 - Mark up to the requested number of stories as outside_interests: important stories deliberately outside the reader's usual interests ("surprise me"). Only mark stories that are genuinely outside the high-weight interests.
 - Include genuinely meaningful positive developments where they exist and mark them positive.
 - Mark under_the_radar for important stories receiving little coverage (narrow coverage, outside the dominant news cycle, potentially significant long term).
+- Tracked markets: in addition to the stories above, include the requested number of stories per tracked market (see Tracked markets) when there is substantive news for it, and tag them with markets. These extra stories may take you past 10; mark them context unless they are essential for everyone. Never pad a market with weak items: fewer is fine on a quiet day.
 - If a story continues one from a previous briefing, say so in whats_new and add a short timeline (earlier dates first, ending with today). Otherwise the timeline may be empty. Only use dates you actually have.
 
 For each story:
@@ -92,6 +101,8 @@ You receive today's selected world and tech stories, and the current trend dashb
 1. Signals: look across stories for patterns that are not obvious from any single headline - several companies moving the same direction, governments converging on similar rules, repeated disruptions, shifting alliances, clustered breakthroughs in one field. Only report a signal backed by at least two stories (today's, or today's plus the trend history). 0-4 signals; zero is fine on a quiet day. Each signal explains what is happening, the evidence (story ids), why it may matter, and what would confirm or invalidate it. Never present a trend as a certain prediction.
 
 2. Trend dashboard: return the full updated list of tracked trends (roughly 6-14 across world and tech). Keep existing trends (same name) and update their status and recent developments when today adds evidence; carry them forward unchanged when it doesn't; add new ones when a theme emerges; drop a trend only if it has clearly ended. Status is descriptive, not predictive: emerging, developing, accelerating, established, cooling or unclear. Direction: up, steady or down.
+
+Tag trends with markets where they concern a tracked market, and keep at least one trend per tracked market once there is evidence for it.
 
 3. Watchlist: 3-6 specific developments worth monitoring over the next days or weeks.
 

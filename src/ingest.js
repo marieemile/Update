@@ -66,6 +66,7 @@ async function fetchSource(source, cutoff, maxItems) {
         source: source.name,
         tier: source.tier,
         domain: source.domain,
+        market: source.market ?? null,
         published: isNaN(published) ? null : published.toISOString(),
         image: pickImage(item),
         snippet: clean(item.contentSnippet || item.summary || item.content || "").slice(0, 320),

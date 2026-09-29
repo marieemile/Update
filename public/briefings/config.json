@@ -17,5 +17,9 @@
       "Society": 4
     }
   },
-  "surprise_me": 2
+  "surprise_me": 2,
+  "markets": {
+    "ip": "Intellectual Property",
+    "real_estate": "Real Estate"
+  }
 }

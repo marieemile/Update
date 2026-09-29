@@ -21,5 +21,10 @@
     }
   },
   "surprise_me": 2,
-  "port": 4747
+  "port": 4747,
+  "markets": {
+    "ip": "Intellectual Property",
+    "real_estate": "Real Estate"
+  },
+  "stories_per_market": 3
 }

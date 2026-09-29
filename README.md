@@ -64,6 +64,17 @@ npm run chat:fetch    # fetch sources -> data/inbox/<date>-items.json
 npm run chat:finish   # attach images/times, merge trends, save the briefing
 ```
 
+## Tracked markets
+
+`config.json` → `markets` lists markets followed closely in every briefing: **Intellectual Property** (`ip`) and **Real Estate** (`real_estate`). They have dedicated feeds in `src/sources.js` (`market: ...`), but stories from any source can be tagged. The agents follow `MARKETS_RULES` in `src/prompts.js`, add up to `stories_per_market` stories for each market, and tag stories and trends with a `markets` array. In the app, the Briefing tab has a large card for each market that opens a market page (`#/market/<id>`) with its stories, related signals and trends. Market filters also appear on the Briefing and Radar pills.
+
+## 5- and 15-minute modes
+
+- **5 min:** the essential stories, each with a one-sentence summary, plus the top signal.
+- **15 min:** every story with the full write-up (what happened, why it matters, what changed) and all signals.
+
+The read-time label is calculated from the words each mode actually shows.
+
 ## Publishing (Vercel)
 
 The live site is a static deployment of `public/` (see `vercel.json`); `src/server.js` doesn't run there. Every saved briefing is also copied to `public/briefings/` (`<date>.json`, `index.json`, `config.json`). When `/api/*` isn't available, the app reads those files and runs read-only: no Refresh, deep research or interest editing. Committing and pushing `public/briefings/` to `main` publishes a new briefing; the morning scheduled task does this automatically.

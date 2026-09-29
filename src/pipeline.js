@@ -1,7 +1,7 @@
 import { ingest } from "./ingest.js";
 import { structured, research } from "./claude.js";
 import {
-  CHARTER, TRIAGE_TASK, WORLD_TASK, TECH_TASK, DOMAIN_OUTPUT_RULES, SIGNAL_TASK, DEEPDIVE_TASK,
+  CHARTER, MARKETS_RULES, TRIAGE_TASK, WORLD_TASK, TECH_TASK, DOMAIN_OUTPUT_RULES, SIGNAL_TASK, DEEPDIVE_TASK,
 } from "./prompts.js";
 import { TRIAGE_SCHEMA, DOMAIN_SCHEMA, SIGNAL_SCHEMA } from "./schemas.js";
 import {
@@ -43,7 +43,7 @@ const sumScores = (s) => s.importance + s.impact + s.novelty + s.credibility + s
 
 function formatItems(items) {
   return items
-    .map((it) => `${it.id} | ${it.domain} | ${it.source} [T${it.tier}] | ${it.title} | ${it.snippet}`)
+    .map((it) => `${it.id} | ${it.domain}${it.market ? `/${it.market}` : ""} | ${it.source} [T${it.tier}] | ${it.title} | ${it.snippet}`)
     .join("\n");
 }
 
@@ -55,6 +55,9 @@ function pickCandidates(clusters, domain, n) {
   const chosen = new Set(pool.slice(0, n));
   for (const c of pool.filter((c) => c.coverage === "narrow" && c.scores.importance >= 3).slice(0, 4)) chosen.add(c);
   for (const c of pool.filter((c) => c.positive).slice(0, 4)) chosen.add(c);
+  // Tracked-market clusters are judged within their market, so keep the best
+  // few of each even if they'd fall below the general cut.
+  for (const m of ["ip", "real_estate"]) for (const c of pool.filter((c) => c.markets.includes(m)).slice(0, 6)) chosen.add(c);
   return [...chosen];
 }
 
@@ -67,7 +70,7 @@ function formatCandidates(candidates, itemsById) {
         .filter(Boolean)
         .map((it) => `   - ${it.source} [T${it.tier}] ${it.published ?? "undated"}\n     ${it.title}\n     ${it.snippet}\n     ${it.link}`)
         .join("\n");
-      return `C${i + 1}. ${c.headline}  (${c.category}; coverage=${c.coverage}; positive=${c.positive}; imp=${s.importance} impact=${s.impact} nov=${s.novelty} cred=${s.credibility} long=${s.long_term})\n   triage note: ${c.reason}\n${sources}`;
+      return `C${i + 1}. ${c.headline}  (${c.category}; markets=${c.markets.join(",") || "none"}; coverage=${c.coverage}; positive=${c.positive}; imp=${s.importance} impact=${s.impact} nov=${s.novelty} cred=${s.credibility} long=${s.long_term})\n   triage note: ${c.reason}\n${sources}`;
     })
     .join("\n\n");
 }
@@ -86,6 +89,8 @@ READER INTERESTS (weights nudge selection; they never override importance)
 ${formatInterests(config.interests)}
 Mark up to ${Math.ceil(config.surprise_me / 2)} stories as outside_interests.
 
+TRACKED MARKETS: ${Object.entries(config.markets ?? {}).map(([id, name]) => `${id} (${name})`).join(", ")}. Aim for up to ${config.stories_per_market ?? 3} stories per market across the world and tech briefings; include market stories that belong to your domain.
+
 RECENT STORIES FROM PREVIOUS BRIEFINGS
 ${history.length ? history.map((h) => `${h.date}: ${h.headline} - ${h.now ?? ""}`).join("\n") : "(none yet - this is the first briefing)"}
 
@@ -96,7 +101,7 @@ Use story ids ${prefix}1, ${prefix}2, ... in order of importance.`;
 
   const out = await structured({
     label: `${domain} agent`,
-    system: `${CHARTER}\n\n${task}\n\n${DOMAIN_OUTPUT_RULES}`,
+    system: `${CHARTER}\n\n${MARKETS_RULES}\n\n${task}\n\n${DOMAIN_OUTPUT_RULES}`,
     user,
     schema: DOMAIN_SCHEMA,
     effort: "high",
@@ -122,7 +127,7 @@ export async function runPipeline({ ingestOnly = false, log = console.log } = {}
   log("2/4 Triage: clustering duplicates and scoring...");
   const triage = await structured({
     label: "triage",
-    system: `${CHARTER}\n\n${TRIAGE_TASK}`,
+    system: `${CHARTER}\n\n${MARKETS_RULES}\n\n${TRIAGE_TASK}`,
     user: `Today is ${date}. ${items.length} feed items:\n\n${formatItems(items)}`,
     schema: TRIAGE_SCHEMA,
     effort: "medium",
@@ -144,14 +149,14 @@ export async function runPipeline({ ingestOnly = false, log = console.log } = {}
   log("4/4 Signal detector looking across stories...");
   const signal = await structured({
     label: "signals",
-    system: `${CHARTER}\n\n${SIGNAL_TASK}`,
+    system: `${CHARTER}\n\n${MARKETS_RULES}\n\n${SIGNAL_TASK}`,
     user: `Today is ${date}.
 
 TODAY'S STORIES
-${JSON.stringify(stories.map(({ id, domain, headline, categories, what_happened, why_it_matters, whats_new }) => ({ id, domain, headline, categories, what_happened, why_it_matters, whats_new })), null, 1)}
+${JSON.stringify(stories.map(({ id, domain, headline, categories, markets, what_happened, why_it_matters, whats_new }) => ({ id, domain, headline, categories, markets, what_happened, why_it_matters, whats_new })), null, 1)}
 
 CURRENT TREND DASHBOARD
-${JSON.stringify(loadTrends().map(({ name, domain, status, direction, summary, recent_developments, first_detected }) => ({ name, domain, status, direction, summary, recent_developments, first_detected })), null, 1)}`,
+${JSON.stringify(loadTrends().map(({ name, domain, markets, status, direction, summary, recent_developments, first_detected }) => ({ name, domain, markets, status, direction, summary, recent_developments, first_detected })), null, 1)}`,
     schema: SIGNAL_SCHEMA,
     effort: "high",
   });

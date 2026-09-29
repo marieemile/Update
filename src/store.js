@@ -65,8 +65,8 @@ export function publishStatic() {
   const dates = listBriefingDates();
   for (const d of dates) fs.copyFileSync(path.join(BRIEFINGS, `${d}.json`), path.join(STATIC_DIR, `${d}.json`));
   writeJson(path.join(STATIC_DIR, "index.json"), dates);
-  const { interests, surprise_me } = loadConfig();
-  writeJson(path.join(STATIC_DIR, "config.json"), { interests, surprise_me });
+  const { interests, surprise_me, markets } = loadConfig();
+  writeJson(path.join(STATIC_DIR, "config.json"), { interests, surprise_me, markets });
 }
 
 // Headlines from the last few briefings, so agents can spot continuing stories

@@ -59,6 +59,12 @@ function badge(s) {
   return `<span class="chip soft">${ms("insights")}${s.signal_score}/25</span>`;
 }
 
+// Tracked markets. Names come from config.json; icons/colours live here.
+const MARKET_STYLE = { ip: { icon: "copyright", short: "IP" }, real_estate: { icon: "apartment", short: "Real Estate" } };
+const marketName = (id) => state.config?.markets?.[id] ?? id;
+const marketIds = () => Object.keys(state.config?.markets ?? MARKET_STYLE);
+const marketChips = (s, cls = "") => (s.markets ?? []).map((m) => `<span class="chip mk ${m} ${cls}">${ms(MARKET_STYLE[m]?.icon ?? "sell")}${esc(MARKET_STYLE[m]?.short ?? m)}</span>`).join("");
+
 const stories = (f = () => true) => (state.briefing?.stories ?? []).filter(f);
 const byId = (id) => state.briefing?.stories.find((s) => s.id === id);
 const inMode = (s) => state.mode === "fifteen" || s.level === "essential";
@@ -70,7 +76,7 @@ function heroCard(s) {
   <a class="hero" href="#/story/${s.id}">
     <div class="media">${media(s)}</div>
     <div class="hero-body">
-      <div class="hero-tags"><span class="chip ${s.domain}">${esc(topCategory(s).toUpperCase())}</span>
+      <div class="hero-tags"><span class="tile-tags"><span class="chip ${s.domain}">${esc(topCategory(s).toUpperCase())}</span>${marketChips(s)}</span>
         ${s.positive ? `<span class="chip glass">${ms("trending_up")}Progress</span>` : s.under_the_radar ? `<span class="chip glass">${ms("visibility")}Under the radar</span>` : `<span class="chip glass">${ms("bolt")}Essential</span>`}</div>
       <h3>${esc(s.headline)}</h3>
       <div class="hero-foot">
@@ -81,23 +87,51 @@ function heroCard(s) {
   </a>`;
 }
 
-function tile(s, { timeRight = false } = {}) {
+// First sentence of what_happened: the 5-minute "gist".
+const gist = (s) => (s.what_happened.match(/^.*?[.!?](?=\s+[A-Z(“"']|$)/)?.[0] ?? s.what_happened).trim();
+
+// 5-min tiles carry a one-sentence gist; 15-min tiles carry the full write-up.
+function tile(s, { timeRight = false, depth = state.mode } = {}) {
   const src = lead(s);
+  const rich = depth === "fifteen";
   return `
-  <a class="card tile" href="#/story/${s.id}">
+  <a class="card tile ${rich ? "rich" : ""}" href="#/story/${s.id}">
     <div class="thumb">${media(s)}<span class="tag">${s.domain}</span></div>
     <div class="tile-body">
-      <div class="tile-top"><span class="cat ${s.domain}">${esc(s.categories.join(" · "))}</span>${timeRight ? "" : badge(s)}</div>
+      <div class="tile-top"><span class="tile-tags">${marketChips(s, "sm")}<span class="cat ${s.domain}">${esc(s.categories.join(" · "))}</span></span>${timeRight ? "" : badge(s)}</div>
       <h3>${esc(s.headline)}</h3>
+      ${rich ? "" : `<p class="gist">${esc(gist(s))}</p>`}
       <div class="src-row">${avatar(src.name)}<b>${esc(src.name)}</b>${verified(src.tier)}
         ${s.sources.length > 1 ? `<span>+${s.sources.length - 1}</span>` : ""}<span class="time">${esc(ago(s.published))}</span></div>
     </div>
+    ${rich ? `<div class="tile-more">
+      <p>${esc(s.what_happened)}</p>
+      <div class="tile-why"><b>Why it matters</b>${esc(s.why_it_matters)}</div>
+      <div class="tile-now"><b>What changed</b>${esc(s.whats_new.now)}</div>
+    </div>` : ""}
   </a>`;
 }
 const tileList = (list, opts) => (list.length ? `<div class="tiles">${list.map((s) => tile(s, opts)).join("")}</div>` : `<div class="card empty-note">Nothing here today.</div>`);
 
 function sectionHead(title, { icon, live, sub, action } = {}) {
   return `<div class="section-head"><div><h2>${live ? `<span class="live-dot"></span>` : ""}${icon ? ms(icon) : ""}${esc(title)}</h2>${sub ? `<p>${esc(sub)}</p>` : ""}</div>${action ?? ""}</div>`;
+}
+
+// Large filter cards for the tracked markets, shown on the Briefing tab.
+function marketCards() {
+  const ids = marketIds();
+  if (!ids.length) return "";
+  return `<section class="section">${sectionHead("Your markets", { icon: "bookmark_star", sub: "Tracked closely in every briefing" })}
+    <div class="market-grid">${ids.map((m) => {
+      const list = stories((s) => (s.markets ?? []).includes(m)).sort((a, b) => b.signal_score - a.signal_score);
+      const st = MARKET_STYLE[m] ?? { icon: "sell" };
+      return `<a class="market-card ${m}" href="#/market/${m}">
+        <span class="market-icon">${ms(st.icon)}</span>
+        <b>${esc(marketName(m))}</b>
+        <span class="market-count">${list.length ? `${list.length} ${list.length === 1 ? "story" : "stories"} today` : "Quiet today"}</span>
+        ${list[0] ? `<span class="market-lead">${esc(list[0].headline)}</span>` : ""}
+        <span class="market-go">${ms("arrow_forward")}</span></a>`;
+    }).join("")}</div></section>`;
 }
 
 function watchlist() {
@@ -138,19 +172,26 @@ const VIEWS = {
       ["tech", "Tech", (s) => s.domain === "tech"],
       ["positive", "Progress", (s) => s.positive],
       ["missed", "Missed", (s) => s.under_the_radar || s.outside_interests],
+      ...marketIds().map((m) => [`m:${m}`, MARKET_STYLE[m]?.short ?? marketName(m), (s) => (s.markets ?? []).includes(m)]),
     ];
     const [, , active] = filters.find(([k]) => k === state.filter) ?? filters[0];
-    const list = visible.filter(active).sort((a, b) => b.signal_score - a.signal_score);
+    // Market pills show every story for that market, whatever the length mode.
+    const base = state.filter.startsWith("m:") ? stories() : visible;
+    const list = base.filter(active).sort((a, b) => b.signal_score - a.signal_score);
     const sourceNames = [...new Set(b.stories.flatMap((s) => s.sources.map((x) => x.name)))];
-    const minutes = state.mode === "five" ? 5 : 15;
-    const sig = b.signals[0];
+    // Read time from the text this mode actually shows (~230 words per minute).
+    const words = (t) => (t.match(/\S+/g) ?? []).length;
+    const shownWords = words(b.top_line) + visible.reduce((n, s) => n + words(s.headline) +
+      (state.mode === "five" ? words(gist(s)) : words(s.what_happened) + words(s.why_it_matters) + words(s.whats_new.now)), 0);
+    const minutes = Math.max(1, Math.round(shownWords / 230));
+    const sigs = b.signals.slice(0, state.mode === "five" ? 1 : b.signals.length);
 
     return `<div class="wrap">
       ${progressCard()}
       <section class="pad"><div class="card capsule">
         <div class="capsule-top">
           <div><span class="chip status-chip"><i></i>${esc(fmtDate(b.date, { weekday: "long" }))} briefing</span>
-            <span class="meta">${ms("schedule")}${minutes} min read</span></div>
+            <span class="meta">${ms("schedule")}≈${minutes} min read</span></div>
           <div class="seg" role="group" aria-label="Briefing length">
             <button data-mode="five" class="${state.mode === "five" ? "on" : ""}">5 min</button>
             <button data-mode="fifteen" class="${state.mode === "fifteen" ? "on" : ""}">15 min</button></div>
@@ -161,6 +202,8 @@ const VIEWS = {
           <span>${visible.length} stories · ${b.stats.clusters} clusters reviewed</span>
         </div>
       </div></section>
+
+      ${marketCards()}
 
       <section class="section">
         ${sectionHead("Essential intelligence", { live: true, action: `<a class="link" href="#/radar">View all</a>` })}
@@ -176,9 +219,9 @@ const VIEWS = {
           <div style="margin-top:12px"><button class="btn-secondary" data-mode="fifteen">${ms("add")}Show the 15-minute briefing</button></div></div>`}
       </section>
 
-      ${sig ? `<section class="section pad"><a class="banner" href="#/signal-detail/0">
-        <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>Something bigger may be happening. See the evidence.</span></div>
-        <span class="round">${ms("arrow_forward")}</span></a></section>` : ""}
+      ${sigs.length ? `<section class="section pad banners">${sigs.map((sig, i) => `<a class="banner" href="#/signal-detail/${i}">
+        <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>${state.mode === "five" ? "Something bigger may be happening. See the evidence." : esc(sig.what)}</span></div>
+        <span class="round">${ms("arrow_forward")}</span></a>`).join("")}</section>` : ""}
 
       ${watchlist()}
     </div>`;
@@ -189,14 +232,15 @@ const VIEWS = {
     const q = state.query.trim().toLowerCase();
     const cats = [...new Set(b.stories.map(topCategory))].slice(0, 8);
     const filterFn = (s) =>
-      (state.radarFilter === "all" || s.domain === state.radarFilter || topCategory(s) === state.radarFilter) &&
+      (state.radarFilter === "all" || s.domain === state.radarFilter || topCategory(s) === state.radarFilter ||
+        (state.radarFilter.startsWith("m:") && (s.markets ?? []).includes(state.radarFilter.slice(2)))) &&
       (!q || `${s.headline} ${s.categories.join(" ")} ${s.what_happened} ${s.sources.map((x) => x.name).join(" ")}`.toLowerCase().includes(q));
     const list = stories(filterFn).sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
     return `<div class="wrap">
       <label class="search">${ms("search")}<span class="sr">Search stories</span>
         <input id="search" type="search" placeholder="Search stories, sources, topics" value="${esc(state.query)}" autocomplete="off" /></label>
       <div style="height:14px"></div>
-      <div class="pills">${[["all", "All signals"], ["world", "World"], ["tech", "Tech"], ...cats.map((c) => [c, c])]
+      <div class="pills">${[["all", "All signals"], ["world", "World"], ["tech", "Tech"], ...marketIds().map((m) => [`m:${m}`, MARKET_STYLE[m]?.short ?? marketName(m)]), ...cats.map((c) => [c, c])]
         .map(([k, l]) => `<button class="pill ${state.radarFilter === k ? "on" : ""}" data-radar="${esc(k)}">${esc(l)}</button>`).join("")}</div>
 
       <section class="section">
@@ -219,20 +263,11 @@ const VIEWS = {
 
   analysis() {
     const t = state.briefing.trends;
-    const card = (x) => `
-      <div class="card trend">
-        <div class="trend-top"><span class="chip ${x.status === "accelerating" ? "solid" : x.status === "cooling" ? "muted" : "soft"}">${esc(x.status)}</span>
-          <span class="dir ${x.direction}" aria-label="${x.direction}">${ms({ up: "north_east", steady: "east", down: "south_east" }[x.direction])}</span></div>
-        <h3>${esc(x.name)}</h3><p>${esc(x.summary)}</p>
-        ${x.recent_developments.length ? `<ul>${x.recent_developments.slice(0, 3).map((d) => `<li>${esc(d)}</li>`).join("")}</ul>` : ""}
-        <p><b>Watch:</b> ${esc(x.what_to_watch)}</p>
-        <div class="since"><span>Tracked since ${esc(fmtDate(x.first_detected, { month: "short", day: "numeric" }))}</span><span>${x.evidence_story_ids.length} stories today</span></div>
-      </div>`;
     const group = (d) => t.filter((x) => x.domain === d);
     return `<div class="wrap">
       ${sectionHead("What's changing", { icon: "monitoring", sub: "Descriptive trend states built from the stories. Not predictions." })}
-      ${sectionHead("World", {})}<div class="trend-grid">${group("world").map(card).join("") || `<div class="card empty-note">No world trends yet.</div>`}</div>
-      <div class="section">${sectionHead("Technology", {})}<div class="trend-grid">${group("tech").map(card).join("") || `<div class="card empty-note">No tech trends yet.</div>`}</div></div>
+      ${sectionHead("World", {})}<div class="trend-grid">${group("world").map(trendCard).join("") || `<div class="card empty-note">No world trends yet.</div>`}</div>
+      <div class="section">${sectionHead("Technology", {})}<div class="trend-grid">${group("tech").map(trendCard).join("") || `<div class="card empty-note">No tech trends yet.</div>`}</div></div>
       ${watchlist()}
     </div>`;
   },
@@ -293,7 +328,7 @@ const VIEWS = {
     return `<div class="article-wrap">
       <div class="article-hero"><div class="media">${media(s)}</div>
         <div class="article-hero-body">
-          <div class="tags"><span class="chip ${s.domain}">${esc(s.categories[0] ?? s.domain)}</span>${s.categories.slice(1).map((c) => `<span class="chip glass">${esc(c)}</span>`).join("")}</div>
+          <div class="tags">${marketChips(s)}<span class="chip ${s.domain}">${esc(s.categories[0] ?? s.domain)}</span>${s.categories.slice(1).map((c) => `<span class="chip glass">${esc(c)}</span>`).join("")}</div>
           <h1>${esc(s.headline)}</h1>
           <div class="sub"><span><b>Signal ${s.signal_score}/25</b></span>${s.published ? `<span>${ago(s.published)}</span>` : ""}<span>${ms("newsmode")} ${s.sources.length} source${s.sources.length > 1 ? "s" : ""}</span></div>
         </div></div>
@@ -347,6 +382,30 @@ const VIEWS = {
     </div>`;
   },
 
+  market(id) {
+    if (!state.config?.markets?.[id] && !MARKET_STYLE[id]) return `<div class="wrap"><div class="card empty-note">Unknown market.</div></div>`;
+    const b = state.briefing;
+    const inMarket = (x) => (x.markets ?? []).includes(id);
+    const list = stories(inMarket).sort((a, b) => b.signal_score - a.signal_score);
+    const ids = new Set(list.map((s) => s.id));
+    const sigs = b.signals.map((sig, i) => ({ sig, i })).filter(({ sig }) => sig.evidence_story_ids.some((x) => ids.has(x)));
+    const trends = b.trends.filter(inMarket);
+    const st = MARKET_STYLE[id] ?? { icon: "sell" };
+    return `<div class="wrap">
+      <section class="pad"><div class="market-hero ${id}">
+        <span class="market-icon">${ms(st.icon)}</span>
+        <div><small>Tracked market</small><h1>${esc(marketName(id))}</h1>
+          <span>${list.length} ${list.length === 1 ? "story" : "stories"} today · ${trends.length} tracked ${trends.length === 1 ? "trend" : "trends"}</span></div>
+      </div></section>
+      <section class="section">${sectionHead("Today", { sub: "Ranked by importance within this market" })}
+        ${list.length ? tileList(list) : `<div class="card empty-note">No significant ${esc(marketName(id))} news in today's sources.</div>`}</section>
+      ${sigs.length ? `<section class="section">${sectionHead("Related signals", { icon: "radar" })}<div class="signal-row">${sigs.map(({ sig, i }) => `
+        <a class="card signal-card" href="#/signal-detail/${i}"><div class="row"><span class="chip solid">Signal</span><span class="count">${ms("trending_up")}${sig.evidence_story_ids.length} stories</span></div>
+          <h3>${esc(sig.title)}</h3><p>${esc(sig.what)}</p></a>`).join("")}</div></section>` : ""}
+      ${trends.length ? `<section class="section">${sectionHead("What's changing", { icon: "monitoring" })}<div class="trend-grid">${trends.map(trendCard).join("")}</div></section>` : ""}
+    </div>`;
+  },
+
   signalDetail(i) {
     const sig = state.briefing.signals[Number(i)];
     if (!sig) return `<div class="wrap"><div class="card empty-note">Signal not found.</div></div>`;
@@ -366,6 +425,18 @@ const VIEWS = {
     </div>`;
   },
 };
+
+function trendCard(x) {
+  return `
+      <div class="card trend">
+        <div class="trend-top"><span class="chip ${x.status === "accelerating" ? "solid" : x.status === "cooling" ? "muted" : "soft"}">${esc(x.status)}</span>
+          <span class="dir ${x.direction}" aria-label="${x.direction}">${ms({ up: "north_east", steady: "east", down: "south_east" }[x.direction])}</span></div>
+        <h3>${esc(x.name)}</h3>${(x.markets ?? []).length ? `<div class="tile-tags">${marketChips(x, "sm")}</div>` : ""}<p>${esc(x.summary)}</p>
+        ${x.recent_developments.length ? `<ul>${x.recent_developments.slice(0, 3).map((d) => `<li>${esc(d)}</li>`).join("")}</ul>` : ""}
+        <p><b>Watch:</b> ${esc(x.what_to_watch)}</p>
+        <div class="since"><span>Tracked since ${esc(fmtDate(x.first_detected, { month: "short", day: "numeric" }))}</span><span>${x.evidence_story_ids.length} stories today</span></div>
+      </div>`;
+}
 
 function researchBlock(dd) {
   if (dd.error) return `<div class="card research"><p class="error-text">Deep research failed: ${esc(dd.error)}</p></div>`;
@@ -405,11 +476,11 @@ function route() {
 function render({ keepScroll = false } = {}) {
   const { name, arg } = route();
   const detail = name === "story" || name === "signal-detail";
-  const navKey = detail ? (name === "story" ? "briefing" : "radar") : name;
+  const navKey = detail ? (name === "story" ? "briefing" : "radar") : name === "market" ? "briefing" : name;
   document.querySelectorAll("[data-nav]").forEach((nav) => {
     nav.innerHTML = NAV.map(([k, icon, label]) => `<a href="#/${k}" class="${k === navKey ? "on" : ""}" ${k === navKey ? 'aria-current="page"' : ""}>${ms(icon, k === navKey ? "fill" : "")}<span>${label}</span></a>`).join("");
   });
-  $("#section-label").textContent = SECTION[name] ?? "Briefing";
+  $("#section-label").textContent = name === "market" ? (MARKET_STYLE[arg]?.short ?? marketName(arg)) : SECTION[name] ?? "Briefing";
   $("#back").hidden = !detail;
   $("#brand").hidden = detail;
   $("#topbar-title").hidden = !detail;
