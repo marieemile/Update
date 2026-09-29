@@ -1,0 +1,25 @@
+{
+  "lookback_hours": 30,
+  "max_items_per_source": 25,
+  "candidates_per_domain": 18,
+  "interests": {
+    "technology": {
+      "AI": 10,
+      "Product": 8,
+      "Startups": 8,
+      "Robotics": 6,
+      "Space": 6,
+      "Chips": 4,
+      "Quantum": 3
+    },
+    "world": {
+      "Geopolitics": 8,
+      "Economy": 6,
+      "Climate": 6,
+      "Science": 4,
+      "Society": 4
+    }
+  },
+  "surprise_me": 2,
+  "port": 4747
+}
