@@ -7,7 +7,9 @@
   "scripts": {
     "brief": "node src/run.js",
     "ingest": "node src/run.js --ingest-only",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "chat:fetch": "node src/chat-mode.js fetch",
+    "chat:finish": "node src/chat-mode.js finish"
   },
   "engines": {
     "node": ">=20"

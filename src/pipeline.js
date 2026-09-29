@@ -25,7 +25,7 @@ async function ogImage(url) {
   }
 }
 
-async function enrich(stories, items) {
+export async function enrich(stories, items) {
   const byUrl = new Map(items.map((it) => [normKey(it.link), it]));
   await Promise.all(
     stories.map(async (s) => {

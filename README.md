@@ -54,6 +54,16 @@ npm run brief        # full pipeline, writes data/briefings/<today>.json
 npm run ingest       # fetch sources only (no API calls), useful for testing feeds
 ```
 
+### Without an API key ("chat mode")
+
+Claude can act as the agents from inside a Claude Code or Claude desktop chat:
+
+```bash
+npm run chat:fetch    # fetch sources -> data/inbox/<date>-items.json
+# ask Claude: "write today's briefing draft" -> data/inbox/<date>-draft.json
+npm run chat:finish   # attach images/times, merge trends, save the briefing
+```
+
 ## Configuration
 
 - **`config.json`**: interest weights (these nudge selection but never override importance), the number of "surprise me" stories outside your interests, the lookback window and the port.
