@@ -122,7 +122,7 @@ function emptyView() {
     <img src="/logo.svg" alt="" width="64" height="64" />
     <h1>No briefing yet</h1>
     <p>Pulse reads about 35 sources, groups duplicate coverage into single stories, scores them for importance rather than popularity, and writes up what's worth knowing. It takes a few minutes.</p>
-    <button class="btn-primary" style="max-width:320px" data-action="refresh" ${refresh.active && !refresh.error ? "disabled" : ""}>${ms("bolt")}Generate today's briefing</button>
+    ${state.static ? `<p>No briefing has been published yet.</p>` : ""}<button ${state.static ? "hidden" : ""} class="btn-primary" style="max-width:320px" data-action="refresh" ${refresh.active && !refresh.error ? "disabled" : ""}>${ms("bolt")}Generate today's briefing</button>
   </div></div>`;
 }
 
@@ -246,7 +246,7 @@ const VIEWS = {
     const slider = (area, topic, w) => `
       <div class="card stream"><span class="stream-icon">${ms(ICONS[topic] ?? "tune")}</span>
         <div class="stream-body"><b>${esc(topic)} <output>${w}/10</output></b>
-          <input type="range" min="0" max="10" step="1" value="${w}" style="--pct:${w * 10}%" data-area="${area}" data-topic="${esc(topic)}" aria-label="${esc(topic)} interest weight" /></div></div>`;
+          <input type="range" min="0" max="10" step="1" value="${w}" style="--pct:${w * 10}%" ${state.static ? "disabled" : ""} data-area="${area}" data-topic="${esc(topic)}" aria-label="${esc(topic)} interest weight" /></div></div>`;
     return `<div class="wrap">
       <section class="pad"><div class="card engine">
         <img src="/logo.svg" alt="" width="60" height="60" />
@@ -274,8 +274,9 @@ const VIEWS = {
       ${state.dates.length > 1 ? `<section class="section">${sectionHead("Past briefings", { icon: "history" })}
         <div class="date-list">${state.dates.map((d) => `<button class="pill ${d === b?.date ? "on" : ""}" data-date="${d}">${esc(fmtDate(d, { weekday: "short", month: "short", day: "numeric" }))}</button>`).join("")}</div></section>` : ""}
 
-      <section class="section pad"><button class="btn-primary" id="save-interests" disabled>${ms("tune")}Save interests</button>
-        <p class="meta" style="justify-content:center;margin-top:10px;display:flex">Applies from the next briefing.</p></section>
+      ${state.static ? `<section class="section pad"><p class="meta" style="justify-content:center;display:flex;text-align:center">Interest weights can be edited in the local app. This published copy is read-only.</p></section>`
+        : `<section class="section pad"><button class="btn-primary" id="save-interests" disabled>${ms("tune")}Save interests</button>
+        <p class="meta" style="justify-content:center;margin-top:10px;display:flex">Applies from the next briefing.</p></section>`}
     </div>`;
   },
 
@@ -339,7 +340,7 @@ const VIEWS = {
         <div id="research">${dd ? researchBlock(dd) : ""}</div>
         <div style="height:90px"></div>
       </div>
-      ${dd?.markdown ? "" : `<button class="float-pill ${dd?.loading ? "busy" : ""}" data-explain="${s.id}">
+      ${dd?.markdown || state.static ? "" : `<button class="float-pill ${dd?.loading ? "busy" : ""}" data-explain="${s.id}">
         <span class="ms eq" aria-hidden="true">graphic_eq</span>
         <div><b>${dd?.loading ? "Researching across sources…" : "Explain this to me"}</b><small>${dd?.loading ? "Usually one to three minutes" : "Deep research with web search"}</small></div>
         <span class="round">${ms(dd?.loading ? "progress_activity" : "arrow_forward")}</span></button>`}
@@ -416,7 +417,7 @@ function render({ keepScroll = false } = {}) {
   $("#search-btn").hidden = detail;
   const story = name === "story" ? byId(arg) : null;
   $("#share-btn").hidden = !story;
-  $("#refresh-btn").hidden = detail;
+  $("#refresh-btn").hidden = detail || state.static;
   $("#refresh-btn").classList.toggle("spinning", refresh.active && !refresh.error);
 
   const y = window.scrollY;
@@ -444,11 +445,29 @@ function toast(text) {
 }
 
 // ---------- data loading ----------
+// With the local server, data comes from /api/*. On a static host (Vercel)
+// there is no server, so read the copies published under /briefings/.
+async function detectStatic() {
+  if (state.static !== undefined) return state.static;
+  try {
+    const dates = await api("/api/dates");
+    state.static = !Array.isArray(dates);
+  } catch {
+    state.static = true;
+  }
+  return state.static;
+}
+
 async function load(date) {
-  const [dates, config] = await Promise.all([api("/api/dates"), api("/api/config")]);
+  const isStatic = await detectStatic();
+  const noStore = { cache: "no-store" };
+  const [dates, config] = isStatic
+    ? await Promise.all([api("/briefings/index.json", noStore).catch(() => []), api("/briefings/config.json", noStore).catch(() => null)])
+    : await Promise.all([api("/api/dates"), api("/api/config")]);
   state.dates = dates;
   state.config = config;
-  state.briefing = dates.length ? await api(`/api/briefing?date=${date || dates[0]}`) : null;
+  const d = date || dates[0];
+  state.briefing = !d ? null : isStatic ? await api(`/briefings/${d}.json`, noStore) : await api(`/api/briefing?date=${d}`);
   render();
 }
 
@@ -553,4 +572,4 @@ document.addEventListener("input", (e) => {
 window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
 
 load().catch((err) => (view.innerHTML = `<div class="card empty-note error-text">Could not load: ${esc(err.message)}</div>`));
-api("/api/status").then((st) => { if (st.running) { refresh.active = true; startRefresh(); } }).catch(() => {});
+detectStatic().then((isStatic) => !isStatic && api("/api/status").then((st) => { if (st.running) { refresh.active = true; startRefresh(); } })).catch(() => {});

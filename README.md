@@ -64,6 +64,10 @@ npm run chat:fetch    # fetch sources -> data/inbox/<date>-items.json
 npm run chat:finish   # attach images/times, merge trends, save the briefing
 ```
 
+## Publishing (Vercel)
+
+The live site is a static deployment of `public/` (see `vercel.json`); `src/server.js` doesn't run there. Every saved briefing is also copied to `public/briefings/` (`<date>.json`, `index.json`, `config.json`). When `/api/*` isn't available, the app reads those files and runs read-only: no Refresh, deep research or interest editing. Committing and pushing `public/briefings/` to `main` publishes a new briefing; the morning scheduled task does this automatically.
+
 ## Configuration
 
 - **`config.json`**: interest weights (these nudge selection but never override importance), the number of "surprise me" stories outside your interests, the lookback window and the port.

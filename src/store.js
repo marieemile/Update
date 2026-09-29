@@ -54,6 +54,19 @@ export function loadBriefing(date) {
 
 export function saveBriefing(briefing) {
   writeJson(path.join(BRIEFINGS, `${briefing.date}.json`), briefing);
+  publishStatic();
+}
+
+// Static copies under public/briefings/ let the web app run on a static host
+// (Vercel) with no server: the UI falls back to these when /api/* is absent.
+const STATIC_DIR = path.join(root, "public", "briefings");
+export function publishStatic() {
+  fs.mkdirSync(STATIC_DIR, { recursive: true });
+  const dates = listBriefingDates();
+  for (const d of dates) fs.copyFileSync(path.join(BRIEFINGS, `${d}.json`), path.join(STATIC_DIR, `${d}.json`));
+  writeJson(path.join(STATIC_DIR, "index.json"), dates);
+  const { interests, surprise_me } = loadConfig();
+  writeJson(path.join(STATIC_DIR, "config.json"), { interests, surprise_me });
 }
 
 // Headlines from the last few briefings, so agents can spot continuing stories
