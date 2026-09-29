@@ -70,8 +70,8 @@ npm run chat:finish   # attach images/times, merge trends, save the briefing
 
 ## 5- and 15-minute modes
 
-- **5 min:** the essential stories, each with a one-sentence summary, plus the top signal.
-- **15 min:** every story with the full write-up (what happened, why it matters, what changed) and all signals.
+- **5 min:** a text-first, numbered list of the essential stories (headline plus a one-sentence summary), the market cards, the top signal, the top three watchlist items, and a button to open the full edition. No image carousel.
+- **15 min:** the full edition: the image carousel, filter pills, every story with the full write-up (what happened, why it matters, what changed), all signals and the full watchlist.
 
 The read-time label is calculated from the words each mode actually shows.
 

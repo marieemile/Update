@@ -294,6 +294,15 @@ img { display: block; }
 .tile-now { background: color-mix(in srgb, var(--primary-bright) 7%, var(--surface)); }
 .tile-why b, .tile-now b { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); margin-bottom: 2px; }
 .banners { display: grid; gap: 12px; }
+.five-list { list-style: none; margin: 0; padding: 0 var(--margin); display: grid; gap: 10px; }
+.five-item { display: flex; gap: 14px; padding: 14px 16px; align-items: flex-start; }
+.five-num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--primary-bright); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 14px; margin-top: 2px; }
+.five-body { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.five-body h3 { margin: 0; font-size: 16px; line-height: 21px; font-weight: 700; letter-spacing: -0.01em; }
+.five-body p { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-2); }
+.dom-chip { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.dom-chip.world { color: var(--world); }
+.dom-chip.tech { color: var(--tech); }
 .src-row { display: flex; align-items: center; gap: 6px; font-size: 11px; line-height: 14px; font-weight: 600; letter-spacing: 0.02em; color: var(--ink-2); min-width: 0; }
 .src-row b { color: var(--ink); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .src-row .ms.verified { font-size: 13px; }
@@ -509,6 +518,7 @@ input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius
   .tiles, .trend-grid { grid-template-columns: 1fr 1fr; }
   .watch-list { grid-template-columns: 1fr 1fr; }
   .market-card { min-height: 190px; padding: 20px; }
+  .five-list { grid-template-columns: 1fr 1fr; }
   .signal-card { flex-basis: 360px; }
   .changed { grid-template-columns: 1fr 1fr; }
   .article-hero { margin-top: -16px; border-radius: 0 0 var(--r-xl) var(--r-xl); }

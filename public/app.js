@@ -117,6 +117,21 @@ function sectionHead(title, { icon, live, sub, action } = {}) {
   return `<div class="section-head"><div><h2>${live ? `<span class="live-dot"></span>` : ""}${icon ? ms(icon) : ""}${esc(title)}</h2>${sub ? `<p>${esc(sub)}</p>` : ""}</div>${action ?? ""}</div>`;
 }
 
+// The 5-minute edition: a numbered, text-first list of the essential stories.
+function essentialsList(list) {
+  return `<ol class="five-list">${list.map((s, i) => {
+    const src = lead(s);
+    return `<li><a class="card five-item" href="#/story/${s.id}">
+      <span class="five-num">${i + 1}</span>
+      <div class="five-body">
+        <div class="tile-tags"><span class="dom-chip ${s.domain}">${s.domain === "world" ? "World" : "Tech"}</span>${marketChips(s, "sm")}${s.positive ? `<span class="chip good sm">${ms("trending_up")}Progress</span>` : ""}</div>
+        <h3>${esc(s.headline)}</h3>
+        <p>${esc(gist(s))}</p>
+        <div class="src-row">${avatar(src.name)}<b>${esc(src.name)}</b>${verified(src.tier)}${s.sources.length > 1 ? `<span>+${s.sources.length - 1}</span>` : ""}<span class="time">${esc(ago(s.published))}</span></div>
+      </div></a></li>`;
+  }).join("")}</ol>`;
+}
+
 // Large filter cards for the tracked markets, shown on the Briefing tab.
 function marketCards() {
   const ids = marketIds();
@@ -134,8 +149,8 @@ function marketCards() {
     }).join("")}</div></section>`;
 }
 
-function watchlist() {
-  const w = state.briefing.watchlist;
+function watchlist(limit) {
+  const w = state.briefing.watchlist.slice(0, limit ?? undefined);
   if (!w.length) return "";
   return `<section class="section">${sectionHead("Watchlist", { icon: "visibility", sub: "Worth monitoring over the coming days" })}
     <div class="watch-list">${w.map((x) => `<div class="card watch-item">${ms("radar")}<div><b>${esc(x.item)}</b><span>${esc(x.why)}</span></div></div>`).join("")}</div></section>`;
@@ -186,9 +201,7 @@ const VIEWS = {
     const minutes = Math.max(1, Math.round(shownWords / 230));
     const sigs = b.signals.slice(0, state.mode === "five" ? 1 : b.signals.length);
 
-    return `<div class="wrap">
-      ${progressCard()}
-      <section class="pad"><div class="card capsule">
+    const capsule = `<section class="pad"><div class="card capsule">
         <div class="capsule-top">
           <div><span class="chip status-chip"><i></i>${esc(fmtDate(b.date, { weekday: "long" }))} briefing</span>
             <span class="meta">${ms("schedule")}≈${minutes} min read</span></div>
@@ -201,7 +214,28 @@ const VIEWS = {
           <span><span class="avatars">${sourceNames.slice(0, 3).map((n) => avatar(n)).join("")}</span>Synthesized from ${b.stats.items} items across ${b.stats.sources_ok} sources</span>
           <span>${visible.length} stories · ${b.stats.clusters} clusters reviewed</span>
         </div>
-      </div></section>
+      </div></section>`;
+
+    // 5-minute edition: text-first essentials, markets, one signal, short watchlist.
+    if (state.mode === "five") {
+      const essentials = stories((s) => s.level === "essential").sort((a, b) => (a.domain === b.domain ? b.signal_score - a.signal_score : a.domain === "world" ? -1 : 1));
+      return `<div class="wrap">
+        ${progressCard()}
+        ${capsule}
+        <section class="section">${sectionHead("The essentials", { live: true, sub: `${essentials.length} things worth knowing today` })}${essentialsList(essentials)}</section>
+        ${marketCards()}
+        ${sigs.length ? `<section class="section pad banners">${sigs.map((sig, i) => `<a class="banner" href="#/signal-detail/${i}">
+          <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>Something bigger may be happening. See the evidence.</span></div>
+          <span class="round">${ms("arrow_forward")}</span></a>`).join("")}</section>` : ""}
+        ${watchlist(3)}
+        <section class="section pad"><button class="btn-primary" data-mode="fifteen" data-top="1">${ms("menu_book")}Read the full 15-minute briefing</button>
+          <p class="meta" style="justify-content:center;margin-top:10px;display:flex">${b.stories.length} stories with full context, all signals and every market story</p></section>
+      </div>`;
+    }
+
+    return `<div class="wrap">
+      ${progressCard()}
+      ${capsule}
 
       ${marketCards()}
 
@@ -220,7 +254,7 @@ const VIEWS = {
       </section>
 
       ${sigs.length ? `<section class="section pad banners">${sigs.map((sig, i) => `<a class="banner" href="#/signal-detail/${i}">
-        <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>${state.mode === "five" ? "Something bigger may be happening. See the evidence." : esc(sig.what)}</span></div>
+        <div><small>Signal detected · ${sig.evidence_story_ids.length} stories</small><b>${esc(sig.title)}</b><span>${esc(sig.what)}</span></div>
         <span class="round">${ms("arrow_forward")}</span></a>`).join("")}</section>` : ""}
 
       ${watchlist()}
@@ -594,7 +628,12 @@ document.addEventListener("click", (e) => {
     store.set("pulse-saved", [...saved]);
     toast(saved.has(d.save) ? "Saved" : "Removed from saved");
     render({ keepScroll: true });
-  } else if (d.mode) { state.mode = d.mode; store.set("pulse-mode", d.mode); render({ keepScroll: true }); }
+  } else if (d.mode) {
+    state.mode = d.mode;
+    store.set("pulse-mode", d.mode);
+    render({ keepScroll: !d.top });
+    if (d.top) window.scrollTo({ top: 0 });
+  }
   else if (d.filter) { state.filter = d.filter; render({ keepScroll: true }); }
   else if (d.radar) { state.radarFilter = d.radar; render({ keepScroll: true }); }
   else if (d.topicSearch) { state.query = d.topicSearch; state.radarFilter = "all"; location.hash = "#/radar"; }
