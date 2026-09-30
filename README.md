@@ -5,7 +5,7 @@ A personal news intelligence system. It doesn't try to tell you everything. It t
 ## How it works
 
 ```
-~35 RSS sources (tiered: primary → journalism → specialist → discovery)
+~65 RSS sources (tiered: primary → journalism → specialist → discovery)
         │
    1. Ingest        fetch in parallel, exact dedupe            src/ingest.js
         │
@@ -82,7 +82,7 @@ The live site is a static deployment of `public/` (see `vercel.json`); `src/serv
 ## Configuration
 
 - **`config.json`**: interest weights (these nudge selection but never override importance), the number of "surprise me" stories outside your interests (`surprise_me`, capped at `surprise_max`), the tracked `markets`, the lookback window and the port. Market ids here drive the agents' output schemas; give a new market an icon in `MARKET_STYLE` (`public/app.js`), colours in `styles.css` and a description in `MARKETS_RULES` (`src/prompts.js`).
-- **`src/sources.js`**: add or remove feeds and set their tier. Reuters, AP, FT, Bloomberg and WSJ don't offer open RSS; add a feed there if you have one.
+- **`src/sources.js`**: add or remove feeds and set their tier. Reuters, AP, Bloomberg and WSJ don't offer open RSS; add a feed there if you have one. FT, NYT and Law360 are paywalled, but their feeds still carry headlines and summaries.
 - **`PIF_MODEL`** env var: overrides the model (default `claude-opus-5-5`).
 
 ## Cost
