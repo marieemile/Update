@@ -107,9 +107,7 @@
       "outside_interests": false,
       "timeline": [],
       "confidence_note": "Market moves are reported facts; the causes are analysis.",
-      "markets": [
-        "real_estate"
-      ],
+      "markets": [],
       "id": "w2",
       "domain": "world",
       "headline": "Global bond sell-off deepens as Asian yields jump and central banks warn of financial shocks",
@@ -1110,9 +1108,7 @@
       "outside_interests": false,
       "timeline": [],
       "confidence_note": "",
-      "markets": [
-        "real_estate"
-      ],
+      "markets": [],
       "id": "t7",
       "domain": "tech",
       "headline": "US Senate blocks a data centre electricity bill as the AI industry promises to cover its own energy costs",
@@ -1535,178 +1531,195 @@
       "positive": false,
       "under_the_radar": false,
       "outside_interests": false,
+      "domain": "world",
+      "level": "context",
+      "markets": [
+        "real_estate"
+      ],
+      "id": "w15",
+      "headline": "Portugal's parliament backs the Government's rental law in a first vote, after a PSD–Chega deal on amendments",
+      "categories": [
+        "Real Estate",
+        "Housing law",
+        "Portugal"
+      ],
+      "what_happened": "On 30 September parliament approved in general terms the Government's proposal to revise the urban rental regime (NRAU), after the PSD signed an agreement with Chega committing to four amendments at the committee stage. The proposal would remove the 2% cap on rent increases for new contracts, end limits on deposits and advance rent, let landlords end a contract after two months of arrears instead of three, and simplify evictions.",
+      "why_it_matters": "This is the biggest change to Portuguese rental rules in years, and it moves in the opposite direction to Spain, which is tightening tenant protection. The Government argues that freer contracts will bring more homes onto the rental market; left-wing parties and tenant groups say it shifts risk onto tenants. ECO notes that none of the parties has quantified the effect on rents.",
+      "whats_new": {
+        "before": "The proposal went to parliament with no guaranteed majority, as neither the PS nor Chega had said how it would vote.",
+        "now": "It passed the first vote; the details, including Chega's four amendments, are now negotiated in committee."
+      },
+      "watch": [
+        "The four PSD–Chega amendments and the committee timetable",
+        "The final vote and whether the PS tries to add its public rent-guarantee scheme",
+        "How landlords and banks respond once the rules are final"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The vote and the deal are confirmed. Coverage does not yet detail Chega's four amendments, so the final shape of the law is uncertain.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
       "timeline": [
         {
-          "date": "2026-09-29",
-          "event": "US 30-year mortgage rates top 7%"
-        },
-        {
           "date": "2026-09-30",
-          "event": "Mortgage applications fall 6% at a three-year rate high"
+          "event": "PSD and Chega sign a deal on four amendments; parliament approves the proposal in general terms"
         },
         {
           "date": "2026-10-01",
-          "event": "Sixth weekly rate rise; seventh weekly fall in demand"
+          "event": "The proposal moves to the committee stage"
         }
       ],
-      "confidence_note": "",
-      "markets": [
-        "real_estate"
-      ],
-      "id": "w12",
-      "domain": "world",
-      "headline": "US mortgage rates rise for a sixth straight week, well above 7%, and demand falls again",
-      "level": "context",
-      "categories": [
-        "Real Estate",
-        "Economy"
-      ],
-      "what_happened": "US mortgage rates rose for the sixth week in a row, with the 30-year fixed rate well over 7%, and mortgage demand fell for the seventh straight week, hitting both refinancing and purchases. Pending home sales are falling, but unevenly across markets, and New York-area sales dipped only slightly year on year as inventory shrank.",
-      "why_it_matters": "With bond yields rising globally, there is no quick relief for borrowers, and the housing market is slowing just as buyers face the highest rates in three years. The uneven picture means national figures hide very different local markets.",
-      "whats_new": {
-        "before": "Applications had fallen 6% as rates hit a three-year high.",
-        "now": "Rates have risen a sixth week and demand has fallen a seventh."
-      },
-      "watch": [
-        "The next weekly mortgage data",
-        "US Treasury yields",
-        "Price cuts in weaker regional markets"
-      ],
-      "confidence": "high",
-      "claim_status": "confirmed",
-      "scores": {
-        "importance": 3,
-        "impact": 4,
-        "novelty": 2,
-        "credibility": 4,
-        "long_term": 3
-      },
       "sources": [
         {
-          "name": "CNBC Real Estate",
-          "url": "https://www.cnbc.com/2026/09/30/mortgage-rates-jump-to-near-3-year-high-causing-demand-to-drop-.html",
+          "name": "Jornal Económico (via PT housing law)",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQaERkT0lyUXZmeVNzSU9HbkExOFloNkhnWWRXSWRWcUtZeDVrRkFJd0lnbGdwdWRQMVliZGsxa2VhNXBxTWIxTEJhX3hOTnE1aGlYcUtEbkNFNXJYYnY3aHZIN25sbjdnbVZKSFFGWGkwNDUtS194cEpEdWlnZDVSbkNLemtaeUxsZW84cmd6Y19sVXJMX2JvSUFwWHUyUUFhVVRISHJobG1ucFdNSjBSTzFud3JnNE5pa3VVR2lKbFluMy1Rd0poVGJQZFQ3UVVUZDI0eGtxa2RmcnBVVlE?oc=5",
+          "tier": 3,
+          "adds": "Approval in general terms after the Government–Chega deal"
+        },
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/09/30/psd-e-chega-chegam-a-acordo-para-alterar-na-especialidade-proposta-do-governo-sobre-novo-regime-do-arrendamento-urbano",
           "tier": 2,
-          "adds": "Rates up six weeks, demand down seven"
+          "adds": "The PSD–Chega agreement on four amendments"
         },
         {
-          "name": "HousingWire",
-          "url": "https://www.housingwire.com/articles/pending-home-sales-fall-housing-demand-weakens",
-          "tier": 3,
-          "adds": "Uneven fall in pending sales"
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/09/30/o-que-une-e-separa-governo-e-oposicao-na-lei-do-arrendamento",
+          "tier": 2,
+          "adds": "Main measures and each party's position"
         },
         {
-          "name": "Commercial Observer",
-          "url": "https://commercialobserver.com/2026/09/new-york-area-home-sales-dip-inventory-report",
+          "name": "Reuters (via Portugal property (EN))",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ2JCekdhODZ6UU5qaWZabl92Z1ZXWHpZdGZwZFRHOXFWX2VfT2tHRHFYVlBQTHRzNkdBWEpRaHB3WWRMZnZsbXRlWEdhQi1qMEVWVnpEa2tUYTBjY1BRQlAzbVpxMEliU0FXWVZUX3pZQWVMQnMtZTJFZjRLMGh5WWd1VldXZ3YzZlpjYUdfeThSLUktRE5JV0hubmlRZXUy?oc=5",
           "tier": 3,
-          "adds": "New York-area sales and shrinking inventory"
+          "adds": "International context: Spain moving the other way"
         }
       ],
-      "signal_score": 16,
-      "published": "2026-09-30T20:29:33.000Z",
-      "image": "https://image.cnbcfm.com/api/v1/image/108277970-1773428205924-gettyimages-2261059902-260213_to_air_118.jpeg?v=1790717145&w=1920&h=1080"
-    },
-    {
-      "positive": false,
-      "under_the_radar": true,
-      "outside_interests": false,
-      "timeline": [],
-      "confidence_note": "Based on executives' public statements at an industry event.",
-      "markets": [
-        "real_estate"
-      ],
-      "id": "w13",
-      "domain": "world",
-      "headline": "Compass gives listing services an ultimatum: change rules by 6 October or face antitrust suits",
-      "level": "context",
-      "categories": [
-        "Real Estate",
-        "Competition"
-      ],
-      "what_happened": "Compass's Reffkin told multiple listing services (MLSs) to change their listing rules or face lawsuits, setting a 6 October deadline and saying Compass could file antitrust suits by mid-October. Zillow's Samuelson warned that undermining the MLS system and restricting listing data could invite regulators.",
-      "why_it_matters": "MLS rules decide how homes are marketed and who sees listings first. A fight between a major brokerage and the listing services could change how home sales work for buyers and sellers, and draw in regulators.",
-      "whats_new": {
-        "before": "MLS listing rules were already drawing scrutiny, including on Capitol Hill.",
-        "now": "Compass has set a deadline and threatened litigation."
-      },
-      "watch": [
-        "MLS responses before 6 October",
-        "Any antitrust filings by Compass",
-        "Congressional or regulator interest"
-      ],
-      "confidence": "high",
-      "claim_status": "official_statement",
-      "scores": {
-        "importance": 3,
-        "impact": 3,
-        "novelty": 3,
-        "credibility": 3,
-        "long_term": 3
-      },
-      "sources": [
-        {
-          "name": "HousingWire",
-          "url": "https://www.housingwire.com/articles/reffkin-sue-mls-exclusives",
-          "tier": 3,
-          "adds": "Reffkin's ultimatum and timeline"
-        },
-        {
-          "name": "HousingWire",
-          "url": "https://www.housingwire.com/articles/samuelson-mls-tragedy-commons",
-          "tier": 3,
-          "adds": "Zillow's warning about regulation"
-        }
-      ],
-      "signal_score": 15,
-      "published": "2026-09-30T19:08:31.000Z",
-      "image": "https://www.housingwire.com/wp-content/uploads/2026/08/ReffkinMLS.jpg"
+      "signal_score": 19,
+      "published": "2026-10-01T10:00:00.000Z",
+      "image": "https://eco.imgix.net/uploads/2026/09/cropped-45086174-scaled-1.jpg"
     },
     {
       "positive": false,
       "under_the_radar": false,
       "outside_interests": false,
-      "timeline": [],
-      "confidence_note": "Based on one report; the details of the ruling and stay are thin.",
+      "domain": "world",
+      "level": "context",
       "markets": [
         "real_estate"
       ],
-      "id": "w14",
-      "domain": "world",
-      "headline": "Court ruling disrupts New York's pied-à-terre tax rollout; the city and state secure a stay",
-      "level": "context",
+      "id": "w16",
+      "headline": "Portugal posts the EU's fastest house-price growth, up 16.5% a year in the second quarter",
       "categories": [
         "Real Estate",
-        "Housing policy"
+        "Market data",
+        "Portugal"
       ],
-      "what_happened": "A Staten Island judge ruled on Tuesday that the rollout of Mayor Zohran Mamdani's pied-à-terre tax on second homes had been mishandled. Mamdani and Governor Hochul secured a stay of the order, but the city may have to go back to the drawing board on how the tax is introduced.",
-      "why_it_matters": "Taxes on rarely used luxury homes are one of the tools cities are trying in order to raise revenue and address affordability. New York's case will be watched by other expensive cities, and by owners of high-end property.",
+      "what_happened": "Eurostat data show house prices in Portugal rose 16.5% year on year in April–June 2026, the highest in the EU, ahead of Bulgaria (15.5%) and Lithuania (14.3%). The EU average was 4.7% and the euro-area average 4%; prices fell in Finland, Luxembourg and France. EU rents rose 3% over the same period.",
+      "why_it_matters": "Portuguese prices are rising about three times as fast as the EU average while incomes are not, which is why housing dominates domestic politics. Other recent data point the same way: UBS added Lisbon to its bubble index this year at elevated risk, and Idealista reports that the number of sales is falling even as prices hit records in places such as the Algarve.",
       "whats_new": {
-        "before": "New York was preparing to introduce the tax.",
-        "now": "A court has found the rollout flawed, and its timing is uncertain."
+        "before": "Portugal was already among the fastest-rising EU markets.",
+        "now": "It leads the EU outright in the second quarter, with growth more than three times the EU average."
       },
       "watch": [
-        "The appeal and any revised rollout",
-        "The effect on high-end Manhattan sales",
-        "Similar proposals in other cities"
+        "INE's next house-price and transaction data",
+        "Whether falling sales start to slow price growth",
+        "Mortgage costs: ECO reports that October brings the biggest rise in monthly repayments in three years"
       ],
-      "confidence": "medium",
-      "claim_status": "reported",
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
       "scores": {
-        "importance": 2,
+        "importance": 3,
         "impact": 3,
         "novelty": 3,
-        "credibility": 3,
-        "long_term": 3
+        "credibility": 5,
+        "long_term": 4
       },
+      "timeline": [],
       "sources": [
         {
-          "name": "Commercial Observer",
-          "url": "https://commercialobserver.com/2026/09/mamdani-automatic-stay-pied-a-terre-tax",
+          "name": "ECO Imobiliário",
+          "url": "https://eco.sapo.pt/2026/10/01/portugal-teve-o-maior-aumento-do-preco-das-casas-na-ue-no-segundo-trimestre",
+          "tier": 2,
+          "adds": "Eurostat figures and EU comparison"
+        },
+        {
+          "name": "Correio de Lagos (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNN3NVRjFwbEJLcmItS1lScDVkcHNWYjVaYWNiT05WTFBCQW9ueUlfRDk5cGdtSGgwT1Mwb2NaZ0FfV2t3Y09ydmNVYmF1WjJsM1g0QlZQc1JjRDhhSU4ySjBZekl3c3BxVkdQVFlfaG5CbEVFa3ZFZFRaLS1mVnlqRE92MGJteExORmcwVTNqdWx4cVc2VHZlWVpQbWpjX19PUzN5LWFSOU5mcE1lVmlEaWtQYndVQjhzVXFWTUVOdWhPUG9YdVVjMg?oc=5",
           "tier": 3,
-          "adds": "Court ruling and stay"
+          "adds": "Regional detail: Algarve record price per m²"
+        },
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/09/30/outubro-traz-a-maior-subida-da-prestacao-da-casa-em-tres-anos-saiba-quanto-pagara-a-mais-pelo-credito-a-habitacao",
+          "tier": 2,
+          "adds": "Mortgage repayments rising in October"
+        },
+        {
+          "name": "UBS",
+          "url": "https://www.ubs.com/global/en/media/display-page-ndp/en-20260922-grebi26.html",
+          "tier": 1,
+          "adds": "Lisbon added to the bubble index at elevated risk"
         }
       ],
-      "signal_score": 14,
-      "published": "2026-09-30T14:31:51.000Z",
+      "signal_score": 18,
+      "published": "2026-10-01T09:51:35.000Z",
+      "image": "https://eco.imgix.net/uploads/2026/08/cropped-43768911-scaled-1.jpg"
+    },
+    {
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "domain": "world",
+      "level": "context",
+      "markets": [
+        "real_estate"
+      ],
+      "id": "w17",
+      "headline": "Portugal's reformed building-licensing regime takes effect, shifting from prior approval to checks after the fact",
+      "categories": [
+        "Real Estate",
+        "Construction law",
+        "Portugal"
+      ],
+      "what_happened": "The revised legal regime for urbanisation and building (RJUE, Decree-Law 108/2026) came into force on 1 October, after being postponed from August to give municipalities time to adapt their systems. It amends more than 100 articles: prior communication replaces licensing as the default where planning parameters are already set, decision deadlines can be as short as 20 days, and tacit approval is strengthened.",
+      "why_it_matters": "Slow permits are one of the main reasons cited for Portugal's housing shortage, so this is the Government's main supply-side lever alongside the rental law. Law firms note that it puts more responsibility on developers and applicants: less checking upfront means more inspections and possible penalties later.",
+      "whats_new": {
+        "before": "The 2024 Simplex reform had run into practical problems, and the revision was delayed from 3 August.",
+        "now": "The new rules apply from today, and municipalities must use them."
+      },
+      "watch": [
+        "Whether municipalities' platforms are ready and meet the new deadlines",
+        "The first cases of tacit approval and checks after the fact",
+        "Effects on new-build supply over the next year"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Idealista (via PT housing law)",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUkdXR295MXBBM0ltaFFyN0JRbEpVUWRmUDFVaHpDOVNSam5ZRU9rTUhKOTRoM3VEZkM1NkcwcFZ1Ymt5Um9fQTBsMmVHckpsektNSTNEdXlXM1lYT2tyZFYtUWdlaUh2MUVJMGZ6cEprRXVSLTFTRzJxdXFiX1FYdmhJbVhuYTVpd1IyVTBjeUZDZDFXOGxlYVhTakRBTzFfcWkyT3c0cmhIU3ZGRGRaeWxNT0Nmdl9NVmM1QXlZQmFiN2xRdkFGY2FUTUV4UdIBzgFBVV95cUxPUkdXR295MXBBM0ltaFFyN0JRbEpVUWRmUDFVaHpDOVNSam5ZRU9rTUhKOTRoM3VEZkM1NkcwcFZ1Ymt5Um9fQTBsMmVHckpsektNSTNEdXlXM1lYT2tyZFYtUWdlaUh2MUVJMGZ6cEprRXVSLTFTRzJxdXFiX1FYdmhJbVhuYTVpd1IyVTBjeUZDZDFXOGxlYVhTakRBTzFfcWkyT3c0cmhIU3ZGRGRaeWxNT0Nmdl9NVmM1QXlZQmFiN2xRdkFGY2FUTUV4UQ?oc=5",
+          "tier": 3,
+          "adds": "What changes for construction and buying homes"
+        }
+      ],
+      "signal_score": 17,
+      "published": "2026-10-01T08:37:53.000Z",
       "image": null
     }
   ],
@@ -1752,11 +1765,10 @@
     {
       "title": "Financial stability concerns are rising on two fronts: bonds and AI debt",
       "domain": "cross",
-      "what": "A global bond sell-off is pushing up borrowing costs from Japan to Australia while central banks and investors warn about AI-related debt and concentration risk. US mortgage rates have risen for six straight weeks.",
+      "what": "A global bond sell-off is pushing up borrowing costs from Japan to Australia while central banks and investors warn about AI-related debt and concentration risk.",
       "evidence_story_ids": [
         "w2",
-        "t6",
-        "w12"
+        "t6"
       ],
       "why_it_matters": "Higher rates and heavy AI borrowing together increase the risk of a market correction, with knock-on effects for housing and tech funding.",
       "would_confirm": "Further rises in long-term yields, wider credit spreads or failed bond auctions.",
@@ -1773,8 +1785,8 @@
       "why": "Several parliaments and presidencies are up for election amid emigration and ethnic tensions."
     },
     {
-      "item": "Compass's 6 October deadline for MLSs",
-      "why": "Could trigger antitrust suits that reshape US home listings."
+      "item": "Committee stage of Portugal's rental law",
+      "why": "The PSD–Chega amendments will decide how far rent caps and eviction rules actually change."
     },
     {
       "item": "FTC information demands to AI labs",
@@ -2099,109 +2111,6 @@
       "last_updated": "2026-10-01"
     },
     {
-      "name": "Rate shock hits housing",
-      "domain": "world",
-      "markets": [
-        "real_estate"
-      ],
-      "status": "accelerating",
-      "direction": "up",
-      "summary": "War-driven rate rises and a global bond sell-off are cutting mortgage demand across markets.",
-      "recent_developments": [
-        "US mortgage rates up for a sixth week, well above 7%",
-        "Demand down for a seventh week",
-        "Global bond sell-off spreads to Asia"
-      ],
-      "evidence_story_ids": [
-        "w12",
-        "w2"
-      ],
-      "what_to_watch": "Treasury yields and weekly mortgage data",
-      "first_detected": "2026-09-29",
-      "last_updated": "2026-10-01"
-    },
-    {
-      "name": "Housing affordability as mass politics",
-      "domain": "world",
-      "markets": [
-        "real_estate"
-      ],
-      "status": "emerging",
-      "direction": "up",
-      "summary": "Rents, evictions, second-home taxes and insurance gaps are pushing governments to intervene in housing.",
-      "recent_developments": [
-        "New York's pied-à-terre tax rollout disrupted by a court",
-        "Spain's anti-eviction decree after mass protests",
-        "Aviva warns on flood-risk new builds"
-      ],
-      "evidence_story_ids": [
-        "w14"
-      ],
-      "what_to_watch": "Revised New York rollout and rental interventions in the EU",
-      "first_detected": "2026-09-30",
-      "last_updated": "2026-10-01"
-    },
-    {
-      "name": "Institutional consolidation in property",
-      "domain": "world",
-      "markets": [
-        "real_estate"
-      ],
-      "status": "developing",
-      "direction": "up",
-      "summary": "Sovereign and institutional capital is buying defensive property portfolios, while weaker vehicles wind down.",
-      "recent_developments": [
-        "GIC and Orange seek to grow their housing platform to €10bn",
-        "Slate Grocery REIT, $2.34bn",
-        "Elme Communities REIT finishes liquidating"
-      ],
-      "evidence_story_ids": [],
-      "what_to_watch": "More take-privates of listed REITs",
-      "first_detected": "2026-09-29",
-      "last_updated": "2026-10-01"
-    },
-    {
-      "name": "Brokerage and listing rules under pressure",
-      "domain": "world",
-      "markets": [
-        "real_estate"
-      ],
-      "status": "emerging",
-      "direction": "up",
-      "summary": "Large brokerages are challenging MLS rules on listings, with antitrust suits threatened.",
-      "recent_developments": [
-        "Compass sets a 6 October deadline for MLSs",
-        "Zillow warns of regulatory scrutiny"
-      ],
-      "evidence_story_ids": [
-        "w13"
-      ],
-      "what_to_watch": "Compass antitrust filings in mid-October",
-      "first_detected": "2026-10-01",
-      "last_updated": "2026-10-01"
-    },
-    {
-      "name": "Data centres as a property force",
-      "domain": "tech",
-      "markets": [
-        "real_estate"
-      ],
-      "status": "developing",
-      "direction": "up",
-      "summary": "AI infrastructure drives land, power and planning battles, and power costs are now a national political issue.",
-      "recent_developments": [
-        "Senate blocks a data centre electricity bill",
-        "Industry coalition pledges to cover energy costs",
-        "Amazon's 20-year nuclear power deal"
-      ],
-      "evidence_story_ids": [
-        "t7"
-      ],
-      "what_to_watch": "Mandatory energy-cost rules and new power-linked sites",
-      "first_detected": "2026-09-29",
-      "last_updated": "2026-10-01"
-    },
-    {
       "name": "Rules for AI and IP",
       "domain": "tech",
       "markets": [
@@ -2303,10 +2212,92 @@
       "what_to_watch": "Beam's case and any government follow-up",
       "first_detected": "2026-10-01",
       "last_updated": "2026-10-01"
+    },
+    {
+      "name": "Portugal liberalises its rental market",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "The Government is removing rent caps and speeding up evictions to attract supply; the law has passed a first vote.",
+      "recent_developments": [
+        "First vote passed after a PSD–Chega deal",
+        "Four amendments to be agreed in committee"
+      ],
+      "evidence_story_ids": [
+        "w15"
+      ],
+      "what_to_watch": "The final vote and the content of the amendments",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-01"
+    },
+    {
+      "name": "Portuguese prices outpace Europe",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Portugal leads EU house-price growth while sales volumes fall and mortgage costs rise again.",
+      "recent_developments": [
+        "+16.5% year on year in Q2, the highest in the EU",
+        "UBS adds Lisbon to its index at elevated bubble risk",
+        "October brings the biggest rise in repayments in three years"
+      ],
+      "evidence_story_ids": [
+        "w16"
+      ],
+      "what_to_watch": "INE transaction data and the effect of mortgage costs on demand",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-01"
+    },
+    {
+      "name": "Faster permitting to unlock supply",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Portugal and the EU are cutting approval times for building to tackle the housing shortage.",
+      "recent_developments": [
+        "The revised RJUE takes effect with 20-day deadlines and tacit approval",
+        "The EU Council agrees its stance on faster environmental assessments"
+      ],
+      "evidence_story_ids": [
+        "w17"
+      ],
+      "what_to_watch": "Whether municipalities meet the new deadlines",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-01"
+    },
+    {
+      "name": "Europe splits on housing policy",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Spain is tightening tenant protection and the EU is preparing tools to curb short-term rentals, while Portugal is deregulating.",
+      "recent_developments": [
+        "Spain decrees new tenant protections and aims to halt evictions until 2030",
+        "The EU's Affordable Housing Act would let cities restrict short-term rentals",
+        "Portugal moves to speed up evictions"
+      ],
+      "evidence_story_ids": [
+        "w15"
+      ],
+      "what_to_watch": "Debate on the EU short-term rental rules in the Council and Parliament",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-01"
     }
   ],
   "stats": {
-    "items": 597,
+    "items": 670,
     "sources_ok": 65,
     "sources_total": 66,
     "clusters": 95
