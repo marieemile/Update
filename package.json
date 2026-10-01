@@ -10,6 +10,9 @@
     "start": "node src/server.js",
     "chat:fetch": "node src/chat-mode.js fetch",
     "chat:finish": "node src/chat-mode.js finish",
+    "reads:fetch": "node src/reads.js fetch",
+    "reads:draft": "node src/reads.js draft",
+    "reads:finish": "node src/reads.js finish",
     "test": "node --test"
   },
   "engines": {

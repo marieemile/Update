@@ -96,3 +96,23 @@ const signalSchema = (markets) => obj({
   ),
   watchlist: arr(obj({ item: str, why: str })),
 });
+
+// Founder reads: the curator ranks every link in a newsletter issue and writes
+// an "AI lens" across them. Ids refer to the parsed issue items (r1, r2, ...).
+export const READS_SCHEMA = obj({
+  ai_lens: obj({
+    headline: str,
+    summary: str,
+    themes: arr(obj({ name: str, what: str, read_ids: arr(str), related_trend: str })),
+  }),
+  reads: arr(
+    obj({
+      id: str,
+      pick: oneOf("must", "worth", "skip"),
+      summary: str,
+      why_read: str,
+      ai_angle: str,
+      tags: arr(str),
+    }),
+  ),
+});

@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { runPipeline, deepDive } from "./pipeline.js";
-import { listBriefingDates, loadBriefing, loadConfig, saveInterests } from "./store.js";
+import { listBriefingDates, listReadsDates, loadBriefing, loadConfig, loadReads, saveInterests } from "./store.js";
 
 const PUBLIC = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../public");
 const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png", ".ico": "image/png", ".webmanifest": "application/manifest+json" };
@@ -32,6 +32,13 @@ async function api(req, res, url) {
       const date = url.searchParams.get("date") || listBriefingDates()[0];
       const briefing = date && loadBriefing(date);
       return briefing ? send(res, 200, briefing) : send(res, 404, { error: "No briefing yet" });
+    }
+    case "GET /api/reads/dates":
+      return send(res, 200, listReadsDates());
+    case "GET /api/reads": {
+      const date = url.searchParams.get("date") || listReadsDates()[0];
+      const reads = date && loadReads(date);
+      return reads ? send(res, 200, reads) : send(res, 404, { error: "No founder reads yet" });
     }
     case "GET /api/config":
       return send(res, 200, loadConfig());

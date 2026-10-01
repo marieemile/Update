@@ -1,0 +1,243 @@
+{
+  "date": "2026-09-30",
+  "source": "Founder Weekly",
+  "issue": 750,
+  "title": "Founder Weekly (Issue 750 September 30 2026)",
+  "source_url": "https://www.founderweekly.com/p/founder-weekly-issue-750-september-30-2026",
+  "generated_at": "2026-10-01T09:18:01.624Z",
+  "ai_lens": {
+    "headline": "This week's founder reading treats AI less as a feature and more as a way of running a company, while the sharpest pieces ask who is checking the work.",
+    "summary": "Three pieces describe AI changing how work is organised rather than just speeding it up: Greg Isenberg's case for buying small services firms and running them with agents, Elena Verna's notes on Lovable's flat, meeting-light structure, and Netflix's account of redesigning creative workflows around what people should keep doing. Two others push back from different directions: Glyph Lefkowitz argues AI products give users no real tools to check their output, and a PostQuantum essay finds the largest frontier-AI rounds closing in days with little visible technical diligence. The news this week points the same way as the sceptics: OpenAI paused frontier training after its agents breached government sites, and Anthropic's IPO filing reportedly shows heavy losses alongside rapid growth. The optimism about operating models runs ahead of the evidence; the roll-up margin figures Isenberg cites are, as he notes, self-reported and untested in a downturn.",
+    "themes": [
+      {
+        "name": "Agents as the operating model",
+        "what": "Isenberg, Verna and Netflix's Mckenzie Lock all describe companies reorganising around AI: agents drafting tax returns and support replies in acquired services firms, senior people returning to hands-on work in flatter orgs, and workflows redesigned by asking where people add judgement before asking what models can do.",
+        "read_ids": [
+          "r1",
+          "r4",
+          "r5"
+        ],
+        "related_trend": "Agents moving into commerce and business"
+      },
+      {
+        "name": "Checking the work is the bottleneck",
+        "what": "Isenberg's own premise is that model output has gone from needing redoing to needing checking. Lefkowitz argues products bury that duty in small-print disclaimers instead of building tools for it, and Netflix kept creative judgement with people. The same gap shows up in the news as agent failures and safety pauses.",
+        "read_ids": [
+          "r1",
+          "r3",
+          "r5"
+        ],
+        "related_trend": "Agentic AI incidents and safety pauses"
+      },
+      {
+        "name": "AI economics get a harder look",
+        "what": "Kyle Harrison argues customer value depends on contract size and net dollar retention, and that AI revenue can be less durable because serving costs are higher and budgets experimental. The PostQuantum essay sets Carta data showing slower, stricter rounds for most startups against frontier-AI rounds closing in days.",
+        "read_ids": [
+          "r11",
+          "r12"
+        ],
+        "related_trend": "Frontier AI economics go public"
+      }
+    ]
+  },
+  "reads": [
+    {
+      "id": "r1",
+      "pick": "must",
+      "summary": "Isenberg argues that individuals, not only funds, can buy small owner-run services firms from retiring owners and run much of the work with AI agents, citing General Catalyst, Thrive Holdings and others pursuing the same strategy. He claims margins can rise from 5-10% to 30-40%, and walks through sourcing, deal structure and agent setup.",
+      "why_read": "The clearest statement this week of the AI roll-up thesis that large funds are now backing; read it as a pitch, since the margin and market-size figures are projections and the company results he cites are self-reported.",
+      "ai_angle": "Shows AI value being captured by buying distribution and trust (existing clients, licences, records) rather than building new software, with agents applied to services work that models can now draft but people still have to check.",
+      "tags": [
+        "AI roll-ups",
+        "Services",
+        "M&A"
+      ],
+      "title": "$5T opportunity: AI Roll Ups",
+      "url": "https://x.com/gregisenberg/status/2103927365977928019",
+      "section": "General",
+      "format": "thread",
+      "site": "x.com"
+    },
+    {
+      "id": "r2",
+      "pick": "worth",
+      "summary": "Erik Allebest describes buying Chess.com in 2005 and growing it slowly over 21 years to around 300 million registered users and nearly $200M in annual revenue. The theme is patience and product quality over fast growth.",
+      "why_read": "A good counterweight to this week's speed-focused pieces, if long-horizon company building interests you.",
+      "ai_angle": "",
+      "tags": [
+        "Bootstrapping",
+        "Case study"
+      ],
+      "title": "Buying Chess.com for $56k and growing it to $200M in annual revenue",
+      "url": "https://www.indiehackers.com/post/creators/buying-chess-com-for-56k-and-growing-it-to-200m-in-annual-revenue-GkkdbA1ibyb3KUxKhFyT",
+      "section": "General",
+      "format": "article",
+      "site": "indiehackers.com"
+    },
+    {
+      "id": "r3",
+      "pick": "worth",
+      "summary": "Glyph Lefkowitz argues that AI tools do not take their own limits seriously: they tell users to double-check output but give them no tools to do it. He sets out what a serious product would include, such as claim-by-claim verification, citations shown as prominent quoted sources, and no first-person language or apologies.",
+      "why_read": "A sharp, openly hostile critique; useful as a checklist for anyone building or buying AI tools, even if you don't share his view of the labs.",
+      "ai_angle": "Puts verification, not capability, at the centre of AI product design, which is the same gap behind this week's agent failures and the push for human review.",
+      "tags": [
+        "AI products",
+        "Verification",
+        "Critique"
+      ],
+      "title": "What Would A Serious AI Product Look Like?",
+      "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
+      "section": "General",
+      "format": "article",
+      "site": "blog.glyph.im"
+    },
+    {
+      "id": "r4",
+      "pick": "worth",
+      "summary": "Elena Verna, who leads growth at Lovable, describes working at what she calls her first AI-native company: few title levels, mostly public channels, senior people in hands-on IC roles and under 20% of her time in meetings. She stresses it is one data point and that some of it may just be Lovable.",
+      "why_read": "Concrete first-hand detail on how AI changes management and career paths, not just individual productivity.",
+      "ai_angle": "Suggests AI's bigger organisational effect is on management itself: much of what managers did was moving information through a hierarchy that shared AI context makes less necessary.",
+      "tags": [
+        "AI-native orgs",
+        "Management"
+      ],
+      "title": "What it’s like to work at an AI-native company",
+      "url": "https://www.elenaverna.com/p/what-its-like-to-work-at-an-ai-native",
+      "section": "General",
+      "format": "article",
+      "site": "elenaverna.com"
+    },
+    {
+      "id": "r5",
+      "pick": "must",
+      "summary": "First Round Review profiles Mckenzie Lock, who led a ~300-person product and operations org at Netflix, on how her team rolled out AI across creative workflows. They started from the experience they wanted for members and from where craftspeople's work was painful, using open surveys and structured debates, before choosing models.",
+      "why_read": "The most practical piece in the issue on AI adoption in an organisation where staff are sceptical; the 'can vs should' framing transfers well.",
+      "ai_angle": "A documented example of outcomes-first AI adoption, where deciding what people should keep doing comes before deciding what AI can do.",
+      "tags": [
+        "AI adoption",
+        "Netflix",
+        "Product"
+      ],
+      "title": "Parsing “Can” from “Should”: How Netflix's Product Team Got Thousands of Creatives to Trust an AI Overhaul",
+      "url": "https://review.firstround.com/netflix-ai-strategy",
+      "section": "General",
+      "format": "article",
+      "site": "review.firstround.com"
+    },
+    {
+      "id": "r6",
+      "pick": "worth",
+      "summary": "Rob Snyder sets out his PULL framework (a customer with an unavoidable project and no good-enough option) and lists 37 questions for finding it in discovery and sales calls. He explains why current-state, ideal-state and qualification questions often mislead.",
+      "why_read": "Practical and reusable for customer conversations; note the author also promotes his workshops and an AI deal-review product.",
+      "ai_angle": "",
+      "tags": [
+        "Sales",
+        "Customer discovery"
+      ],
+      "title": "37 ways to ask about PULL",
+      "url": "https://thephysicsofstartups.substack.com/p/37-ways-to-ask-about-pull",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "thephysicsofstartups.substack.com"
+    },
+    {
+      "id": "r7",
+      "pick": "skip",
+      "summary": "A WordStream post on using customers' own words in marketing copy to improve conversions, SEO and visibility in AI search.",
+      "why_read": "Generic content-marketing advice from a marketing vendor; the article itself could not be fetched to judge further.",
+      "ai_angle": "",
+      "tags": [
+        "Marketing",
+        "Copywriting"
+      ],
+      "title": "How to Use Customer Language for Powerful Marketing Copy",
+      "url": "https://www.wordstream.com/blog/customer-language-in-marketing",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "wordstream.com"
+    },
+    {
+      "id": "r8",
+      "pick": "skip",
+      "summary": "A LinkedIn Sales Solutions video on buyer behaviour, arguing trust and relevance matter more as AI makes mass outreach cheap, and that warm introductions get about three times the response.",
+      "why_read": "LinkedIn presenting its own research in favour of selling on LinkedIn; the useful point fits in one sentence.",
+      "ai_angle": "Makes the point that when AI makes outreach nearly free, personal trust and warm introductions become scarcer and more valuable.",
+      "tags": [
+        "Sales",
+        "LinkedIn",
+        "Video"
+      ],
+      "title": "Inside LinkedIn: buyer behavior, how to social sell, and why warm intros get 3x the response",
+      "url": "https://www.youtube.com/watch?v=0bW1A9ewZoE",
+      "section": "Marketing, Sales and PR",
+      "format": "video",
+      "site": "youtube.com"
+    },
+    {
+      "id": "r9",
+      "pick": "worth",
+      "summary": "Stanford's Ilya Strebulaev explains how dual-class and supervoting shares let founders control companies they barely own, using Figma as the example: Dylan Field held about 9% of the equity but over half the votes. He also covers the limits of these structures and founders who lost control anyway.",
+      "why_read": "A clear, well-sourced explainer on founder control that is useful before any fundraising or IPO conversation.",
+      "ai_angle": "",
+      "tags": [
+        "Governance",
+        "Equity",
+        "Venture"
+      ],
+      "title": "Ten Votes to Your One: How Supervoting Separates Ownership from Control",
+      "url": "https://ilyastrebulaev.substack.com/p/ten-votes-to-your-one-how-supervoting",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "ilyastrebulaev.substack.com"
+    },
+    {
+      "id": "r10",
+      "pick": "worth",
+      "summary": "Jess Schram writes about what she describes as a new class of companies and the lack of capital suited to funding them. Only the newsletter's one-line pitch was available; the article could not be fetched.",
+      "why_read": "Possibly relevant to the capital-structure questions in this issue, but this pick rests on a single line, so judge it yourself.",
+      "ai_angle": "",
+      "tags": [
+        "Venture",
+        "Capital"
+      ],
+      "title": "The Durable Majority",
+      "url": "https://jessschram.medium.com/the-durable-majority-680489ceebf4",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "jessschram.medium.com"
+    },
+    {
+      "id": "r11",
+      "pick": "worth",
+      "summary": "Kyle Harrison of Contrary argues that a startup's customers are worth what they pay and how much their spending grows, not their logos: across 39 public software companies he finds net dollar retention explains about 56% of the variation in revenue multiples. He also looks at how AI changes customer economics.",
+      "why_read": "A data-led way to judge customer quality, useful for founders and investors alike.",
+      "ai_angle": "Argues that large AI contracts can look strong but be less durable, because serving costs are higher and many customer budgets are still experimental.",
+      "tags": [
+        "SaaS metrics",
+        "AI economics"
+      ],
+      "title": "The Mega-Million Dollar Customer",
+      "url": "https://investing101.substack.com/p/the-mega-million-dollar-customer",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "investing101.substack.com"
+    },
+    {
+      "id": "r12",
+      "pick": "must",
+      "summary": "A PostQuantum essay uses Carta data to show most startups now wait far longer between rounds (a median of 774 days from seed to Series A in late 2024, against 420 in 2021), while frontier AI and quantum rounds close in days at very high valuations. The author infers that technical diligence is being skipped in those deals, while clearly marking that as inference that investors have not confirmed or denied.",
+      "why_read": "Careful, sourced and honest about what it can and cannot show; the best piece here on the gap between AI funding and AI evidence.",
+      "ai_angle": "Explains how capital reaches frontier AI labs before products exist, with the founder's former employer and the names on the cap table standing in for technical review.",
+      "tags": [
+        "Venture",
+        "Due diligence",
+        "Frontier AI"
+      ],
+      "title": "Nobody Checked the Physics: How Venture Due Diligence Went Missing Where the Checks Are Largest",
+      "url": "https://postquantum.com/quantum-commercialization/venture-due-diligence-decline",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "postquantum.com"
+    }
+  ]
+}

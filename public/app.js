@@ -1,8 +1,8 @@
 // Daily Bite - personal intelligence feed. Hash routes:
-//   #/briefing  #/radar  #/analysis  #/signal  #/story/<id>  #/market/<id>  #/signal-detail/<n>
+//   #/briefing  #/radar  #/analysis  #/reads  #/signal  #/story/<id>  #/market/<id>  #/signal-detail/<n>
 import { esc, safeUrl, firstSentence, ago, markdown } from "/lib.js";
 
-const state = { briefing: null, dates: [], config: null, mode: "five", filter: "top", radarFilter: "all", query: "", deepdive: {} };
+const state = { briefing: null, dates: [], reads: null, readsDates: [], config: null, mode: "five", filter: "top", radarFilter: "all", query: "", deepdive: {} };
 const view = document.getElementById("view");
 const $ = (s) => document.querySelector(s);
 
@@ -189,6 +189,34 @@ function progressCard() {
     <pre>${esc(refresh.log.join("\n"))}${refresh.error ? `\n\n<span class="error-text">${esc(refresh.error)}</span>` : ""}</pre></div>`;
 }
 
+// Founder reads: a weekly curated reading list with an AI lens (src/reads.js).
+const READ_FORMAT = { article: ["description", "Article"], thread: ["forum", "Thread"], video: ["play_circle", "Video"], podcast: ["podcasts", "Podcast"] };
+const issueLabel = (r) => `${r.source} · Issue ${r.issue}`;
+
+function readsTeaser() {
+  const r = state.reads;
+  if (!r) return "";
+  const must = r.reads.filter((x) => x.pick === "must").length;
+  return `<section class="section pad"><a class="card reads-teaser" href="#/reads">
+    <span class="reads-icon">${ms("auto_stories")}</span>
+    <div><small>Founder reads · Issue ${r.issue}</small><b>${esc(r.ai_lens.headline)}</b>
+      <span>${must} must-read${must === 1 ? "" : "s"} · AI lens on this week's essays</span></div>
+    <span class="round">${ms("arrow_forward")}</span></a></section>`;
+}
+
+function readCard(x) {
+  const [icon, label] = READ_FORMAT[x.format] ?? READ_FORMAT.article;
+  return `<article class="card read ${x.pick}" id="read-${x.id}">
+    <div class="read-top"><span class="chip soft sm">${ms(icon)}${label}</span><span class="read-site">${esc(x.site)}</span>${x.pick === "must" ? `<span class="chip solid sm">${ms("star")}Must read</span>` : ""}</div>
+    <h3><a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">${esc(x.title)}</a></h3>
+    <p>${esc(x.summary)}</p>
+    <div class="tile-why"><b>${x.pick === "skip" ? "Why skip" : "Why read"}</b>${esc(x.why_read)}</div>
+    ${x.ai_angle ? `<div class="ai-angle">${ms("neurology")}<div><b>AI angle</b>${esc(x.ai_angle)}</div></div>` : ""}
+    <div class="read-foot"><span class="tile-tags">${x.tags.map((t) => `<span class="hashtag">${esc(t)}</span>`).join("")}</span>
+      <a class="link" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">Open ${ms("open_in_new")}</a></div>
+  </article>`;
+}
+
 // ---------- views ----------
 function emptyView() {
   return `<div class="wrap">${progressCard()}<div class="empty">
@@ -249,6 +277,7 @@ const VIEWS = {
         ${capsule}
         <section class="section">${sectionHead("The essentials", { live: true, sub: `${essentials.length} things worth knowing today` })}${essentialsList(essentials)}</section>
         ${marketCards()}
+        ${readsTeaser()}
         ${signalBanners(sigs, () => "Something bigger may be happening. See the evidence.")}
         ${watchlist(3)}
         <section class="section pad"><button class="btn-primary" data-mode="fifteen" data-top="1">${ms("menu_book")}Read the full 15-minute briefing</button>
@@ -261,6 +290,7 @@ const VIEWS = {
       ${capsule}
 
       ${marketCards()}
+      ${readsTeaser()}
 
       <section class="section">
         ${sectionHead("Essential intelligence", { live: true, action: `<a class="link" href="#/radar">View all</a>` })}
@@ -315,6 +345,40 @@ const VIEWS = {
       ${sectionHead("World", {})}<div class="trend-grid">${group("world").map(trendCard).join("") || `<div class="card empty-note">No world trends yet.</div>`}</div>
       <div class="section">${sectionHead("Technology", {})}<div class="trend-grid">${group("tech").map(trendCard).join("") || `<div class="card empty-note">No tech trends yet.</div>`}</div></div>
       ${watchlist()}
+    </div>`;
+  },
+
+  reads() {
+    const r = state.reads;
+    if (!r) return `<div class="wrap"><div class="card empty-note">No founder reads yet.${state.static ? "" : " Run <code>npm run reads:fetch</code>, then draft and finish an issue."}</div></div>`;
+    const byId = new Map(r.reads.map((x) => [x.id, x]));
+    const group = (pick, title, icon, sub) => {
+      const list = r.reads.filter((x) => x.pick === pick);
+      return list.length ? `<section class="section">${sectionHead(title, { icon, sub })}<div class="reads-list">${list.map(readCard).join("")}</div></section>` : "";
+    };
+    return `<div class="wrap">
+      <section class="pad"><div class="card capsule reads-hero">
+        <div class="capsule-top"><span class="chip status-chip"><i></i>${esc(issueLabel(r))}</span>
+          <span class="meta">${ms("calendar_today")}${esc(fmtDate(r.date, { weekday: "short", month: "short", day: "numeric" }))}</span></div>
+        <div><h1>${ms("neurology")}The AI lens</h1><p class="topline">${esc(r.ai_lens.headline)}</p></div>
+        <p class="lens-summary">${esc(r.ai_lens.summary)}</p>
+        <div class="capsule-foot"><span>${r.reads.length} links reviewed · sponsored items left out</span>
+          <a class="link" href="${esc(safeUrl(r.source_url))}" target="_blank" rel="noopener">Original issue ${ms("open_in_new")}</a></div>
+      </div></section>
+
+      <section class="section">${sectionHead("AI themes this week", { icon: "hub", sub: "Patterns across the essays, set against your briefing's trends. Analysis, not fact." })}
+        <div class="trend-grid">${r.ai_lens.themes.map((t) => `<div class="card trend theme">
+          <h3>${esc(t.name)}</h3><p>${esc(t.what)}</p>
+          <div class="theme-reads">${t.read_ids.map((id) => byId.get(id)).filter(Boolean).map((x) => `<button class="theme-read" data-scroll="read-${x.id}">${ms("arrow_downward")}${esc(x.title)}</button>`).join("")}</div>
+          ${t.related_trend ? `<a class="trend-link" href="#/analysis">${ms("monitoring")}<span>Briefing trend: ${esc(t.related_trend)}</span></a>` : ""}
+        </div>`).join("")}</div></section>
+
+      ${group("must", "Must read", "star", "The pieces most worth your time this week")}
+      ${group("worth", "Worth your time", "bookmark_add", "Solid if the topic matters to you")}
+      ${group("skip", "Safe to skip", "do_not_disturb_on", "Generic, promotional or thin")}
+
+      ${state.readsDates.length > 1 ? `<section class="section">${sectionHead("Past issues", { icon: "history" })}
+        <div class="date-list">${state.readsDates.map((d) => `<button class="pill ${d === r.date ? "on" : ""}" data-reads-date="${d}">${esc(fmtDate(d, { month: "short", day: "numeric" }))}</button>`).join("")}</div></section>` : ""}
     </div>`;
   },
 
@@ -506,8 +570,8 @@ function researchBlock(dd) {
 }
 
 // ---------- routing & chrome ----------
-const NAV = [["briefing", "home", "Briefing"], ["radar", "explore", "Radar"], ["analysis", "newspaper", "Analysis"], ["signal", "tune", "My Signal"]];
-const SECTION = { briefing: "Briefing", radar: "Radar", analysis: "Analysis", signal: "My Signal" };
+const NAV = [["briefing", "home", "Briefing"], ["radar", "explore", "Radar"], ["analysis", "newspaper", "Analysis"], ["reads", "auto_stories", "Reads"], ["signal", "tune", "My Signal"]];
+const SECTION = { briefing: "Briefing", radar: "Radar", analysis: "Analysis", reads: "Founder reads", signal: "My Signal" };
 
 function route() {
   const [, name = "briefing", arg] = location.hash.match(/^#\/([\w-]+)(?:\/(.+))?/) ?? [];
@@ -533,7 +597,7 @@ function render({ keepScroll = false } = {}) {
   $("#refresh-btn").classList.toggle("spinning", refresh.active && !refresh.error);
 
   const y = window.scrollY;
-  if (!state.briefing && name !== "signal") view.innerHTML = emptyView();
+  if (!state.briefing && name !== "signal" && name !== "reads") view.innerHTML = emptyView();
   else view.innerHTML = VIEWS[name](arg);
   if (keepScroll) window.scrollTo(0, y);
   wireCarousel();
@@ -579,7 +643,21 @@ async function load(date) {
   state.config = config;
   const d = date || dates[0];
   state.briefing = !d ? null : isStatic ? await api(`/briefings/${d}.json`, noStore) : await api(`/api/briefing?date=${d}`);
+  if (!state.reads) await loadReads({ render: false });
   render();
+}
+
+// Founder reads are optional: a missing index or issue just hides the section.
+async function loadReads({ date, render: rerender = true } = {}) {
+  const noStore = { cache: "no-store" };
+  try {
+    state.readsDates = state.static ? await api("/reads/index.json", noStore) : await api("/api/reads/dates");
+    const d = date || state.readsDates[0];
+    state.reads = !d ? null : state.static ? await api(`/reads/${d}.json`, noStore) : await api(`/api/reads?date=${d}`);
+  } catch {
+    state.reads = null;
+  }
+  if (rerender) render({ keepScroll: true });
 }
 
 async function startRefresh() {
@@ -655,6 +733,8 @@ document.addEventListener("click", (e) => {
   else if (d.explain) explain(d.explain);
   else if (d.action === "refresh" || t.id === "refresh-btn") startRefresh();
   else if (d.date) load(d.date).then(() => (location.hash = "#/briefing"));
+  else if (d.readsDate) loadReads({ date: d.readsDate }).then(() => window.scrollTo(0, 0));
+  else if (d.scroll) document.getElementById(d.scroll)?.scrollIntoView({ behavior: "smooth", block: "start" });
   else if (d.step) {
     const out = $("#surprise");
     const v = Math.max(0, Math.min(state.config.surprise_max ?? 4, Number(out.value || out.textContent) + Number(d.step)));

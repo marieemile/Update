@@ -6,9 +6,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const DATA_DIR = path.join(root, "data");
 const BRIEFINGS = path.join(DATA_DIR, "briefings");
 const DEEPDIVES = path.join(DATA_DIR, "deepdives");
+const READS = path.join(DATA_DIR, "reads");
 const TRENDS = path.join(DATA_DIR, "trends.json");
 
-for (const dir of [DATA_DIR, BRIEFINGS, DEEPDIVES]) fs.mkdirSync(dir, { recursive: true });
+for (const dir of [DATA_DIR, BRIEFINGS, DEEPDIVES, READS]) fs.mkdirSync(dir, { recursive: true });
 
 // Briefings are dated in the machine's local time zone, not UTC, so an early
 // morning run isn't filed under yesterday.
@@ -46,14 +47,14 @@ const readJson = (file, fallback) => {
 };
 const writeJson = (file, value) => fs.writeFileSync(file, JSON.stringify(value, null, 2));
 
-export function listBriefingDates() {
-  return fs
-    .readdirSync(BRIEFINGS)
+const listDates = (dir) =>
+  fs
+    .readdirSync(dir)
     .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
     .map((f) => f.slice(0, 10))
     .sort()
     .reverse();
-}
+export const listBriefingDates = () => listDates(BRIEFINGS);
 
 export function loadBriefing(date) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
@@ -65,14 +66,27 @@ export function saveBriefing(briefing) {
   publishStatic();
 }
 
-// Static copies under public/briefings/ let the web app run on a static host
+// Founder reads: one curated newsletter issue per file, keyed by issue date.
+export const listReadsDates = () => listDates(READS);
+export function loadReads(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+  return readJson(path.join(READS, `${date}.json`), null);
+}
+export function saveReads(reads) {
+  writeJson(path.join(READS, `${reads.date}.json`), reads);
+  publishStatic();
+}
+
+// Static copies under public/briefings/ and public/reads/ let the web app run on a static host
 // (Vercel) with no server: the UI falls back to these when /api/* is absent.
 const STATIC_DIR = path.join(root, "public", "briefings");
+const STATIC_READS = path.join(root, "public", "reads");
 export function publishStatic() {
-  fs.mkdirSync(STATIC_DIR, { recursive: true });
-  const dates = listBriefingDates();
-  for (const d of dates) fs.copyFileSync(path.join(BRIEFINGS, `${d}.json`), path.join(STATIC_DIR, `${d}.json`));
-  writeJson(path.join(STATIC_DIR, "index.json"), dates);
+  for (const [from, to, dates] of [[BRIEFINGS, STATIC_DIR, listBriefingDates()], [READS, STATIC_READS, listReadsDates()]]) {
+    fs.mkdirSync(to, { recursive: true });
+    for (const d of dates) fs.copyFileSync(path.join(from, `${d}.json`), path.join(to, `${d}.json`));
+    writeJson(path.join(to, "index.json"), dates);
+  }
   const { interests, surprise_me, surprise_max, markets } = loadConfig();
   writeJson(path.join(STATIC_DIR, "config.json"), { interests, surprise_me, surprise_max, markets });
 }

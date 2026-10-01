@@ -33,6 +33,7 @@ The UI follows the **Cobalt Pulse** design system from the Stitch project (Inter
 - **Briefing**: the "if you only read one thing" capsule, the essential-stories carousel, filtered story tiles, the top signal and the watchlist
 - **Radar**: search, emerging signals, and a live wire of every story by time
 - **Analysis**: the "What's changing" trend dashboard
+- **Reads**: the weekly founder reading list with its AI lens (see Founder reads below)
 - **My Signal**: interest weights (saved to `config.json`), the surprise-me count, saved stories and past briefings
 
 Tapping a story opens the deep-dive page, with takeaways, confidence, the score breakdown, what changed, a timeline, sources and on-demand deep research.
@@ -75,6 +76,21 @@ npm run chat:finish   # attach images/times, merge trends, save the briefing
 
 The 5/15 control is a sliding switch. Sliding it to 15 min expands the top card in place with a "Today in brief" summary: the essential world and tech stories, the lead story for each tracked market, and the main signal, each with why it matters. The rest of the page then changes to the full edition. The read-time label is calculated from the words each mode actually shows.
 
+## Founder reads
+
+A weekly reading list from [Founder Weekly](https://www.founderweekly.com), on the **Reads** tab with a teaser card on the Briefing. Founder Weekly has no RSS feed, so `src/founder-weekly.js` parses the issue page itself: each linked piece, its section and the newsletter's blurb, with sponsored blocks left out. It also fetches the opening text of each piece, so the curator judges the article and not just the pitch.
+
+A curator then marks every piece **must** (at most three), **worth** or **skip**, says why, and notes its AI angle. It also writes an **AI lens**: what this week's essays say about how AI is changing how companies are built, sold, staffed and funded, set against the tech trends and headlines from your briefings. Themes link to the matching trend on the Analysis tab.
+
+```bash
+npm run reads:fetch    # latest issue -> data/inbox/reads-<date>-items.json (or pass an issue URL)
+npm run reads:draft    # curate with the API -> data/inbox/reads-<date>-draft.json
+# or, without an API key, ask Claude in chat: "draft this week's founder reads"
+npm run reads:finish   # validate, save data/reads/<date>.json and publish public/reads/
+```
+
+`finish` takes titles and URLs from the parsed issue rather than the draft, rejects drafts that cite unknown or skip existing pieces, and drops trend links that don't exist.
+
 ## Publishing (Vercel)
 
 The live site is a static deployment of `public/` (see `vercel.json`); `src/server.js` doesn't run there. Every saved briefing is also copied to `public/briefings/` (`<date>.json`, `index.json`, `config.json`). When `/api/*` isn't available, the app reads those files and runs read-only: no Refresh, deep research or interest editing. Committing and pushing `public/briefings/` to `main` publishes a new briefing; the morning scheduled task does this automatically.
@@ -102,7 +118,10 @@ src/store.js      briefings, trend history, deep-dive cache (data/), static publ
 src/server.js     local HTTP server + API
 src/run.js        CLI entry for `npm run brief` / `npm run ingest`
 src/chat-mode.js  API-key-free pipeline driven from a Claude chat
+src/founder-weekly.js  Founder Weekly issue parser and article fetcher
+src/reads.js      founder reads CLI (fetch → draft → finish)
 public/           web app (index.html, styles.css, app.js, lib.js, logo.svg)
 public/briefings/ static copies of briefings for the Vercel site
+public/reads/     static copies of founder reads issues
 test/             `npm test` (node:test, no extra dependencies)
 ```
