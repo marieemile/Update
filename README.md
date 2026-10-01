@@ -67,7 +67,7 @@ npm run chat:finish   # attach images/times, merge trends, save the briefing
 
 ## Tracked markets
 
-`config.json` → `markets` lists markets followed closely in every briefing: **Intellectual Property** (`ip`) and **Real Estate** (`real_estate`). They have dedicated feeds in `src/sources.js` (`market: ...`), but stories from any source can be tagged. The agents follow `MARKETS_RULES` in `src/prompts.js`, add up to `stories_per_market` stories for each market, and tag stories and trends with a `markets` array. In the app, the Briefing tab has a large card for each market that opens a market page (`#/market/<id>`) with its stories, related signals and trends. Market filters also appear on the Briefing and Radar pills.
+`config.json` → `markets` lists markets followed closely in every briefing: **Intellectual Property** (`ip`) and **Real Estate** (`real_estate`, Europe with a Portugal focus: law and tax changes, proptech tools, market data). They have dedicated feeds in `src/sources.js` (`market: ...`), but stories from any source can be tagged. The agents follow `MARKETS_RULES` in `src/prompts.js`, add up to `stories_per_market` stories for each market, and tag stories and trends with a `markets` array. In the app, the Briefing tab has a large card for each market that opens a market page (`#/market/<id>`) with its stories, related signals and trends. Market filters also appear on the Briefing and Radar pills.
 
 ## 5- and 15-minute modes
 

@@ -7,6 +7,7 @@ const parser = new Parser({
       ["media:content", "mediaContent", { keepArray: true }],
       ["media:thumbnail", "mediaThumbnail", { keepArray: true }],
       ["content:encoded", "contentEncoded"],
+      ["source", "gnSource"],
     ],
   },
 });
@@ -47,6 +48,18 @@ function pickImage(item) {
   return url.replace(/\/ace\/standard\/\d+\//, "/ace/standard/976/");
 }
 
+// Google News search items: the publisher is in <source> and also appended to
+// the title as " - Publisher". Split it out so the item reads like any other.
+function googleNewsItem(item) {
+  const title = clean(item.title);
+  const publisher = clean(typeof item.gnSource === "string" ? item.gnSource : item.gnSource?._ ?? "");
+  const suffix = publisher && ` - ${publisher}`;
+  return {
+    title: suffix && title.endsWith(suffix) ? title.slice(0, -suffix.length) : title,
+    publisher,
+  };
+}
+
 function normalizeTitle(title) {
   return title.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
 }
@@ -62,13 +75,15 @@ async function fetchSource(source, cutoff, maxItems) {
   // Some feeds contain bare "&" characters, which strict XML parsing rejects.
   const xml = (await res.text()).replace(/&(?!#?\w+;)/g, "&amp;");
   const feed = await parser.parseString(xml);
+  const isGoogleNews = source.url.startsWith("https://news.google.com/");
   return feed.items
     .map((item) => {
       const published = new Date(item.isoDate || item.pubDate || 0);
+      const gn = isGoogleNews ? googleNewsItem(item) : null;
       return {
-        title: clean(item.title),
+        title: gn ? gn.title : clean(item.title),
         link: normalizeUrl(item.link),
-        source: source.name,
+        source: gn?.publisher ? `${gn.publisher} (via ${source.name})` : source.name,
         tier: source.tier,
         domain: source.domain,
         market: source.market ?? null,

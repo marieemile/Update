@@ -7,6 +7,12 @@
 // not listed; add any feed you have access to here. FT, NYT and Law360 articles
 // are paywalled, but their feeds carry headlines and summaries.
 
+// Google News search feed. Items carry the real publisher, which ingest uses as
+// the source name; "when:Nd" limits results to the last N days.
+function googleNews(query, lang = "pt-PT", country = "PT") {
+  return `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=${lang}&gl=${country}&ceid=${country}:${lang.split("-")[0]}`;
+}
+
 export const SOURCES = [
   // ---- World: primary ----
   { name: "UN News", url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml", tier: 1, domain: "world" },
@@ -80,13 +86,19 @@ export const SOURCES = [
   { name: "TorrentFreak", url: "https://torrentfreak.com/feed/", tier: 3, domain: "tech", market: "ip" },
   { name: "IPFray", url: "https://ipfray.com/feed/", tier: 3, domain: "tech", market: "ip" },
 
-  // ---- Market: Real Estate ----
-  { name: "The Guardian Property", url: "https://www.theguardian.com/money/property/rss", tier: 2, domain: "world", market: "real_estate" },
-  { name: "CNBC Real Estate", url: "https://www.cnbc.com/id/10000115/device/rss/rss.html", tier: 2, domain: "world", market: "real_estate" },
-  { name: "HousingWire", url: "https://www.housingwire.com/feed/", tier: 3, domain: "world", market: "real_estate" },
-  { name: "Bisnow", url: "https://www.bisnow.com/rss-feed/home", tier: 3, domain: "world", market: "real_estate" },
-  { name: "Commercial Observer", url: "https://commercialobserver.com/feed/", tier: 3, domain: "world", market: "real_estate" },
-  { name: "Inman", url: "https://feeds.feedburner.com/inmannews", tier: 3, domain: "world", market: "real_estate" },
+  // ---- Market: Real Estate (Europe, with a Portugal focus) ----
+  // Most Portuguese property outlets (idealista, Vida Imobiliária, Jornal de
+  // Negócios, Expresso) block or don't publish feeds, so Google News searches
+  // fill the gap. Ingest names each of their items after the real publisher.
+  { name: "ECO Imobiliário", url: "https://eco.sapo.pt/topico/imobiliario/feed/", tier: 2, domain: "world", market: "real_estate" },
+  { name: "ECO Habitação", url: "https://eco.sapo.pt/topico/habitacao/feed/", tier: 2, domain: "world", market: "real_estate" },
+  { name: "Housing Europe", url: "https://www.housingeurope.eu/rss", tier: 3, domain: "world", market: "real_estate" },
+  { name: "PT housing law", url: googleNews("lei habitação OR arrendamento OR \"alojamento local\" OR IMT OR IMI OR \"crédito habitação\" OR \"Diário da República\" imóveis when:2d"), tier: 3, domain: "world", market: "real_estate" },
+  { name: "PT property market", url: googleNews("imobiliário OR \"preço das casas\" OR \"mercado imobiliário\" when:2d"), tier: 3, domain: "world", market: "real_estate" },
+  { name: "Portugal property (EN)", url: googleNews("Portugal property OR \"real estate\" OR housing when:2d", "en-GB", "GB"), tier: 3, domain: "world", market: "real_estate" },
+  { name: "EU housing policy", url: googleNews("EU housing OR \"Affordable Housing\" OR \"short-term rentals\" OR \"real estate\" regulation Europe when:3d", "en-GB", "GB"), tier: 3, domain: "world", market: "real_estate" },
+  { name: "PropTech Europe", url: googleNews("proptech OR \"property platform\" OR \"real estate\" AI tool Europe OR Portugal OR Spain when:7d", "en-GB", "GB"), tier: 3, domain: "tech", market: "real_estate" },
+  { name: "PropTech PT", url: googleNews("proptech OR \"plataforma imobiliária\" OR \"startup imobiliária\" OR \"inteligência artificial\" imobiliário when:7d"), tier: 3, domain: "tech", market: "real_estate" },
 
   // ---- Discovery ----
   { name: "Hacker News (200+ points)", url: "https://hnrss.org/frontpage?points=200", tier: 4, domain: "tech" },
