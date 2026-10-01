@@ -7,7 +7,7 @@ const parser = new Parser({
       ["media:content", "mediaContent", { keepArray: true }],
       ["media:thumbnail", "mediaThumbnail", { keepArray: true }],
       ["content:encoded", "contentEncoded"],
-      ["source", "gnSource"],
+      ["source", "gnSource", { keepArray: true }],
     ],
   },
 });
@@ -52,11 +52,17 @@ function pickImage(item) {
 // the title as " - Publisher". Split it out so the item reads like any other.
 function googleNewsItem(item) {
   const title = clean(item.title);
-  const publisher = clean(typeof item.gnSource === "string" ? item.gnSource : item.gnSource?._ ?? "");
+  const src = item.gnSource?.[0];
+  const publisher = clean(typeof src === "string" ? src : src?._ ?? "");
   const suffix = publisher && ` - ${publisher}`;
+  let host = "";
+  try {
+    host = new URL(src?.$?.url ?? "").hostname.replace(/^www\./, "");
+  } catch {}
   return {
     title: suffix && title.endsWith(suffix) ? title.slice(0, -suffix.length) : title,
     publisher,
+    host,
   };
 }
 
@@ -77,6 +83,7 @@ async function fetchSource(source, cutoff, maxItems) {
   const feed = await parser.parseString(xml);
   const isGoogleNews = source.url.startsWith("https://news.google.com/");
   return feed.items
+    .filter((item) => !(isGoogleNews && source.skipPublishers?.test(googleNewsItem(item).host)))
     .map((item) => {
       const published = new Date(item.isoDate || item.pubDate || 0);
       const gn = isGoogleNews ? googleNewsItem(item) : null;

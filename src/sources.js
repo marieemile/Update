@@ -13,6 +13,10 @@ function googleNews(query, lang = "pt-PT", country = "PT") {
   return `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=${lang}&gl=${country}&ceid=${country}:${lang.split("-")[0]}`;
 }
 
+// Portuguese-language searches also surface Brazilian outlets; skip them by
+// publisher domain.
+const BRAZIL = /\.br$|^(valor\.globo|oglobo\.globo|exame|cnnbrasil|investidor10)\.com|vietnam\.vn$/;
+
 export const SOURCES = [
   // ---- World: primary ----
   { name: "UN News", url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml", tier: 1, domain: "world" },
@@ -93,12 +97,12 @@ export const SOURCES = [
   { name: "ECO Imobiliário", url: "https://eco.sapo.pt/topico/imobiliario/feed/", tier: 2, domain: "world", market: "real_estate" },
   { name: "ECO Habitação", url: "https://eco.sapo.pt/topico/habitacao/feed/", tier: 2, domain: "world", market: "real_estate" },
   { name: "Housing Europe", url: "https://www.housingeurope.eu/rss", tier: 3, domain: "world", market: "real_estate" },
-  { name: "PT housing law", url: googleNews("lei habitação OR arrendamento OR \"alojamento local\" OR IMT OR IMI OR \"crédito habitação\" OR \"Diário da República\" imóveis when:2d"), tier: 3, domain: "world", market: "real_estate" },
-  { name: "PT property market", url: googleNews("imobiliário OR \"preço das casas\" OR \"mercado imobiliário\" when:2d"), tier: 3, domain: "world", market: "real_estate" },
-  { name: "Portugal property (EN)", url: googleNews("Portugal property OR \"real estate\" OR housing when:2d", "en-GB", "GB"), tier: 3, domain: "world", market: "real_estate" },
+  { name: "PT housing law", url: googleNews("lei habitação OR arrendamento OR \"alojamento local\" OR IMT OR IMI OR \"crédito habitação\" OR \"Diário da República\" imóveis when:2d"), skipPublishers: BRAZIL, tier: 3, domain: "world", market: "real_estate" },
+  { name: "PT property market", url: googleNews("imobiliário OR \"preço das casas\" OR \"mercado imobiliário\" when:2d"), skipPublishers: BRAZIL, tier: 3, domain: "world", market: "real_estate" },
+  { name: "Portugal property (EN)", url: googleNews("Portugal (property OR \"real estate\" OR housing OR rental OR landlords) -Ronaldo -football -\"for sale\" when:2d", "en-GB", "GB"), tier: 3, domain: "world", market: "real_estate" },
   { name: "EU housing policy", url: googleNews("EU housing OR \"Affordable Housing\" OR \"short-term rentals\" OR \"real estate\" regulation Europe when:3d", "en-GB", "GB"), tier: 3, domain: "world", market: "real_estate" },
   { name: "PropTech Europe", url: googleNews("proptech OR \"property platform\" OR \"real estate\" AI tool Europe OR Portugal OR Spain when:7d", "en-GB", "GB"), tier: 3, domain: "tech", market: "real_estate" },
-  { name: "PropTech PT", url: googleNews("proptech OR \"plataforma imobiliária\" OR \"startup imobiliária\" OR \"inteligência artificial\" imobiliário when:7d"), tier: 3, domain: "tech", market: "real_estate" },
+  { name: "PropTech PT", url: googleNews("proptech OR \"plataforma imobiliária\" OR \"startup imobiliária\" OR \"inteligência artificial\" imobiliário when:7d"), skipPublishers: BRAZIL, tier: 3, domain: "tech", market: "real_estate" },
 
   // ---- Discovery ----
   { name: "Hacker News (200+ points)", url: "https://hnrss.org/frontpage?points=200", tier: 4, domain: "tech" },
