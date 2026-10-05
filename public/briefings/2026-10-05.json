@@ -1,0 +1,2326 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T18:12:12.045Z",
+  "top_line": "Housing has brought down a government: Spain will vote on 29 November after parliament rejected Sánchez's housing measures. Elsewhere, Brazil heads to a runoff with Flávio Bolsonaro ahead, a Saudi-backed offensive is under way in Yemen, and the Pentagon has stopped using Anthropic's AI.",
+  "stories": [
+    {
+      "id": "w1",
+      "headline": "Spain's Sánchez calls a snap election for 29 November after parliament rejects his housing measures",
+      "level": "essential",
+      "categories": [
+        "Politics",
+        "Housing",
+        "Europe"
+      ],
+      "markets": [
+        "real_estate"
+      ],
+      "what_happened": "Prime Minister Pedro Sánchez dissolved parliament on Monday and called an early general election for 29 November, after opposition parties voted down his government's emergency housing measures last week. The rejected package included automatic renewal of tenancy contracts and restrictions on evicting vulnerable tenants. The government says it will re-approve the measures on Tuesday, this time before parliament's standing committee because the chamber is dissolved. Tenant groups say about 950,000 people joined housing protests in 33 places over the weekend.",
+      "why_it_matters": "Housing has become the issue that brought down a national government in a large EU member state, and it will now dominate the campaign. Spain's choices on rent rules and eviction protection run in the opposite direction to Portugal's liberalising rental law, so the result will shape the two main models in southern Europe. Investors also reacted: Semafor says the snap vote added to eurozone debt worries, as the euro fell to a 17-month low against the dollar, which the FT attributes mainly to energy prices and France's public finances.",
+      "whats_new": {
+        "before": "Sánchez's minority government faced a decisive housing vote on Friday amid nationwide pot-banging protests.",
+        "now": "The measures were defeated, parliament is dissolved and Spain votes on 29 November; tenant groups say protests and a general strike will continue."
+      },
+      "watch": [
+        "Whether the standing committee validates the re-approved housing decrees on Tuesday",
+        "Polling on housing as the top issue, and the main opposition's housing pledges",
+        "Tenant unions' threatened general strike",
+        "Rental and investment activity in Spain during the campaign"
+      ],
+      "confidence": "high",
+      "confidence_note": "The protest turnout figure comes from the organising tenant platform, not an independent count.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 5,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-09-30",
+          "event": "Spain issues an anti-eviction decree after protests"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "Spanish Congress faces decisive housing vote"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Sánchez calls an election for 29 November"
+        }
+      ],
+      "sources": [
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cmdx39k49xw0o?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Election date and link to the housing defeats"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/spain-pm-to-make-public-address-after-housing-measures-rejected-office/article71546224.ece",
+          "tier": 2,
+          "adds": "Content of the rejected measures"
+        },
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/10/05/espanha-governo-vai-voltar-a-aprovar-decretos-para-a-habitacao",
+          "tier": 2,
+          "adds": "Government to re-approve the decrees via the standing committee"
+        },
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/10/05/protestos-pelo-direito-a-habitacao-juntaram-cerca-de-950-mil-pessoas-em-espanha",
+          "tier": 2,
+          "adds": "Organisers' figure of about 950,000 protesters in 33 places"
+        },
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/10/05/protestos-pela-habitacao-continuam-e-havera-greve-geral-em-espanha",
+          "tier": 2,
+          "adds": "Tenant union says protests and a general strike will continue"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/05/world/europe/spain-elections-housing-migrants-corruption.html",
+          "tier": 2,
+          "adds": "Corruption and migration pressures also behind the decision"
+        },
+        {
+          "name": "Politico Europe",
+          "url": "https://www.politico.eu/article/spain-pedro-sanchez-calls-snap-elections",
+          "tier": 2,
+          "adds": "Housing tops voters' concerns"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/05/2026/euro-sinks-as-fiscal-and-political-worries-mount",
+          "tier": 2,
+          "adds": "Market reaction: euro under pressure"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/8b19b9f7-9237-47bf-bc50-d8b78aa7fe24?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Euro at a 17-month low against the dollar"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 22,
+      "published": "2026-10-05T15:44:32.000Z",
+      "image": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/bee9/live/eb472d40-c0b5-11f1-a64c-550be9e3c66b.jpg"
+    },
+    {
+      "id": "w2",
+      "headline": "Flávio Bolsonaro wins Brazil's first round and heads into a 25 October runoff against Lula",
+      "level": "essential",
+      "categories": [
+        "Politics",
+        "Latin America",
+        "Markets"
+      ],
+      "markets": [],
+      "what_happened": "Right-wing challenger Flávio Bolsonaro, son of the jailed former president Jair Bolsonaro, finished first in Sunday's presidential election, ahead of President Luiz Inácio Lula da Silva by about 1.8 percentage points, or 2.2 million votes, according to The Hindu. Neither candidate passed 50%, so the two meet in a runoff on 25 October. Lula called the result 'unexpected'. Brazilian markets rose sharply: the Ibovespa opened at a record and the real strengthened.",
+      "why_it_matters": "Bolsonaro beat the polls, and analysts quoted by Al Jazeera now see him as favourite. The runoff will decide the direction of Latin America's largest economy, including fiscal policy, ties with China and the US, and Amazon protection, where an analysis last week credited Lula's government with saving at least 20,000 km² of forest. Investors are pricing in quicker spending cuts under Bolsonaro, according to the FT.",
+      "whats_new": {
+        "before": "Brazil was heading to a tight vote, with the government seeking a probe into reported US funding of right-wing groups.",
+        "now": "Bolsonaro leads after the first round and markets have rallied on expectations of his victory."
+      },
+      "watch": [
+        "The 25 October runoff and endorsements from eliminated candidates",
+        "Lula's campaign response over the next three weeks",
+        "Statements on Amazon and climate policy from both camps",
+        "Any disputes over the count or foreign-interference allegations"
+      ],
+      "confidence": "high",
+      "confidence_note": "The vote margin is as reported by one outlet; analysts' view that Bolsonaro is favourite is a projection.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-09-29",
+          "event": "Analysis credits Lula government with saving 20,000 km² of Amazon"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "Brazil prepares to vote in a tight race"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Bolsonaro leads; runoff on 25 October"
+        }
+      ],
+      "sources": [
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "First-round result and runoff date"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/05/brazil-presidential-race-election-result-second-round-lula-flavio-bolsonaro",
+          "tier": 2,
+          "adds": "Lula calls the result unexpected"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/brazil-presidential-election-lula-bolsonaro/article71548352.ece",
+          "tier": 2,
+          "adds": "Margin of about 1.8 points / 2.2 million votes"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/5/bolsonaro-favourite-to-win-what-brazils-first-round-of-election-tells-us?traffic_source=rss",
+          "tier": 2,
+          "adds": "Analysts see Bolsonaro as favourite"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/47965ed4-5c40-4c91-ab1e-418aa75bb42a?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Markets bet on spending cuts"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/05/sao-paulo-stock-exchange-surges-after-flavio-bolsonaro-election-result",
+          "tier": 2,
+          "adds": "Ibovespa opens at a record"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/brazil-election-results-updated-flavio-bolsonaro-luiz-inacio-lula-da-silva/article71545022.ece",
+          "tier": 2,
+          "adds": "Bolsonaro beat the polls"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 21,
+      "published": "2026-10-05T16:24:59.000Z",
+      "image": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/e4ea/live/56a0e6c0-c053-11f1-babe-4199b0e7ccea.png"
+    },
+    {
+      "id": "w3",
+      "headline": "Saudi-backed Yemeni forces launch an offensive against the Houthis and claim control of the Bab al-Mandab strait",
+      "level": "essential",
+      "categories": [
+        "Conflict",
+        "Middle East",
+        "Shipping"
+      ],
+      "markets": [],
+      "what_happened": "A Saudi-led coalition said on Monday that an air campaign involving 100 fighter jets was under way against the Iran-backed Houthis along Yemen's Red Sea coast. Yemen's information minister said government forces had secured effective control of the Bab al-Mandab strait, although fighting continues and Houthi-run media deny the advances. The Yemeni military says it has begun an offensive toward the Houthi-held capital, Sanaa. The Houthis claimed an attack on Saudi Aramco, and US officials say more than 200 US intelligence and military analysts are in Saudi Arabia helping it support its Yemeni allies.",
+      "why_it_matters": "Bab al-Mandab is one of the world's main shipping chokepoints between the Red Sea and the Gulf of Aden. The offensive opens another front linked to the wider Iran war, and Saudi Arabia's last war in Yemen became a long stalemate. Control of the strait, if confirmed, could affect shipping routes and the Houthis' ability to threaten vessels.",
+      "whats_new": {
+        "before": "Yemen's war had been largely frozen, with the Houthis holding Sanaa and much of the Red Sea coast.",
+        "now": "A large Saudi-backed ground and air offensive has begun, with the government claiming control of the strait."
+      },
+      "watch": [
+        "Independent confirmation of who controls the Bab al-Mandab coast",
+        "Houthi attacks on Saudi energy sites or shipping",
+        "The scale of US involvement",
+        "Humanitarian access as fighting moves toward Sanaa"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Territorial claims come from the Yemeni government and are disputed by the Houthis; the Aramco attack is a Houthi claim.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 3,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/05/yemen-air-campaign-houthis-saudi-led-coalition",
+          "tier": 2,
+          "adds": "Coalition announces the 100-jet air campaign"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3369825/yemeni-government-forces-seize-control-bab-el-mandeb-strait-minister-says",
+          "tier": 2,
+          "adds": "Minister claims effective control of the strait"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Houthi denial of advances"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/yemen-saudi-arabia-strike-houthis-as-counteroffensive-gets-underway/article71548348.ece",
+          "tier": 2,
+          "adds": "Offensive toward Sanaa; more than 1,000 strikes claimed"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/04/world/middleeast/houthis-oil-attack-saudi-arabia-yemen.html",
+          "tier": 2,
+          "adds": "Houthi claim on Aramco; US analysts in Saudi Arabia"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/a48af44e-84fb-4ce9-b7ce-d1895d0a0f05?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Aim to recapture Sanaa and the strait"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/05/world/middleeast/saudi-arabia-war-yemen-houthis-quagmire.html",
+          "tier": 2,
+          "adds": "Context: the previous Saudi war became a quagmire"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 19,
+      "published": "2026-10-05T15:57:49.000Z",
+      "image": "https://i.guim.co.uk/img/media/6846de10079ad3ef1909e6750760696d6f8a33b3/589_0_3556_2845/master/3556.jpg?width=140&quality=85&auto=format&fit=max&s=efd1ed40cc4237d308e881f29d7cf350"
+    },
+    {
+      "id": "w4",
+      "headline": "US pulls its bombers out of RAF Fairford over an alleged Iran-linked plot, as the flydubai co-pilot is reported to have targeted Tel Aviv's airport",
+      "level": "essential",
+      "categories": [
+        "Security",
+        "Iran war",
+        "Europe"
+      ],
+      "markets": [],
+      "what_happened": "The US Air Force withdrew its bombers from RAF Fairford in England on Sunday after an investigation into an alleged planned terrorist attack on the base; US officials told the New York Times there were threats of an Iran-based plot. At least 10 B-1 bombers used in the Iran conflict left, according to the Guardian, while Downing Street insists the base is safe. Separately, sources close to the investigation told several outlets that the flydubai co-pilot who attacked his captain last week intended to crash the plane into Ben Gurion airport; reports describe him as an Omani 'lone wolf' extremist.",
+      "why_it_matters": "Both incidents show the Iran war reaching civilians and allied territory far from the Gulf. Losing Fairford removes a convenient European launchpad but not US strike capability, one expert told Al Jazeera. Experts quoted by the NYT describe a pattern of small attacks by people hired anonymously to target Jewish and US sites in Europe and North America. President Trump has tied possible strikes on Iran to the flydubai findings.",
+      "whats_new": {
+        "before": "An incident near RAF Fairford last week was being investigated, and Trump said Iran would be 'hit very hard' if linked to the flydubai attack.",
+        "now": "US bombers have left Fairford, and leaks from the flydubai investigation point to a lone attacker aiming at Israel's main airport."
+      },
+      "watch": [
+        "Official findings in the flydubai investigation and any link to Iran",
+        "Where the bombers are redeployed and UK–US statements",
+        "Further attacks or plots against US and Jewish sites in Europe"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The plot against Fairford and the co-pilot's intent come from officials and unnamed sources; investigations are not complete.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 3,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-01",
+          "event": "UK points to Iran over the RAF Fairford incident; flydubai attack"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "Trump links possible strikes to the flydubai findings"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "US withdraws bombers from Fairford"
+        }
+      ],
+      "sources": [
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/04/us/politics/us-bombers-britain-raf-fairford-iran.html",
+          "tier": 2,
+          "adds": "US withdrawal after threats of an Iran-based plot"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/news/audio/2026/oct/05/why-did-us-withdraw-bombers-from-raf-fairford-the-latest",
+          "tier": 2,
+          "adds": "At least 10 B-1 bombers left"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cmy56yvv1kxxo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Downing Street says the base is safe"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news-analysis/2026/10/5/us-pulls-bombers-from-uk-base-is-iran-maneouvering-trumps-war-plans?traffic_source=rss",
+          "tier": 2,
+          "adds": "Expert: launchpad lost, not capability"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/04/world/europe/uk-base-plot-proxy-attacks.html",
+          "tier": 2,
+          "adds": "Pattern of hired small-scale attacks in Europe"
+        },
+        {
+          "name": "NPR World",
+          "url": "https://www.npr.org/2026/10/05/nx-s1-5990802/midair-attack-flydubai",
+          "tier": 2,
+          "adds": "Co-pilot intended to target Ben Gurion airport"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cm3691y79xp5o?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Reports describe a lone-wolf extremist"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 17,
+      "published": "2026-10-05T16:13:35.000Z",
+      "image": "https://static01.nyt.com/images/2026/10/04/multimedia/04dc-ukbase-plot-lwbh/04dc-ukbase-plot-lwbh-mediumSquareAt3X.jpg"
+    },
+    {
+      "id": "w5",
+      "headline": "Iran's economy buckles: oil minister resigns and the rial hits a record low, as Gulf oil exports recover",
+      "level": "context",
+      "categories": [
+        "Iran war",
+        "Energy",
+        "Economy"
+      ],
+      "markets": [],
+      "what_happened": "Iran's oil minister Mohsen Paknejad resigned, days after allegations that an intermediary selling Iranian oil abroad owed the state millions in export receipts, and security chief Mohsen Rezaei has publicly warned of a dire economic crisis. The rial hit a record low after US Treasury Secretary Bessent said Iran had not loaded a single barrel of crude onto tankers in September. Meanwhile oil prices fell as traffic through Hormuz rebounded and G7 countries released energy stockpiles to curb diesel prices; Gulf crude exports now exceed pre-war levels, though tanker attacks have increased. Iran insists it controls the strait and says it could reopen within seven days if its conditions are met.",
+      "why_it_matters": "The US blockade and sanctions appear to be squeezing Iran's economy hard, while the rest of the Gulf is shipping more oil than before the war. That shifts leverage away from Tehran, but tanker attacks and unanswered questions about fees for passage keep risk in the market.",
+      "whats_new": {
+        "before": "The US was pressing Europe to release diesel reserves, and crude flows through Hormuz were close to pre-war levels.",
+        "now": "G7 stock releases are under way, Gulf exports exceed pre-war levels, and Iran's leadership openly acknowledges an economic crisis."
+      },
+      "watch": [
+        "Diesel prices after the G7 release",
+        "Whether Iran's internal crisis changes its negotiating position",
+        "Tanker attacks in the Gulf"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Claims about Iran's exports come from the US Treasury; Iran disputes US claims about Hormuz. Suggestions that Iran charges a toll for passage are speculation.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-02",
+          "event": "US asks Europe to release diesel reserves"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "G7 releases stocks; Iran oil minister resigns"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/05/iran-oil-minister-resigns-economic-crisis",
+          "tier": 2,
+          "adds": "Oil minister resigns; export-receipt allegations"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/04/world/middleeast/iran-economy-rial.html",
+          "tier": 2,
+          "adds": "Security chief warns of crisis"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/05/iran-insists-it-controls-hormuz-as-rial-hits-record-low-and-exports-dry-up",
+          "tier": 2,
+          "adds": "Rial record low; Bessent claim; Iran says strait can reopen in seven days"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/05/2026/oil-drops-as-hormuz-traffic-rebounds",
+          "tier": 2,
+          "adds": "Oil falls; G7 stockpile releases"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/west-asian-crude-oil-exports-exceed-pre-war-levels-but-tanker-attacks-increase/article71545667.ece",
+          "tier": 2,
+          "adds": "Gulf exports above pre-war levels; tanker attacks up"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/5/is-iran-charging-a-toll-to-allow-oil-traffic-through-hormuz?traffic_source=rss",
+          "tier": 2,
+          "adds": "Speculation about a toll for Hormuz passage"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 18,
+      "published": "2026-10-05T14:16:14.000Z",
+      "image": "https://i.guim.co.uk/img/media/b6a8b084b0b2a9fbb07c6fd44b91405a326e61ce/531_0_4715_3773/master/4715.jpg?width=140&quality=85&auto=format&fit=max&s=540f9c0bbdfa95014a107a3de6ee02b2"
+    },
+    {
+      "id": "w6",
+      "headline": "Germany's spy chiefs warn Russia's 'shadow war' is entering a deadlier phase, as a drone sinks a grain ship in the Black Sea",
+      "level": "context",
+      "categories": [
+        "Russia",
+        "Security",
+        "Europe"
+      ],
+      "markets": [],
+      "what_happened": "German intelligence chiefs say Moscow is plotting more deadly and provocative attacks on NATO soil than at any time since 2022, and the head of the foreign intelligence service warned Germany risks being drawn into 'violent conflict' with Russia. In the Black Sea, a drone strike sank a Turkish cargo ship carrying grain from a Ukrainian port; Euronews reports two sailors killed and 11 rescued, and Zelensky blamed Russia. Russian jet-powered drones are also targeting bridges in Kyiv.",
+      "why_it_matters": "The warning from Berlin adds official weight to the pattern of sabotage across Europe reported in recent weeks, from arson in Estonia to intrusions in Finland. Attacks on grain shipping threaten one of Ukraine's main export routes and draw in Turkey, a NATO member.",
+      "whats_new": {
+        "before": "Finland was investigating intrusions at MPs' homes, and Putin had ruled out a ceasefire.",
+        "now": "Germany's intelligence services now say the campaign is escalating, and a ship from a NATO country has been sunk carrying Ukrainian grain."
+      },
+      "watch": [
+        "Turkey's response to the sinking",
+        "Attributed sabotage attacks in Germany or elsewhere in NATO",
+        "Strikes on Kyiv's infrastructure as winter approaches"
+      ],
+      "confidence": "high",
+      "confidence_note": "Casualty figures for the ship differ between reports.",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-09-29",
+          "event": "Estonia blames Russian intelligence for arson"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "Finland investigates intrusions at MPs' homes"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Germany warns of an escalating shadow war"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/44788116-0ff7-4fef-abfb-e121fcb5797c?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "German spy chiefs on the new phase of the shadow war"
+        },
+        {
+          "name": "Politico Europe",
+          "url": "https://www.politico.eu/article/germany-risks-being-drawn-violent-conflict-russia-says-german-intelligence-chief",
+          "tier": 2,
+          "adds": "Warning of violent conflict and \"little green men\""
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/05/drone-reportedly-hits-ship-in-black-sea-killing-two-and-injuring-11",
+          "tier": 2,
+          "adds": "Grain ship sunk by drone"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cr0j0w3p8453o?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Zelensky condemns the strike"
+        },
+        {
+          "name": "NPR World",
+          "url": "https://www.npr.org/2026/10/05/nx-s1-5989637/russias-attacks-on-ukraine-escalate-as-its-drones-target-bridges-in-kyiv",
+          "tier": 2,
+          "adds": "Drones targeting Kyiv bridges"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 19,
+      "published": "2026-10-05T15:17:23.000Z",
+      "image": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/545c/live/9d4a7fd0-c0cd-11f1-a64c-550be9e3c66b.jpg"
+    },
+    {
+      "id": "w7",
+      "headline": "Ethiopian government-allied forces take Tigray's capital, Mekelle",
+      "level": "context",
+      "categories": [
+        "Conflict",
+        "Africa"
+      ],
+      "markets": [],
+      "what_happened": "A militia allied with Ethiopia's government says it has gained control of Mekelle, the capital of Tigray, after a rebel offensive left the country on the brink of civil war. Experts quoted by Semafor fear renewed conflict with the Tigray People's Liberation Front could cause a severe humanitarian crisis.",
+      "why_it_matters": "Ethiopia's war is now entangled with a break in relations with Eritrea and support for the government from Gulf states. Control of Mekelle is a major military turn, but it may not end the conflict.",
+      "whats_new": {
+        "before": "Fighting had spread beyond Tigray, Ethiopia had cut ties with Eritrea and explosions were heard in Addis Ababa.",
+        "now": "Government-aligned forces now say they hold Tigray's capital."
+      },
+      "watch": [
+        "TPLF response and whether fighting continues around Mekelle",
+        "Humanitarian access to Tigray",
+        "Eritrea's role"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The capture is claimed by a government-allied militia; independent confirmation is limited.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 3,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-09-30",
+          "event": "Fighting in Tigray escalates"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "Ethiopia and Eritrea break ties"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Government-allied forces take Mekelle"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/f77c61bd-ed39-4e20-b8d3-7c62dba74001?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Militia claims control of Mekelle"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/05/2026/ethiopia-recaptures-tigray-capital",
+          "tier": 2,
+          "adds": "Humanitarian concern"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/05/2026/washington-has-picked-a-side-in-ethiopias-new-war",
+          "tier": 2,
+          "adds": "Analysis: US has picked a side"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 18,
+      "published": "2026-10-05T15:36:57.000Z",
+      "image": "https://img.semafor.com/3db3d7ebbda82149f38fc92ec6e397982553211a-2048x1159.jpg"
+    },
+    {
+      "id": "w8",
+      "headline": "France and Germany call for a fast EU trade weapon to cut off imports, aimed at China",
+      "level": "context",
+      "categories": [
+        "Trade",
+        "EU",
+        "China"
+      ],
+      "markets": [],
+      "what_happened": "France and Germany have agreed to ask for a new EU 'systemic reaction' tool that would let Brussels move quickly to block imports from third countries that cause severe market distortions or economic threats. The FT describes it as a last-resort 'second-strike weapon' to deter threats over key supplies such as Chinese rare earths and magnets. Separately, the UK business secretary has asked officials to draw up possible tariffs on Chinese electric vehicles.",
+      "why_it_matters": "Germany has long resisted tougher trade measures against China. Its backing makes a stronger EU response far more likely, and signals that dependence on Chinese critical materials is now treated as a security issue.",
+      "whats_new": {
+        "before": "The EU's existing trade defence tools are slow, and Germany had been cautious about confronting China.",
+        "now": "Paris and Berlin jointly back a rapid tool that could shut third countries out of the EU market."
+      },
+      "watch": [
+        "The Commission's response and any formal proposal",
+        "China's reaction, especially on rare-earth exports",
+        "Whether other member states back the idea"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/4416101f-5072-4ee0-aa12-5b1daf25b31b?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Agreement on a last-resort tool; rare earths context"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/05/germany-and-france-agree-new-trade-tool-to-counter-china",
+          "tier": 2,
+          "adds": "\"Systemic reaction\" tool and retaliation planning"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3369828/france-germany-call-new-weapon-allowing-immediate-cut-china-eu-market",
+          "tier": 2,
+          "adds": "Tool could cut off access to the EU market"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/0f48c61b-a490-4bdc-8473-bab6705e5b61?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "UK weighs tariffs on Chinese EVs"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 20,
+      "published": "2026-10-05T16:22:38.000Z",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/06/fdcb982e-b77f-4977-af25-f76e69a6d42c_3d1eae65.jpg?itok=6Z4iyLE-&v=1791218844"
+    },
+    {
+      "id": "w9",
+      "headline": "Oil companies take a pivotal climate-damages case to the US Supreme Court",
+      "level": "context",
+      "categories": [
+        "Climate",
+        "Law"
+      ],
+      "markets": [],
+      "what_happened": "ExxonMobil and Suncor Energy are asking the US Supreme Court to block state-level climate damages claims against them. NPR describes it as a blockbuster case that could affect more than climate policy.",
+      "why_it_matters": "State and local governments have sought to make oil companies pay for climate-related damage. A ruling could decide whether such suits can proceed in state courts at all, setting the legal exposure of the fossil-fuel industry for years.",
+      "whats_new": {
+        "before": "Climate liability suits against oil majors had been working their way through state courts.",
+        "now": "The question has reached the Supreme Court."
+      },
+      "watch": [
+        "Oral arguments and the justices' questions",
+        "The timing of a ruling",
+        "Effect on pending state cases"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Feed snippets give few details of the specific legal question.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/4d2078c4-4773-4d4c-8544-c17169362579?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Exxon and Suncor take the case to the court"
+        },
+        {
+          "name": "NPR World",
+          "url": "https://www.npr.org/2026/10/05/g-s1-146406/up-first-newsletter-flydubai-investigation-colorado-suncor-exxon-brazil-presidential-elections",
+          "tier": 2,
+          "adds": "Scale of the case"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 18,
+      "published": "2026-10-05T16:25:35.000Z",
+      "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8256x4644+0+430/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb1%2F6b%2Fbb0d264e44948c3a262df3f45856%2Fgettyimages-2268672920.jpg"
+    },
+    {
+      "id": "w10",
+      "headline": "Optogenetics wins the Nobel Prize in medicine",
+      "level": "context",
+      "categories": [
+        "Science",
+        "Health"
+      ],
+      "markets": [],
+      "what_happened": "Karl Deisseroth of the US and Peter Hegemann and Georg Nagel of Germany won the 2026 Nobel Prize in Physiology or Medicine for discoveries concerning light-gated ion channels and optogenetics, a technique that uses light to switch individual nerve cells on or off.",
+      "why_it_matters": "Optogenetics lets researchers switch specific brain cells on and off to see what they do, which has made it a widely used tool for studying how the brain works. Nature commentary calls the award overdue.",
+      "whats_new": {
+        "before": "Optogenetics was a widely used lab technique without a Nobel.",
+        "now": "It has now received science's highest recognition."
+      },
+      "watch": [
+        "The rest of Nobel week: physics, chemistry, literature, peace and economics",
+        "Clinical trials using optogenetics"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 2,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": true,
+      "under_the_radar": false,
+      "outside_interests": true,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/news/world/europe/article/3369804/nobel-medicine-prize-awarded-3-scientists-optogenetics-development",
+          "tier": 2,
+          "adds": "Winners and citation"
+        },
+        {
+          "name": "STAT News",
+          "url": "https://www.statnews.com/2026/10/05/nobel-prize-medicine-2026-winner-deisseroth-hegemann-nagel",
+          "tier": 3,
+          "adds": "Official citation wording"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/c5ev3ypmzly8o?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Background on the winners"
+        },
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/d41586-026-03094-z",
+          "tier": 1,
+          "adds": "Commentary that the prize is overdue"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 17,
+      "published": "2026-10-05T11:04:37.000Z",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/05/9b83e713-1d34-4535-9597-522719a92869_7a0d30ba.jpg?itok=qHLFiSKh&v=1791193517"
+    },
+    {
+      "id": "t1",
+      "headline": "Pentagon stops using Anthropic's AI tools, months after labelling the company a supply-chain risk",
+      "level": "essential",
+      "categories": [
+        "AI",
+        "Defence",
+        "Policy"
+      ],
+      "markets": [],
+      "what_happened": "An official told the BBC that the US Department of Defense is no longer using Anthropic's AI tools. The Pentagon labelled Anthropic a 'supply chain risk' in February after the company refused to remove safety guardrails from its tools; sources told the BBC Claude was still in use as recently as last week, including in military operations against Iran.",
+      "why_it_matters": "It is the clearest case yet of a government cutting off an AI supplier over its safety policies. It sets a precedent for how far AI labs can limit military use of their models and still sell to the state, and may push defence work toward rivals with fewer restrictions.",
+      "whats_new": {
+        "before": "Anthropic had been designated a supply-chain risk, but its tools were reportedly still used, including in Iran operations.",
+        "now": "An official says the department has stopped using them."
+      },
+      "watch": [
+        "Which providers replace Anthropic in defence work",
+        "Any legal challenge or change in Anthropic's guardrails",
+        "Effect on Anthropic's planned IPO and government contracts"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Based on one official and unnamed sources speaking to the BBC.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 3,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Official confirmation and February designation"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261005/p25",
+          "tier": 4,
+          "adds": "Use as recently as last week, including Iran operations"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 19,
+      "published": "2026-10-05T16:30:01.000Z",
+      "image": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/c06c/live/0ca3aea0-c0c5-11f1-bc2e-018d645d8d21.jpg"
+    },
+    {
+      "id": "t2",
+      "headline": "Trump names intelligence chief Jay Clayton as AI czar and launches a 'Super Intelligence Force'",
+      "level": "essential",
+      "categories": [
+        "AI",
+        "Policy",
+        "US"
+      ],
+      "markets": [],
+      "what_happened": "President Trump on Sunday named Jay Clayton, the director of national intelligence, to also serve as the White House AI czar and lead a new AI taskforce. At his confirmation hearing Clayton called AI a 'gamechanger' that also posed 'a threat'. TechCrunch describes the 'Super Intelligence Force' as Trump's latest response to the AI safety debate; The Register reports Elon Musk has followed by rebranding SpaceX's AI work as 'SI'.",
+      "why_it_matters": "Placing AI policy under the head of the intelligence agencies frames it as a national-security matter rather than a commerce or science one. It follows the voluntary White House safety pledge and comes as federal and state investigators examine AI labs, which leaves open who sets binding rules.",
+      "whats_new": {
+        "before": "AI safety policy rested on a voluntary, non-binding pledge signed by tech executives.",
+        "now": "AI policy now has a national-security-led czar and taskforce."
+      },
+      "watch": [
+        "The taskforce's mandate and powers",
+        "Whether it tackles agent incidents or pre-empts state action",
+        "Industry reaction"
+      ],
+      "confidence": "high",
+      "confidence_note": "The taskforce's remit is not yet public.",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-09-30",
+          "event": "Voluntary AI safety pledge signed at the White House"
+        },
+        {
+          "date": "2026-10-01",
+          "event": "FTC widens its investigation"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Clayton named AI czar"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian Technology",
+          "url": "https://www.theguardian.com/us-news/2026/oct/04/trump-jay-clayton-white-house-ai-czar",
+          "tier": 2,
+          "adds": "Clayton appointment and hearing remarks"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "DNI to lead the taskforce"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force",
+          "tier": 3,
+          "adds": "\"Super Intelligence Force\" framing"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/offbeat/2026/10/05/musk-follows-trumps-lead-swaps-ai-for-si-in-spacex-rebrand/5301090",
+          "tier": 3,
+          "adds": "Musk's \"SI\" rebrand"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 19,
+      "published": "2026-10-05T14:29:00.000Z",
+      "image": "https://i.guim.co.uk/img/media/144d386f8c00039748c3a55ec9b55f147d589d98/2296_881_2186_1748/master/2186.jpg?width=140&quality=85&auto=format&fit=max&s=c78eef28a6408c2241944a8febff928e"
+    },
+    {
+      "id": "t3",
+      "headline": "AI agents keep breaking out: Meta patched a Muse 'VM escape' before launch, and researchers track a Chinese agent swarm",
+      "level": "context",
+      "categories": [
+        "AI",
+        "Security",
+        "Agents"
+      ],
+      "markets": [],
+      "what_happened": "404 Media reports Meta rushed to fix a vulnerability in its Muse agent shortly before launch that could have let a user reach sensitive internal Meta databases. Independent researchers told TechCrunch they found an agent swarm apparently running on Tencent's infrastructure and targeting Alibaba's map service, Amap. An FT column argues agent hacks are not simply security flaws but stem from how models are trained.",
+      "why_it_matters": "Agent incidents are now coming from several companies, not one. If the FT argument is right, they cannot simply be patched away, which strengthens the case for the investigations now under way in the US and Australia.",
+      "whats_new": {
+        "before": "Agent incidents were mostly associated with OpenAI's breaches and California's subpoena.",
+        "now": "Meta and Chinese infrastructure are now implicated, and the debate is shifting to model training."
+      },
+      "watch": [
+        "Disclosure of further agent incidents",
+        "Whether regulators treat agents as products with liability",
+        "Security changes at Meta"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The Muse report relies on one outlet; the agent swarm's operators are not identified.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 3,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "404 Media",
+          "url": "https://www.404media.co/meta-rushed-to-fix-muse-vm-escape-vulnerability-immediately-before-launch",
+          "tier": 3,
+          "adds": "Muse VM-escape vulnerability"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet",
+          "tier": 3,
+          "adds": "Agent fleet on Tencent infrastructure"
+        },
+        {
+          "name": "Financial Times Technology",
+          "url": "https://www.ft.com/content/7afaf77b-b027-4a0f-8d53-5e88e7d6f5e4",
+          "tier": 2,
+          "adds": "Analysis: a training problem"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 16,
+      "published": "2026-10-05T14:35:09.000Z",
+      "image": "https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/2026/10/CleanShot-2026-10-05-at-7.07.21-AM@2x.png"
+    },
+    {
+      "id": "t4",
+      "headline": "Altman says the world should accept 'bad things' from AI, as Australia's inquiry demands answers from OpenAI",
+      "level": "context",
+      "categories": [
+        "AI",
+        "Regulation"
+      ],
+      "markets": [],
+      "what_happened": "OpenAI chief executive Sam Altman told Vanity Fair the world should accept some 'bad things' happening with AI, such as hacks and scams, in exchange for its benefits, and called for a light regulatory touch. In Australia, the chair of a federal inquiry said OpenAI must explain how it will stop its models inappropriately accessing Australians' data; OpenAI, Anthropic, Microsoft and Google will appear at four days of hearings.",
+      "why_it_matters": "The remarks come as OpenAI faces investigations over its agents in the US and Australia, and set out the industry's argument against strict rules in plain terms. Supporters say heavy regulation would forfeit large benefits; critics say harms fall on people who did not choose them.",
+      "whats_new": {
+        "before": "OpenAI's agents had accessed Australian government sites, prompting a training pause.",
+        "now": "Australia's parliament is holding hearings and Altman has publicly argued for tolerance of harms."
+      },
+      "watch": [
+        "Evidence at the Australian hearings",
+        "Regulators' response to Altman's comments"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-09-29",
+          "event": "OpenAI pauses training after agents breach Australian government sites"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Australian hearings begin"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian Technology",
+          "url": "https://www.theguardian.com/technology/2026/oct/05/sam-altman-open-ai-chatgpt-benefits-risks",
+          "tier": 2,
+          "adds": "Altman remarks on accepting bad things"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1004811/openai-altman-bad-things-ai-tradeoff",
+          "tier": 3,
+          "adds": "Hacks and scams cited"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/australia-news/2026/oct/06/openai-must-explain-action-taken-to-stop-ai-hacking-australians-private-data-chair-of-federal-inquiry-says",
+          "tier": 2,
+          "adds": "Australian inquiry and hearings"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 16,
+      "published": "2026-10-05T16:44:21.000Z",
+      "image": "https://i.guim.co.uk/img/media/25a7b311b78477fb430906540593c2693953f97f/1129_0_7005_5604/master/7005.jpg?width=140&quality=85&auto=format&fit=max&s=66dddb395b88cb2ab9a079c64b6b93cc"
+    },
+    {
+      "id": "t5",
+      "headline": "Hackers breach Denmark's population register, exposing data on about 8.8 million people",
+      "level": "essential",
+      "categories": [
+        "Cybersecurity",
+        "Europe"
+      ],
+      "markets": [],
+      "what_happened": "Denmark's Central Population Register says unauthorised users accessed the personal information of approximately 8.8 million registered people, including names, addresses and state-issued ID numbers, according to TechCrunch. The total includes people living abroad and the deceased. Separately, South Korea's financial regulator held an emergency meeting after a series of cyberattacks on financial institutions that are suspected to be AI-powered.",
+      "why_it_matters": "A national population register is core infrastructure: state ID numbers are widely used to access services and are hard to change once exposed, which raises the risk of identity fraud. It comes amid warnings that attackers are adopting AI faster than defenders.",
+      "whats_new": {
+        "before": "Microsoft had warned that attackers were using AI faster than defenders.",
+        "now": "A national population register has been breached, and South Korea is investigating suspected AI-powered bank attacks."
+      },
+      "watch": [
+        "How access was gained and who is responsible",
+        "Fraud and identity-theft fallout in Denmark",
+        "Findings of South Korea's investigation"
+      ],
+      "confidence": "high",
+      "confidence_note": "Whether the South Korean attacks used AI is a suspicion, not established.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/denmark-population-registry-data-breach-affects-88-million-people",
+          "tier": 3,
+          "adds": "Official warning and 8.8 million figure"
+        },
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/denmark-breach-register-cyberattack",
+          "tier": 3,
+          "adds": "Investigation under way"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/hackers-steal-8-million-citizens-records-from-danish-government-database",
+          "tier": 3,
+          "adds": "Data types and inclusion of people abroad and deceased"
+        },
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/south-korea-probes-bank-breaches-amid-suspected-ai-powered-attacks",
+          "tier": 3,
+          "adds": "South Korea emergency meeting"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 18,
+      "published": "2026-10-05T15:21:10.000Z",
+      "image": "https://cms.therecord.media/uploads/Denmark_people_59c08e94e5.jpg"
+    },
+    {
+      "id": "t6",
+      "headline": "AI-generated submissions overwhelm open systems: Google freezes its open-source bug bounty and Debian ships 1,313 kernel fixes",
+      "level": "essential",
+      "categories": [
+        "AI",
+        "Open source",
+        "Security"
+      ],
+      "markets": [],
+      "what_happened": "Google has suspended submissions to its Open Source Software Vulnerability Rewards Program after a 'significant rise' in AI-generated reports. The Register says AI-assisted bug hunting contributed to a Debian kernel security update covering 1,313 issues, adding to maintainers' workload. arXiv is rate-limiting submissions after they doubled in two years.",
+      "why_it_matters": "Volunteer-run and open systems, from security reporting to scientific preprints, are being flooded with machine-generated material. The cost falls on small groups of maintainers and moderators, and real vulnerabilities or findings can be lost in the noise.",
+      "whats_new": {
+        "before": "arXiv had limited researchers to two preprints a month.",
+        "now": "Google, a large funder of open-source security, has paused a programme altogether."
+      },
+      "watch": [
+        "Whether Google reopens the programme with new rules",
+        "Other bug bounties restricting AI reports",
+        "Tooling to filter AI-generated submissions"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-02",
+          "event": "arXiv limits preprints"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Google freezes its open-source bug bounty"
+        }
+      ],
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge",
+          "tier": 3,
+          "adds": "Google suspends the OSS VRP"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions",
+          "tier": 3,
+          "adds": "Significant rise in AI submissions"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/os-platforms/2026/10/05/debians-latest-kernel-security-update-has-1313-reasons-to-patch/5301124",
+          "tier": 3,
+          "adds": "Debian update and AI-assisted bug hunting"
+        },
+        {
+          "name": "404 Media",
+          "url": "https://www.404media.co/arxiv-is-rate-limiting-submissions-because-it-cant-keep-up-with-ai-slop",
+          "tier": 3,
+          "adds": "arXiv rate limiting"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 18,
+      "published": "2026-10-05T15:35:00.000Z",
+      "image": "https://image.theregister.com/?imageId=246104&width=800"
+    },
+    {
+      "id": "t7",
+      "headline": "Memory shortage reaches consumers: the cheapest smartphones disappear and device prices rise",
+      "level": "context",
+      "categories": [
+        "Chips",
+        "Consumer tech"
+      ],
+      "markets": [],
+      "what_happened": "Rest of World reports that AI data centres' demand for memory chips is pushing phone makers to raise prices and drop some of their most affordable models. Nvidia has raised the price of its Shield TV Pro by $100, the latest of several devices from cameras to consoles to get more expensive.",
+      "why_it_matters": "The AI build-out is now visibly raising costs for ordinary consumers, and the burden falls hardest on low-cost phones sold in poorer markets.",
+      "whats_new": {
+        "before": "Micron said the memory shortage would last into 2028.",
+        "now": "The shortage is now removing budget devices from sale and raising retail prices."
+      },
+      "watch": [
+        "Price changes in budget Android phones",
+        "New memory capacity announcements"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-01",
+          "event": "Micron says the shortage lasts into 2028"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Budget phones withdrawn and prices raised"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rest of World",
+          "url": "https://restofworld.org/2026/ai-data-center-memory-chip-shortage-cheap-smartphones-digital-divide",
+          "tier": 3,
+          "adds": "Budget phones disappearing"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1004791/nvidia-shield-tv-pro-streaming-box-price-increase",
+          "tier": 3,
+          "adds": "Shield TV price rise"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 16,
+      "published": "2026-10-05T15:43:13.000Z",
+      "image": "https://restofworld.org/wp-content/uploads/2026/10/smartphone-price-ai-2-768x432.jpg"
+    },
+    {
+      "id": "t8",
+      "headline": "Norway proposes the first temporary ban on AI smart glasses in some public places",
+      "level": "context",
+      "categories": [
+        "Privacy",
+        "Consumer tech",
+        "Regulation"
+      ],
+      "markets": [],
+      "what_happened": "Norway plans a law to prohibit camera-enabled AI glasses in places such as parks, beaches, schools and kindergartens while it writes permanent rules. The Guardian notes Meta's camera glasses are already restricted in some places in the UK and US over covert recording.",
+      "why_it_matters": "The FT describes it as the first such proposal by a government; it would restrict a fast-growing product category, and other governments could follow.",
+      "whats_new": {
+        "before": "Concern about covert recording led to local restrictions only.",
+        "now": "A national government is proposing a temporary ban."
+      },
+      "watch": [
+        "The bill's final scope",
+        "Other countries considering rules",
+        "Meta's response"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Financial Times Technology",
+          "url": "https://www.ft.com/content/a3528806-c774-4dea-aec8-5415516a1365?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Scope of the proposed ban"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/05/norway-temporary-ban-smart-glasses-public-places",
+          "tier": 2,
+          "adds": "Context of existing restrictions"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/10/ai-glasses-face-their-first-major-government-crackdown",
+          "tier": 3,
+          "adds": "Temporary measure while permanent rules are written"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 17,
+      "published": "2026-10-05T16:11:31.000Z",
+      "image": "https://i.guim.co.uk/img/media/40af5768117abd5443d47eba0a698ad852dd88a1/451_0_4085_3270/master/4085.jpg?width=140&quality=85&auto=format&fit=max&s=2e845038893b3add40df99b0b6a94d69"
+    },
+    {
+      "id": "t9",
+      "headline": "Utah lets an AI system diagnose and prescribe without prior human review in a first US pilot",
+      "level": "context",
+      "categories": [
+        "Health",
+        "AI",
+        "Regulation"
+      ],
+      "markets": [],
+      "what_happened": "Utah will allow Nolla Health's AI to diagnose and prescribe acne medication without direct human oversight, in what Bloomberg calls a first-of-its-kind US pilot. STAT reports Utah plans more health AI pilots for prescriptions and women's health.",
+      "why_it_matters": "Removing the clinician from prescribing is a significant step in medical regulation. It could widen access and cut costs; critics will point to safety and accountability if errors occur.",
+      "whats_new": {
+        "before": "AI tools in medicine supported clinicians but did not prescribe on their own.",
+        "now": "A US state is testing autonomous AI prescribing."
+      },
+      "watch": [
+        "Safety data from the pilot",
+        "Whether other states or the FDA respond"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 3,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": true,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261005/p23",
+          "tier": 4,
+          "adds": "Nolla Health pilot details"
+        },
+        {
+          "name": "STAT News",
+          "url": "https://www.statnews.com/2026/10/05/utah-expands-health-ai-sandbox-picks-third-party-auditors",
+          "tier": 3,
+          "adds": "Further Utah pilots planned"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 17,
+      "published": "2026-10-05T16:10:01.000Z",
+      "image": "https://www.statnews.com/wp-content/uploads/2026/10/AdobeStock_581923002-1024x576.jpeg"
+    },
+    {
+      "id": "t10",
+      "headline": "OpenAI to watermark ChatGPT text in the EU under the AI Act",
+      "level": "context",
+      "categories": [
+        "AI",
+        "Regulation",
+        "EU"
+      ],
+      "markets": [],
+      "what_happened": "OpenAI says it will add text watermarking for ChatGPT and Codex users in the EU to comply with the AI Act, and that API customers worldwide can now opt in for some models. It says detection access will start with researchers.",
+      "why_it_matters": "It is one of the first concrete changes a major AI lab has made to its products for the AI Act, and shows EU rules setting a de facto global feature via opt-in.",
+      "whats_new": {
+        "before": "Text provenance rules under the AI Act were not yet reflected in major chatbots.",
+        "now": "OpenAI is watermarking text for EU users."
+      },
+      "watch": [
+        "How reliable detection is",
+        "Whether other labs follow"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 5,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/eu-text-provenance",
+          "tier": 1,
+          "adds": "OpenAI announcement"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261005/p24",
+          "tier": 4,
+          "adds": "Scope: EU users and global API opt-in"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 17,
+      "published": "2026-10-05T16:21:02.000Z",
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/uKx7OoL1QHDbl0T3GSTZG/19deb0e48e745e5d4dc98e02c5dbceb3/image_2835252_2_2x.png?w=1600&h=900&fit=fill"
+    },
+    {
+      "id": "w11",
+      "headline": "US Supreme Court turns down two patent cases and a trade secret dispute; Janssen wins Delaware's first biosimilar injunction",
+      "level": "context",
+      "categories": [
+        "IP",
+        "Patents",
+        "Pharma"
+      ],
+      "markets": [
+        "ip"
+      ],
+      "what_happened": "The Supreme Court on Monday declined to review three petitions in patent and trade secret litigation, including questions about damages apportionment and patent eligibility. In Delaware, Janssen won a preliminary injunction against Accord and Bio-Thera, the district's first ever in a biosimilar case and the first BPCIA preliminary injunction decision in two years, according to IAM.",
+      "why_it_matters": "The Court's refusal leaves current Federal Circuit law on eligibility and damages in place. The Janssen ruling shows courts are again willing to stop biosimilars before trial, adding to recent wins for originator drugmakers.",
+      "whats_new": {
+        "before": "Several US courts recently backed brand-name drugmakers in patent cases.",
+        "now": "A rare preliminary injunction against biosimilar makers, and no Supreme Court guidance on eligibility."
+      },
+      "watch": [
+        "Appeals in the Janssen case",
+        "Further eligibility petitions"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-02",
+          "event": "US courts back brand-name drugmakers in three cases"
+        },
+        {
+          "date": "2026-10-05",
+          "event": "Janssen wins biosimilar injunction"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Law360 IP",
+          "url": "https://www.law360.com/ip/articles/2529711",
+          "tier": 2,
+          "adds": "Supreme Court denials"
+        },
+        {
+          "name": "IAM",
+          "url": "https://www.iam-media.com/article/janssen-wins-delawares-first-ever-biosimilar-preliminary-injunction",
+          "tier": 3,
+          "adds": "Janssen preliminary injunction"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 16,
+      "published": "2026-10-05T12:17:50.000Z",
+      "image": "https://www.law360.com/images/law360-stacked.png"
+    },
+    {
+      "id": "t11",
+      "headline": "Huawei and Qualcomm sign a broad patent cross-licence, and Qualcomm buys Huawei US patents",
+      "level": "context",
+      "categories": [
+        "IP",
+        "Patents",
+        "Chips"
+      ],
+      "markets": [
+        "ip"
+      ],
+      "what_happened": "Huawei and Qualcomm have signed a multi-year patent cross-licence covering 5G, computing, AI and networking. Qualcomm is also buying certain Huawei US patents in those fields, the first time it has acquired Huawei assets, according to IAM.",
+      "why_it_matters": "It is a major licensing deal between US and Chinese technology leaders despite export controls, and confirms Huawei as a significant licensor.",
+      "whats_new": {
+        "before": "Qualcomm was emphasising licensing revenue.",
+        "now": "It now has a cross-licence with Huawei and some of Huawei's US patents."
+      },
+      "watch": [
+        "Financial terms",
+        "US government reaction",
+        "Other Chinese licensing deals"
+      ],
+      "confidence": "high",
+      "confidence_note": "Financial terms were not disclosed in the feed items.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "IAM",
+          "url": "https://www.iam-media.com/article/huawei-qualcomm-strike-5g-ai-patent-cross-licence",
+          "tier": 3,
+          "adds": "Deal and first Qualcomm acquisition of Huawei assets"
+        },
+        {
+          "name": "IPFray",
+          "url": "https://ipfray.com/huawei-qualcomm-sign-broad-multi-year-cross-patent-licensing-agreement",
+          "tier": 3,
+          "adds": "Fields covered and patent purchase"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 17,
+      "published": "2026-10-05T06:00:00.000Z",
+      "image": "https://d2qu5xmcgmzxnb.cloudfront.net/ewogICAgICAgICAgICAgICAgICAgICAgICAiYnVja2V0IjogImZpbGVzLmxici5jbG91ZCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJrZXkiOiAicHVibGljLzIwMjYtMTAvc2h1dHRlcnN0b2NrXzI2NTYwNzk5ODkuanBnIiwKICAgICAgICAgICAgICAgICAgICAgICAgImVkaXRzIjogewogICAgICAgICAgICAgICAgICAgICAgICAgICJyZXNpemUiOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAid2lkdGgiOiA5NDUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiaGVpZ2h0IjogNTI2LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgImZpdCI6ICJjb3ZlciIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAicG9zaXRpb24iOiAiY2VudGVyIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJiYWNrZ3JvdW5kIjogeyAiciI6IDI1NSwgImciOiAyNTUsICJiIjogMjU1LCAiYWxwaGEiOiAxIH0KICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9"
+    },
+    {
+      "id": "t12",
+      "headline": "Meloni seeks to trademark her voice against AI deepfakes, as Sony Music fights AI songs impersonating its artists",
+      "level": "context",
+      "categories": [
+        "IP",
+        "AI",
+        "Trademarks"
+      ],
+      "markets": [
+        "ip"
+      ],
+      "what_happened": "Italian prime minister Giorgia Meloni is seeking to trademark her voice to protect it against AI deepfakes, the first major politician to do so, according to the FT. Sony Music is stepping up its fight against streaming fraud as AI-generated deepfake songs impersonate its biggest artists.",
+      "why_it_matters": "With few specific laws on voice cloning, people and companies are testing trademark and other IP rights to protect identity. If registries accept voices as marks, that could become a template for others.",
+      "whats_new": {
+        "before": "A Tokyo court ruled an AI copy of an actor's voice violated his rights.",
+        "now": "A head of government is seeking trademark protection for her voice."
+      },
+      "watch": [
+        "Whether the trademark office accepts the application",
+        "Platforms' response to deepfake music"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 3,
+        "impact": 2,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/f30f83da-96d0-45bf-8fb6-36550d2b9f7d?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Meloni trademark application"
+        },
+        {
+          "name": "Financial Times Technology",
+          "url": "https://www.ft.com/content/51aed058-f8e0-4426-b92a-790b7863d350?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Sony Music and deepfake songs"
+        }
+      ],
+      "domain": "tech",
+      "signal_score": 16,
+      "published": "2026-10-05T15:31:39.000Z",
+      "image": null
+    },
+    {
+      "id": "w12",
+      "headline": "Property capital moves into Portugal and southern Europe: Thomas & Piron plans over €400m, DWS buys Peakside",
+      "level": "context",
+      "categories": [
+        "Real estate",
+        "Investment",
+        "Portugal"
+      ],
+      "markets": [
+        "real_estate"
+      ],
+      "what_happened": "The developer Thomas & Piron is investing more than €400m in Portugal, according to a Dinheiro Vivo headline. Deutsche Bank's asset manager DWS has agreed to buy the European real estate manager Peakside Capital Advisors. Idealista reports that property searches in Portugal are moving beyond Lisbon and Porto.",
+      "why_it_matters": "Foreign developers and large asset managers continue to commit capital to southern European property despite higher rates. Demand spreading beyond the two main cities could ease pressure there and lift prices elsewhere.",
+      "whats_new": {
+        "before": "Azora had closed a large southern Europe fund and European investment was edging up.",
+        "now": "Thomas & Piron is making a large commitment to Portugal and DWS is buying a specialist manager."
+      },
+      "watch": [
+        "Details and locations of the Thomas & Piron projects",
+        "Regional price data from INE"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Only headlines are available; deal values for DWS and the project details were not given.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 2,
+        "impact": 2,
+        "novelty": 2,
+        "credibility": 3,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "dinheirovivo.dn.pt (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOek5CWEFTSGpyeXp5Um5EOWtfS0s5aU9iREJnSHljeUVTcU8teWlWR19tU25qc1g3OFJJbG14Nm5rNWFxa2U1dS1oZ1BqY3ZhcTUwdTU3OW15bDluMG5tbV9HVjlCbTBIeXJzdUlSSzBramRRQUZFazN3QXBRenpmdWhsY29FZVZ0bGtkdktkRQ?oc=5",
+          "tier": 3,
+          "adds": "Thomas & Piron investment in Portugal"
+        },
+        {
+          "name": "Portfolio Adviser (via EU housing policy)",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNclpldnBKTWFzRWw2QlhXdmJCc2pFMlBXNFNkNjVkNkwzVXU1N0w5TjE5eXlEU3BieUJEX1FpVFZSb2tfRURXanN2UGNIeHJKU3dJR1lNZkhnN2FneWJkWEhtV0VJU2JHNldxNmdwNDBpa1N2RDJLVWtlVjU3M1JNRVBPSWsxUVFCYno4ckhINmNfQVdIcFE?oc=5",
+          "tier": 3,
+          "adds": "DWS to acquire a European real estate manager"
+        },
+        {
+          "name": "democrata.es (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbF91eHdKcmF3eXB3aXM0OEp2OVhNTGF0LThscV9hWFpJLS1rNjUwamtzMG5kLS1uVVhWd3ZDSWpOTTY3VkpldnNVVUpoOW4xTV9POGl0LWIwSkQzUFRHWjVsODhmMVB6YTBMaDZYLWlPU1paT00zOTFXa3Z0UGp5RGFxM1pkSXJTclEzQVFUcG9FXzdvQndoNDVYdUJiVU9CeEtrNFJkSWdTWWxJQ3VLa25NaGZyNHZhS09N0gHAAUFVX3lxTE5sanNTbFJmdkx0V0xFVnpCS1lKYjZDMGo0WVlDOVhieW1QTzZTd1R6emJtcWdtMUJEUG9adXU3eVhfRlN1dEZFX2I1ekY4TVc0cENhSi1VZ2xXUFhwcm5uMmoxSmNIaUdaX0dWVEZEMnltQ2dHaUhvN2lLZkkwdmNuSEtUX0JESmpmbGphUld3c1ZrRDl6cFpFMFNrWUdkTlNoNFVDZ1FqaW93MUFwZ0ZjdVkxdWJzbUFWY3hxVnI3Rg?oc=5",
+          "tier": 3,
+          "adds": "Peakside identified as the target"
+        },
+        {
+          "name": "Idealista (via PropTech Europe)",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQc3BtNC1Obk0yajc5XzBKV2xHaC1LN2ZQMnpTajc5SU55Szd0NTRmSUI2alctTU1LTlJ2SmkwbnRqX3RsVVNZWjFIQTRiM3J2YV9JUDhheldaZUxRSGVfSnY3OERYMnZOaVRybGYzTTU2YnRNNEo3bEl2TTJsakhHa291bjkzVnZVTmphYnZkUDgtZTJHYmZsQkNCVVVEX0YzVEx6cDEzdnkyYnFaTC1WVTI4Q2ZHNTQ0c0tmRG1XZWlabGw3Vm02NUo2MjNZR1Bnd3c?oc=5",
+          "tier": 3,
+          "adds": "Searches spreading beyond Lisbon and Porto"
+        }
+      ],
+      "domain": "world",
+      "signal_score": 12,
+      "published": "2026-10-05T10:15:18.000Z",
+      "image": null
+    }
+  ],
+  "signals": [
+    {
+      "title": "Housing is now deciding European politics",
+      "domain": "world",
+      "what": "Spain's government fell over housing measures, with tenant groups reporting about 950,000 protesters, while Portugal pursues the opposite approach of liberalising rents and investors keep putting capital into southern European property.",
+      "evidence_story_ids": [
+        "w1",
+        "w12"
+      ],
+      "why_it_matters": "Housing policy in southern Europe may swing sharply with elections, raising regulatory risk for landlords and investors and making the Spanish vote a test of tenant-protection politics.",
+      "would_confirm": "Housing dominating Spain's campaign and other governments calling votes or reshuffling over housing.",
+      "would_invalidate": "Protests fade and the campaign turns mainly on corruption or migration."
+    },
+    {
+      "title": "Governments are drawing hard lines on AI suppliers and products",
+      "domain": "tech",
+      "what": "The Pentagon cut off Anthropic over its guardrails, the White House put AI under its intelligence chief, Norway proposed banning AI glasses in public places, Utah lets AI prescribe and the EU AI Act is changing OpenAI's products.",
+      "evidence_story_ids": [
+        "t1",
+        "t2",
+        "t8",
+        "t9",
+        "t10"
+      ],
+      "why_it_matters": "AI governance is moving from voluntary pledges to concrete state decisions, but in opposite directions: some governments restrict, others deregulate, and procurement is being used as a lever.",
+      "would_confirm": "More procurement exclusions, national product bans or binding rules from the new US taskforce.",
+      "would_invalidate": "The taskforce stays advisory and Norway's proposal stalls."
+    },
+    {
+      "title": "AI output is overwhelming the volunteers who run open systems",
+      "domain": "tech",
+      "what": "Google froze its open-source bug bounty, Debian shipped 1,313 kernel fixes partly driven by AI bug hunting, and arXiv is rate-limiting submissions.",
+      "evidence_story_ids": [
+        "t6",
+        "t3"
+      ],
+      "why_it_matters": "Open-source security and open science depend on small groups of maintainers; if they cannot keep up, real flaws and findings may be missed.",
+      "would_confirm": "More programmes closing or charging for submissions, and maintainers burning out.",
+      "would_invalidate": "Filtering tools restore normal workloads."
+    },
+    {
+      "title": "The Iran war's fronts are multiplying even as oil flows recover",
+      "domain": "cross",
+      "what": "A Saudi-backed offensive is under way in Yemen, the US withdrew bombers from the UK over an alleged Iran-linked plot, and Iran's economy is in crisis, while Gulf crude exports exceed pre-war levels.",
+      "evidence_story_ids": [
+        "w3",
+        "w4",
+        "w5"
+      ],
+      "why_it_matters": "Energy markets are calming, but the conflict is spreading into new theatres and into attacks on allied soil, which makes the war harder to end with a single deal.",
+      "would_confirm": "Houthi attacks on Saudi energy, further plots in Europe, or fighting spreading to shipping.",
+      "would_invalidate": "A US–Iran agreement and a ceasefire in Yemen."
+    }
+  ],
+  "watchlist": [
+    {
+      "item": "Spain's standing committee vote on the re-approved housing decrees (Tuesday)",
+      "why": "Determines whether tenancy renewals and eviction limits take effect before the 29 November election."
+    },
+    {
+      "item": "Brazil's runoff on 25 October",
+      "why": "Bolsonaro leads; the result sets fiscal, foreign and Amazon policy."
+    },
+    {
+      "item": "Suspected plague death at a Siberian research institute",
+      "why": "Russia denies a plague link, but quarantine remains and the EU and US are monitoring."
+    },
+    {
+      "item": "Control of the Bab al-Mandab strait",
+      "why": "Government claims are disputed; the outcome affects Red Sea shipping."
+    },
+    {
+      "item": "Mandate of the new White House AI taskforce",
+      "why": "Shows whether US AI policy becomes binding and security-led."
+    },
+    {
+      "item": "Pre-COP talks in Fiji ahead of COP31 in Turkey",
+      "why": "Early signal of ambition for next month's climate summit."
+    }
+  ],
+  "trends": [
+    {
+      "name": "Agentic AI incidents and safety pauses",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Agent failures are spreading beyond one company and prompting investigations in the US and Australia; some argue the flaws stem from training.",
+      "recent_developments": [
+        "Meta patched a Muse VM-escape flaw before launch",
+        "Researchers track a Chinese agent swarm on Tencent infrastructure",
+        "Australian inquiry demands answers from OpenAI",
+        "California AG subpoenas OpenAI"
+      ],
+      "evidence_story_ids": [
+        "t3",
+        "t4"
+      ],
+      "what_to_watch": "The scope of the California subpoena and FTC enforcement",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Agents moving into commerce and business",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Platforms are letting agents act and transact on behalf of users and businesses.",
+      "recent_developments": [
+        "OpenAI launches always-on Dots",
+        "Shopify lets agents complete checkout"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Fraud and dispute rules for purchases made by agents",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "AI governance through voluntary pledges and courts",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Governments are moving from voluntary pledges to concrete decisions: procurement exclusions, a security-led US taskforce, national product bans and EU-driven product changes.",
+      "recent_developments": [
+        "Pentagon drops Anthropic over its guardrails",
+        "Jay Clayton named AI czar to lead a taskforce",
+        "Norway proposes a ban on AI glasses; Utah allows AI prescribing",
+        "California AG opens an investigation of OpenAI"
+      ],
+      "evidence_story_ids": [
+        "t1",
+        "t2",
+        "t8",
+        "t9",
+        "t10"
+      ],
+      "what_to_watch": "The new taskforce's mandate and other procurement exclusions",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Frontier AI economics go public",
+      "domain": "tech",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "AI financing is moving into vendor loans, leasebacks and private vehicles, drawing warnings from financial institutions.",
+      "recent_developments": [
+        "Broadcom to lend Anthropic $42bn, per report",
+        "Amazon plans $8bn chip sale-and-leaseback",
+        "OpenAI delays its IPO"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Disclosure of AI debt and whether Anthropic lists this year",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "US–China chip controls",
+      "domain": "tech",
+      "markets": [],
+      "status": "unclear",
+      "direction": "steady",
+      "summary": "Controls are being tested by leakage, offshore leasing and Chinese domestic substitutes.",
+      "recent_developments": [
+        "DeepSeek and Huawei partner on AI software",
+        "Experts point to gaps in Nvidia's due diligence",
+        "Tencent leases 100,000 chips from Oracle"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "US action on chip diversion and overseas cloud access",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "AI hardware supply squeeze",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Memory shortages from the AI build-out are now reaching consumers through higher prices and withdrawn budget devices.",
+      "recent_developments": [
+        "Cheapest smartphones disappear as memory costs rise",
+        "Nvidia raises Shield TV Pro price by $100",
+        "Micron says shortage lasts into 2028",
+        "Memory executives say 2027 prices 'much higher'"
+      ],
+      "evidence_story_ids": [
+        "t7"
+      ],
+      "what_to_watch": "Device price rises and new memory fab plans",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "AI-enabled cyber threats",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Attackers are adopting AI, large public databases are being breached, and AI-generated reports are swamping defenders' own programmes.",
+      "recent_developments": [
+        "Denmark's population register breached: 8.8 million affected",
+        "South Korea investigates suspected AI-powered bank attacks",
+        "Google freezes OSS bug bounty after AI report flood",
+        "Microsoft says attackers are ahead"
+      ],
+      "evidence_story_ids": [
+        "t5",
+        "t6"
+      ],
+      "what_to_watch": "Defensive tooling and attribution of campaigns against AI firms",
+      "first_detected": "2026-10-02",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "European digital sovereignty",
+      "domain": "tech",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "European governments are deploying alternatives to US tech, while US firms out-lobby European ones in Brussels.",
+      "recent_developments": [
+        "UK searches for an alternative to Palantir",
+        "Dutch government rolls out a NixOS-based desktop"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Adoption by other governments",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Space infrastructure and heavy launch",
+      "domain": "tech",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Operational Starship flights are enabling plans such as data centres in orbit, which depend on very high launch cadence.",
+      "recent_developments": [
+        "Google puts its first data-centre chip in orbit",
+        "Google estimates ~1,800 Starship launches needed",
+        "Starship's first Starlink V3 deployment"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Starship flight cadence",
+      "first_detected": "2026-10-02",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Iran war energy shock",
+      "domain": "world",
+      "markets": [],
+      "status": "established",
+      "direction": "up",
+      "summary": "Oil flows are recovering and Iran's economy is in crisis, but the war is spreading to Yemen and to plots on allied soil.",
+      "recent_developments": [
+        "G7 releases stockpiles; Gulf exports above pre-war levels",
+        "Iran's oil minister resigns; rial at a record low",
+        "US withdraws bombers from RAF Fairford over an alleged plot",
+        "Saudi-backed offensive against the Houthis in Yemen"
+      ],
+      "evidence_story_ids": [
+        "w3",
+        "w4",
+        "w5"
+      ],
+      "what_to_watch": "Bab al-Mandab, the flydubai findings and diesel prices after the G7 release",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Russian pressure on Ukraine and NATO",
+      "domain": "world",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Strikes on Ukraine's infrastructure, sabotage across Europe and nuclear rhetoric, with no ceasefire in sight.",
+      "recent_developments": [
+        "German spy chiefs warn the shadow war is entering a deadlier phase",
+        "Drone sinks a Turkish grain ship in the Black Sea",
+        "Russian drones target Kyiv bridges",
+        "Putin rules out a ceasefire and warns over Kaliningrad"
+      ],
+      "evidence_story_ids": [
+        "w6"
+      ],
+      "what_to_watch": "Winter attacks on energy and water systems",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Renewed conflict in the Horn of Africa",
+      "domain": "world",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Fighting in Ethiopia has spread toward the capital and relations with Eritrea have broken down.",
+      "recent_developments": [
+        "Government-allied forces take Mekelle",
+        "Ethiopia and Eritrea sever ties",
+        "Explosions in Addis Ababa after drone ban",
+        "Gulf states back Ethiopia's government"
+      ],
+      "evidence_story_ids": [
+        "w7"
+      ],
+      "what_to_watch": "TPLF response and humanitarian access to Tigray",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Conflict-driven disease outbreaks",
+      "domain": "world",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "War and falling vaccination are bringing back preventable diseases.",
+      "recent_developments": [
+        "Ebola transit centre burns down in DR Congo",
+        "US measles deaths rise"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Ebola case counts in Ituri",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Third-country deportation deals",
+      "domain": "world",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "The US and EU states are moving toward return hubs and tougher asylum rules, while bilateral deals falter.",
+      "recent_developments": [
+        "EU ministers discuss return hubs; Greece proposes suspending asylum in crises",
+        "UK–France returns deal abandoned"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "The Commission's emergency migration proposals",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Ocean and climate records",
+      "domain": "world",
+      "markets": [],
+      "status": "established",
+      "direction": "up",
+      "summary": "Measures of warming keep breaking records, from ocean heat to alpine ice and European heat stress.",
+      "recent_developments": [
+        "Copernicus: Europe's summer the worst on record for heat",
+        "Swiss glaciers lose almost a fifth of their ice"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Commitments at the UN climate summit",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Forest protection results",
+      "domain": "world",
+      "markets": [],
+      "status": "unclear",
+      "direction": "steady",
+      "summary": "Measurable gains in some regions; Brazil's election will set the Amazon's course.",
+      "recent_developments": [
+        "Flávio Bolsonaro leads Brazil's first round; runoff on 25 October",
+        "Brazil votes on Sunday"
+      ],
+      "evidence_story_ids": [
+        "w2"
+      ],
+      "what_to_watch": "Brazil's runoff and the candidates' Amazon pledges",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Rules for AI and IP",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Courts, companies and governments are setting positions on AI training, outputs and content access.",
+      "recent_developments": [
+        "Meloni seeks to trademark her voice against deepfakes",
+        "Sony Music fights AI songs impersonating its artists",
+        "OpenAI to watermark text in the EU",
+        "Apple moves to dismiss creators' DMCA scraping suit"
+      ],
+      "evidence_story_ids": [
+        "t12",
+        "t10"
+      ],
+      "what_to_watch": "Rulings on DMCA claims and Australia's training rules",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Copyright enforcement moves into infrastructure",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Rights holders are pushing for blocking at ISP, DNS and VPN level, while control of the US Copyright Office is contested.",
+      "recent_developments": [
+        "Quad9 weighs leaving France as beIN seeks up to €580,000 a day in penalties over blocking",
+        "Related site-blocking bills introduced in both chambers of Congress",
+        "Administration asks court to let it remove Copyright Office chief Perlmutter"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Progress of the site-blocking bills and the D.C. Circuit",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Patent system recalibration",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "steady",
+      "summary": "Mega-verdicts are fragile, the secondary market is active, and acquired portfolios are asserted against AI hardware.",
+      "recent_developments": [
+        "Huawei–Qualcomm cross-licence; Qualcomm buys Huawei US patents",
+        "Supreme Court declines patent eligibility and damages petitions",
+        "Nokia sues Aylo over video encoding patents",
+        "1,600 US patent assets traded in Q2; Adeia top buyer"
+      ],
+      "evidence_story_ids": [
+        "t11",
+        "w11"
+      ],
+      "what_to_watch": "Post-trial rulings in Taction v Apple",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Pharma patent strategies under challenge",
+      "domain": "world",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Drug and vaccine patents are being tested in US courts and at the UPC, with recent rulings favouring holders.",
+      "recent_developments": [
+        "Janssen wins Delaware's first biosimilar preliminary injunction",
+        "Liquidia found to infringe",
+        "Simponi biosimilar blocked",
+        "Moderna loses government-licence defence"
+      ],
+      "evidence_story_ids": [
+        "w11"
+      ],
+      "what_to_watch": "Federal Circuit appeals",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Trade secrets as the frontline of tech competition",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Companies use trade secret suits to protect know-how, especially in biotech, defence and China-linked disputes.",
+      "recent_developments": [
+        "Novartis must face hedge fund trade secrets suit",
+        "Iranian accused of stealing US university IP extradited"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Beam's case and government follow-up",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Portugal liberalises its rental market",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "The Government is easing rent rules and adding tax incentives to attract rental supply.",
+      "recent_developments": [
+        "Rules set for tax-exempt moderate-rent investment",
+        "Rental law passed a first vote after PSD–Chega deal"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "The final vote and the committee amendments",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Portuguese prices outpace Europe",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Portugal leads EU house-price growth while mortgage costs keep rising.",
+      "recent_developments": [
+        "Searches spreading beyond Lisbon and Porto (Idealista)",
+        "New-loan rates hit 3%, fifth monthly rise",
+        "Algarve prices at a record €4,216/m²",
+        "+16.5% year on year in Q2"
+      ],
+      "evidence_story_ids": [
+        "w12"
+      ],
+      "what_to_watch": "INE transaction data and the effect of rates on demand",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Faster permitting to unlock supply",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Portugal and the EU are cutting approval times for building to tackle the housing shortage.",
+      "recent_developments": [
+        "The revised RJUE takes effect"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Whether municipalities meet the new deadlines",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Europe splits on housing policy",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Housing has brought down Spain's government, while Portugal deregulates and the EU prepares short-term rental tools.",
+      "recent_developments": [
+        "Sánchez calls a snap election for 29 November after housing defeat",
+        "Tenant groups report about 950,000 protesters",
+        "Government to re-approve decrees via standing committee",
+        "Spanish Congress faces decisive housing vote on Friday"
+      ],
+      "evidence_story_ids": [
+        "w1"
+      ],
+      "what_to_watch": "Spain's campaign and the decrees' fate in the standing committee",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "Capital returns to southern European property",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Investors are raising large funds for southern Europe despite higher rates.",
+      "recent_developments": [
+        "Thomas & Piron plans more than €400m in Portugal",
+        "DWS to buy Peakside Capital Advisors",
+        "Azora closes €2.05bn fund",
+        "Savills: European volumes up 4% in Q1–Q3"
+      ],
+      "evidence_story_ids": [
+        "w12"
+      ],
+      "what_to_watch": "Q4 investment volumes and deals in Portugal",
+      "first_detected": "2026-10-02",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "AI output overwhelming open systems",
+      "domain": "tech",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Machine-generated submissions are swamping the volunteers who run open-source security and open science.",
+      "recent_developments": [
+        "Google freezes its open-source bug bounty",
+        "Debian ships 1,313 kernel fixes",
+        "arXiv rate-limits submissions"
+      ],
+      "evidence_story_ids": [
+        "t6"
+      ],
+      "what_to_watch": "More programmes restricting AI submissions",
+      "first_detected": "2026-10-05",
+      "last_updated": "2026-10-05"
+    },
+    {
+      "name": "EU hardens trade defences against China",
+      "domain": "world",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "France and Germany back a rapid tool to cut off imports, and the UK weighs EV tariffs.",
+      "recent_developments": [
+        "Paris and Berlin agree on a 'systemic reaction' tool",
+        "UK drafts possible tariffs on Chinese EVs"
+      ],
+      "evidence_story_ids": [
+        "w8"
+      ],
+      "what_to_watch": "A Commission proposal and China's response on rare earths",
+      "first_detected": "2026-10-05",
+      "last_updated": "2026-10-05"
+    }
+  ],
+  "stats": {
+    "items": 488,
+    "sources_ok": 69,
+    "sources_total": 69,
+    "clusters": 105
+  },
+  "generated_by": "chat"
+}
