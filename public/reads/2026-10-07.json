@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-07",
+  "source": "Founder Weekly",
+  "issue": 751,
+  "title": "Founder Weekly (Issue 751 October 7 2026)",
+  "source_url": "https://www.founderweekly.com/p/founder-weekly-issue-751-october-7-2026",
+  "generated_at": "2026-10-08T05:06:12.941Z",
+  "ai_lens": {
+    "headline": "This week's founder reading moves from what AI can do to what it costs and how to check it: margins, pricing and evals are where the AI arguments now sit.",
+    "summary": "The strongest pieces are about AI unit economics. OnlyCFO uses Harvey and Legora to argue that weak AI gross margins are only acceptable if they buy distribution, data or cheaper models, and Euclid's data finds consumption pricing has been the biggest separator of software stock performance while retention has held. A second group is practical about quality: one founder argues the first AI eval should be reading the output yourself and enforcing rules in code, and a GTM newsletter presents Jev, a model built only to classify and score, while flagging that its speed and cost claims are the vendor's own. The essays on adoption pull in different directions: Jeanne DeWitt Grosser reportedly describes Vercel handing most inbound SDR work to an agent in six weeks, while the Deployment Gap essay argues robots, like enterprise AI, deploy far more slowly than pilots suggest. The news is louder than the essays on risk (agent breaches, AI-financing warnings, AI output swamping open systems); the founder pieces mostly assume those problems are manageable, and the optimistic adoption figures here are self-reported.",
+    "themes": [
+      {
+        "name": "AI margins and pricing are the business-model question",
+        "what": "OnlyCFO argues low or negative AI gross margins only make sense if they build distribution, data or a cheaper model stack; Harvey fine-tuned its own model and Legora added consumption pricing. Euclid finds consumption-priced software outperformed seat-priced peers and that the market cut vertical software on narrative rather than retention. A Breadcrumb piece (blurb only) suggests local models could shift inference off the cloud and change who captures value.",
+        "read_ids": [
+          "r7",
+          "r2",
+          "r1"
+        ],
+        "related_trend": "Frontier AI economics go public"
+      },
+      {
+        "name": "Checking the output: rules in code, judgment for the model",
+        "what": "The Focused Chaos author grades Candor's output by hand before automating evals, and moves hard requirements out of the model into code. The Jev piece makes a similar split from the tooling side: a model that only returns labels, scores and confidence, used next to an LLM rather than instead of one.",
+        "read_ids": [
+          "r3",
+          "r8"
+        ],
+        "related_trend": ""
+      },
+      {
+        "name": "Pushback on cheap AI output",
+        "what": "Lily Ray expects Google to target scaled AI content, fake authors and tactics built to game AI answers, and the CheckVibe story is a business built on security holes in AI-built apps. Both echo the news about machine-generated submissions overwhelming open systems.",
+        "read_ids": [
+          "r9",
+          "r4"
+        ],
+        "related_trend": "AI output overwhelming open systems"
+      },
+      {
+        "name": "Deployment is slower than the pilots",
+        "what": "The Deployment Gap author found, in diligence, a robot that a founder said was on the production line but wasn't, and compares robotics to the slow diffusion of AI in enterprises. Against that, Jeanne DeWitt Grosser reportedly describes an agent taking over most of Vercel's inbound SDR work in six weeks at about $5,000 a year.",
+        "read_ids": [
+          "r5",
+          "r6"
+        ],
+        "related_trend": "Agents moving into commerce and business"
+      }
+    ]
+  },
+  "reads": [
+    {
+      "id": "r1",
+      "pick": "worth",
+      "summary": "A Breadcrumb essay suggests local AI models could move more inference from the cloud onto personal devices, changing AI economics, hardware demand and where value is captured. It argues this could trigger a broader reset for cloud infrastructure and application companies built on expensive centralised inference.",
+      "why_read": "An interesting contrarian angle on AI costs, but the article could not be fetched, so this rests on the newsletter's blurb.",
+      "ai_angle": "Questions the assumption that AI value accrues to centralised compute, at a time when the news is dominated by data-centre financing and memory shortages.",
+      "tags": [
+        "Local AI",
+        "AI economics",
+        "Infrastructure"
+      ],
+      "title": "Local AI Models: The Catalyst for the Great Reset",
+      "url": "https://breadcrumb.vc/local-ai-models-the-catalyst-for-the-great-reset-2b93ece0687e",
+      "section": "General",
+      "format": "article",
+      "site": "breadcrumb.vc"
+    },
+    {
+      "id": "r2",
+      "pick": "must",
+      "summary": "Euclid revisits its 'SaaSpocalypse' thesis with data on about 140 public application-layer software companies: prices whipsawed but median net revenue retention held at 109%, and consumption-based pricing was the biggest separator of stock performance. It finds vertical software fell hardest (about -26% over a year against -17% for horizontal apps and +29% for infrastructure) despite similar growth and better retention, which it reads as the market pricing on narrative.",
+      "why_read": "The most data-led piece in the issue on how AI is actually showing up in software businesses, with the caveat the authors make themselves that NRR is a lagging indicator.",
+      "ai_angle": "Suggests the market is punishing 'knowledge work' verticals for AI exposure ahead of any evidence of customers leaving, while rewarding usage-priced businesses that capture AI demand directly.",
+      "tags": [
+        "SaaS",
+        "Pricing",
+        "Vertical AI"
+      ],
+      "title": "SaaSpocalypse Now What?",
+      "url": "https://insights.euclid.vc/p/saaspocalypse-now-what-euclid-comps",
+      "section": "General",
+      "format": "article",
+      "site": "insights.euclid.vc"
+    },
+    {
+      "id": "r3",
+      "pick": "must",
+      "summary": "The founder of Candor, a synthetic user research platform, argues that before automating evals you have to read the output yourself to discover what 'good' looks like, and describes the problems this found, such as report quotes that needed verifying against transcripts. Their rule: if something is a rule, enforce it in code; save the AI for real judgment calls.",
+      "why_read": "A concrete, unglamorous account of AI quality control that any team shipping an AI product can apply straight away.",
+      "ai_angle": "Shows the shift from 'can the model do it' to 'how do we know it did it well', and argues that sometimes the right amount of AI is less AI.",
+      "tags": [
+        "Evals",
+        "AI products",
+        "Quality"
+      ],
+      "title": "The First Version of Your AI Eval is You",
+      "url": "https://www.focusedchaos.co/p/the-first-version-of-your-ai-eval",
+      "section": "General",
+      "format": "article",
+      "site": "focusedchaos.co"
+    },
+    {
+      "id": "r4",
+      "pick": "skip",
+      "summary": "A Volanea blog post retells a Reddit founder story: a two-person team selling security scans for vibe-coded apps reported about $11K in gross volume and 350+ paying customers, helped by TikTok content and outreach based on real findings. Showing the number of critical issues before the paywall reportedly tripled conversion.",
+      "why_read": "A second-hand write-up of self-reported numbers; the one useful tactic (show the size of the problem before the paywall) fits in a sentence.",
+      "ai_angle": "A small sign that AI-built software is creating its own market for checking and securing what it produces.",
+      "tags": [
+        "Vibe coding",
+        "Growth",
+        "Security"
+      ],
+      "title": "Vibe Coding SaaS Growth: 4 Lessons From an $11K Security Scanner Launch",
+      "url": "https://www.volanea.com/blog/vibe-coding-saas-growth-lessons",
+      "section": "General",
+      "format": "article",
+      "site": "volanea.com"
+    },
+    {
+      "id": "r5",
+      "pick": "worth",
+      "summary": "The author of Deployment Gap argues robotics startups face a deployment gap: pilots and announced partnerships do not quickly turn into production use because factories are cautious and decisions sit with individual plant managers. From the author's own diligence calls, the piece describes a robot a founder said was on the production line but wasn't, and urges investors to bring patience and spend time in factories.",
+      "why_read": "A grounded corrective to the rush of software investors into hard tech, with first-hand diligence anecdotes.",
+      "ai_angle": "Draws a direct parallel to the slow diffusion of AI in enterprises, citing a figure that 19.8% of US businesses used AI in any business function as of May 2026.",
+      "tags": [
+        "Robotics",
+        "Diligence",
+        "Venture"
+      ],
+      "title": "Deployment Gap",
+      "url": "https://writing.nikunjk.com/p/deployment-gap",
+      "section": "General",
+      "format": "article",
+      "site": "writing.nikunjk.com"
+    },
+    {
+      "id": "r6",
+      "pick": "worth",
+      "summary": "In a video, Jeanne DeWitt Grosser explains how AI agents are making personalised inbound sales automation work where earlier systems failed. At Vercel, by this account, an agent took over most inbound SDR work in six weeks, kept conversion rates steady, sped up responses and runs on about $5,000 a year in infrastructure and token costs.",
+      "why_read": "A rare specific claim about an agent replacing a sales role; it's a video that could not be fetched, so this is judged from the blurb and the figures are as reported.",
+      "ai_angle": "A concrete case of agents replacing an entry-level go-to-market job rather than assisting it, which has implications for how sales teams are staffed.",
+      "tags": [
+        "AI agents",
+        "Sales",
+        "Video"
+      ],
+      "title": "When Inbound Sells Itself",
+      "url": "https://www.youtube.com/watch?v=zNFecTwsUz0",
+      "section": "Marketing, Sales and PR",
+      "format": "video",
+      "site": "youtube.com"
+    },
+    {
+      "id": "r7",
+      "pick": "must",
+      "summary": "OnlyCFO uses the Harvey-Legora rivalry to ask when weak AI gross margins are acceptable: only, the author argues, when they buy distribution, data or product learning, not because inference costs are falling, since cheaper models also make thin wrappers easier to bypass. The piece describes Harvey fine-tuning its own model from an open-weight Kimi model, which it says can cost up to a tenth of frontier models, and Legora adding consumption pricing and model routing.",
+      "why_read": "The clearest piece this week on AI unit economics, with a useful framework for judging whether an AI company's margins are temporary or structural.",
+      "ai_angle": "Shows vertical AI companies trying to escape frontier-model costs by training their own models and routing between them, while the labs move into their markets.",
+      "tags": [
+        "AI economics",
+        "Legal AI",
+        "Gross margins"
+      ],
+      "title": "Harvey vs Legora | When Are Terrible Gross Margins OK?",
+      "url": "https://www.onlycfo.io/p/harvey-vs-legora-when-are-terrible",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "onlycfo.io"
+    },
+    {
+      "id": "r8",
+      "pick": "worth",
+      "summary": "A GTM Engineering newsletter introduces Jev from TypeSafe AI, a model that cannot write text and instead returns choices, scores and confidence values for tasks like classification, scoring and routing, and shows how to call it from Clay. It flags that TypeSafe's speed and cost claims come from its own tests and that 'no hallucination' only means it picks from options you write.",
+      "why_read": "Useful if you run high-volume scoring or routing workflows; read it as an early-access product tutorial rather than an independent review.",
+      "ai_angle": "Points to a split between models that generate and models that only decide, aimed at the cost and inconsistency of using large LLMs for repetitive judgment calls.",
+      "tags": [
+        "AI models",
+        "GTM",
+        "Tools"
+      ],
+      "title": "Jev: Decision AI for GTM (what you need to know)",
+      "url": "https://newsletter.gtmengineering.ai/p/jev-engineering-for-gtm-and-why-it",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "newsletter.gtmengineering.ai"
+    },
+    {
+      "id": "r9",
+      "pick": "worth",
+      "summary": "SEO consultant Lily Ray predicts Google's next major update will target scaled AI content, fake authors, templated pages and tactics built to game AI answers, based on what Ray says Google is signalling in writing. Ray places it in a long cycle of exploits followed by crackdowns.",
+      "why_read": "Worth it if your company relies on content or search traffic; the advice is to invest in real expertise and authorship rather than scaling thin AI pages.",
+      "ai_angle": "A sign that platforms are starting to penalise low-effort AI output, the same pressure the news shows on open-source projects and arXiv.",
+      "tags": [
+        "SEO",
+        "AI content",
+        "Google"
+      ],
+      "title": "Prediction: the next massive Google update is around the corner",
+      "url": "https://lilyraynyc.substack.com/p/prediction-the-next-massive-google",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "lilyraynyc.substack.com"
+    },
+    {
+      "id": "r10",
+      "pick": "skip",
+      "summary": "Laurie Owen argues short-form video is where founders' and LPs' attention now is, yet few VCs show up there, and groups the ones who do into four types such as news-jackers and founder FAQs. Owen says the space is open for better structured short-form content.",
+      "why_read": "Aimed at VCs building a brand, not founders; Owen draws partly on her own client work.",
+      "ai_angle": "",
+      "tags": [
+        "Venture",
+        "Marketing",
+        "Video"
+      ],
+      "title": "The 'TikTokification' of Venture Capital",
+      "url": "https://x.com/imlaurieowen/status/2104596330723066117",
+      "section": "Money and Finance",
+      "format": "thread",
+      "site": "x.com"
+    },
+    {
+      "id": "r11",
+      "pick": "worth",
+      "summary": "Chris Neumann argues that founders should not raise their burn rate just because capital looks abundant, because investors have converged on a few hot companies and are increasingly unwilling to fund bridges and extensions for the rest. Neumann suggests matching spending to runway and asking existing investors directly whether they would fund the company again if milestones slip.",
+      "why_read": "Short, practical and timely advice for any founder deciding how much to spend after a raise.",
+      "ai_angle": "",
+      "tags": [
+        "Fundraising",
+        "Burn rate",
+        "Venture"
+      ],
+      "title": "Now Is Not the Time to Increase Your Burn Rate",
+      "url": "https://chrisneumann.com/archives/now-is-not-the-time-to-increase-your-burn-rate",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "chrisneumann.com"
+    }
+  ]
+}
