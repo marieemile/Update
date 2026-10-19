@@ -1,0 +1,2706 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T18:04:32.170Z",
+  "top_line": "Cost-of-living protests turned into France's worst rioting in years, pushing up French borrowing costs and spreading to Italy, Belgium, Albania and Portugal. Meanwhile the Houthis carried out the deadliest strike of Yemen's renewed war, and Zelensky said US policy looks like pushing Ukraine to surrender.",
+  "stories": [
+    {
+      "id": "w1",
+      "headline": "France imposes local curfews after a weekend of riots and looting, as its bonds sell off and unrest spreads across Europe",
+      "level": "essential",
+      "categories": [
+        "Society",
+        "Economy",
+        "Europe"
+      ],
+      "markets": [],
+      "what_happened": "More than half a million people joined cost-of-living protests across France at the weekend, and in cities including Paris, Marseille and Limoges they turned into rioting, looting and clashes with outnumbered police, with about 2,400 arrests. Interior Minister Laurent Nuñez said police 'lost control' and offered his resignation, which President Macron refused. Prime Minister Sébastien Lecornu ordered localised partial curfews and a large operation to identify suspects. He blamed the 'ultra-left' for exploiting the protests and said it was 'a miracle' that no one was killed. French bonds and shares sold off and the gap with German borrowing costs widened. Looting and clashes were also reported in Milan, Brussels, Liège and Tirana.",
+      "why_it_matters": "The unrest comes about six months before France's presidential election. The National Rally, already ahead in the polls, is presenting itself as the party of order, and Macron faces criticism from all sides. The bond sell-off shows how quickly social instability affects a heavily indebted state's finances. Oxford Economics warns that a severe bond shock could push France and Italy into recession in 2027, though that is not its central forecast.",
+      "whats_new": {
+        "before": "French school protests had already turned violent earlier this month, with nearly 2,000 arrests, and the government was under fiscal pressure.",
+        "now": "The protests have become nationwide cost-of-living unrest with mass looting, a minister's offered resignation, curfews and a market reaction, and similar protests are spreading to other European countries."
+      },
+      "watch": [
+        "Whether the curfews and the investigation calm the streets this week",
+        "The French–German bond spread",
+        "Whether Italy's protests in the north and south grow",
+        "Polling for the National Rally and for Macron's camp"
+      ],
+      "confidence": "high",
+      "confidence_note": "Arrest totals vary slightly between sources (about 2,400 in French figures, more than 2,500 cited by Germany).",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-02",
+          "event": "French high-school protests turn violent, with nearly 2,000 arrests"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Curfews ordered after weekend riots; bond sell-off; unrest spreads to other European cities"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/news/audio/2026/oct/19/france-protests-escalate-riots-looting-arrests-the-latest",
+          "tier": 2,
+          "adds": "Scale of the protests, cities hit and the minister's 'lost control' admission"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/live/2026/oct/19/europe-france-protests-riots-macron-ukraine-russia-zelenskyy-sweden-latest-news-updates",
+          "tier": 2,
+          "adds": "Curfew details, arrest count and Lecornu blaming the 'ultra-left'"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/french-president-macron-refuses-interior-minister-laurent-nunezs-resignation-after-protests/article71602152.ece",
+          "tier": 2,
+          "adds": "Macron refuses the interior minister's resignation"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/france-protest-prime-minister-calls-for-localised-curfews-in-cities-to-curb-rioting-looting/article71602727.ece",
+          "tier": 2,
+          "adds": "Lecornu says no one was killed"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/19/france-launches-massive-law-enforcement-operation-after-weekend-looting-pm-says",
+          "tier": 2,
+          "adds": "Investigators assigned to identify suspects"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/cc7e577a-db7a-4e12-9a42-443696b98ec5?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Bond sell-off and admission that police oversight was botched"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/france-hit-by-debt-sell-off-as-protests-unnerve-investors",
+          "tier": 2,
+          "adds": "Widening spread over German borrowing costs"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/d8df36c2-7e8c-4cfb-ad9e-e6e954fea4b9?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Unrest in Milan, Brussels, Liège and Tirana"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/19/world/europe/italy-protests-riots.html",
+          "tier": 2,
+          "adds": "Parallel protests in northern and southern Italy"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/19/france-far-right-protests-riots.html",
+          "tier": 2,
+          "adds": "National Rally shifts into campaign mode"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/19495e50-0f55-44b1-8d19-19244163a4e8?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Political timing before the election"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/19/could-frances-debt-troubles-tip-italy-into-recession",
+          "tier": 2,
+          "adds": "Oxford Economics recession scenario"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/germany-condemns-france-protest-violence/article71602630.ece",
+          "tier": 2,
+          "adds": "Germany's travel warning and arrest figure"
+        }
+      ],
+      "signal_score": 21,
+      "published": "2026-10-19T17:49:49.000Z",
+      "image": "https://i.guim.co.uk/img/media/c03aeec18e4c18c679d10e540b434dee8e0cd2a6/1373_0_4892_3913/master/4892.jpg?width=140&quality=85&auto=format&fit=max&s=d945ce103247224ba42281ae0af70041"
+    },
+    {
+      "id": "w2",
+      "headline": "Houthi missiles kill at least 53 at a Yemeni government training camp, as Saudi Arabia postpones its flagship investment forum",
+      "level": "essential",
+      "categories": [
+        "Geopolitics",
+        "Middle East"
+      ],
+      "markets": [],
+      "what_happened": "A Houthi ballistic missile attack on a government security forces training camp in Shabwa province killed at least 53 people and injured about 200, according to local authorities. The Guardian calls it the largest single loss of life since Yemen's civil war reignited. Saudi Arabia postponed its Future Investment Initiative, due next week in Riyadh, to next year after Houthi attacks; Semafor reports that Wall Street executives had raised safety concerns. Egypt pledged 'all necessary and possible forms of support' to Saudi Arabia, and Pakistan's army said it is providing whatever support is needed.",
+      "why_it_matters": "The war is now hitting Saudi Arabia's economic plans and drawing in regional allies, which raises the risk of a wider conflict on the Red Sea and Gulf routes. Postponing the forum known as 'Davos in the desert' is a visible cost to Riyadh's effort to present itself as a safe place to invest.",
+      "whats_new": {
+        "before": "The Houthis had struck Riyadh's airport, killing 12, and Saudi Arabia had hit Houthi oil depots near Sanaa.",
+        "now": "The deadliest single attack of the renewed war has hit government forces, the investment forum has been postponed, and Egypt and Pakistan have publicly committed support."
+      },
+      "watch": [
+        "Saudi retaliation and any strike on Aramco",
+        "What support Egypt and Pakistan actually provide",
+        "US security alerts for possible Iran-backed attacks on US interests"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Death tolls differ between reports (at least 20 in an early report, about 50 per the BBC, 53 per local authorities) and may change.",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-12",
+          "event": "Houthi strike on Riyadh's main airport kills 12"
+        },
+        {
+          "date": "2026-10-13",
+          "event": "Saudi Arabia strikes Houthi oil depots; Houthis threaten Aramco"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Houthi strike on Shabwa camp kills at least 53; investment forum postponed"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/houthi-attack-yemen-al-alam-camp-biggest-single-loss-of-life-civil-war",
+          "tier": 2,
+          "adds": "Toll and largest single loss of life since the war reignited"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3371416/houthi-attack-kills-53-yemen-government-training-camp",
+          "tier": 2,
+          "adds": "Local authority figures and Reuters-verified video"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cv0ld6lrr2zeo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Three missiles hit the recruits' camp"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/75a2ee4e-ead9-4d37-b1ea-6fd759c4691d?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Future Investment Initiative postponed to next year"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/19/2026/saudi-to-decide-on-postponing-fii-after-wall-street-lobbying",
+          "tier": 2,
+          "adds": "Wall Street safety concerns before the postponement"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/18/2026/egypt-pledges-to-support-saudi-arabia-in-houthi-war",
+          "tier": 2,
+          "adds": "Egypt's pledge of support"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/pakistan-providing-whatever-support-needed-to-defend-saudi-arabia-army/article71603002.ece",
+          "tier": 2,
+          "adds": "Pakistan army's statement of support"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/us-missions-in-west-asia-issue-security-alert-over-possible-iran-backed-attacks/article71602754.ece",
+          "tier": 2,
+          "adds": "US missions' security alert"
+        }
+      ],
+      "signal_score": 19,
+      "published": "2026-10-19T17:15:23.000Z",
+      "image": "https://i.guim.co.uk/img/media/44bec58d0d4cb4eaba65d281103bb5d9e4a39dd6/47_0_3212_2571/master/3212.jpg?width=140&quality=85&auto=format&fit=max&s=fe8ae50d263858ba5e84accb2a3c14b1"
+    },
+    {
+      "id": "w3",
+      "headline": "Zelensky says US policy looks like pushing Ukraine to surrender, as Kyiv gets warning of only one of two missile attacks",
+      "level": "essential",
+      "categories": [
+        "Geopolitics",
+        "Ukraine war"
+      ],
+      "markets": [],
+      "what_happened": "Zelensky said he did not want to believe Washington wanted the war to end at Ukraine's expense, 'but that's how it looks'. Ukraine's air force said Western allies warned of only one of two overnight attacks; Zelensky said Russia fired 16 ballistic missiles at the Kyiv region and more than 200 drones across the country. Secretary of State Rubio said there is no pause in US intelligence sharing. Trump blocked a number of Russia sanctions two days before they were due to take effect, saying this keeps peace negotiations going. Zelensky also said he believes the US government is behind the Ukrainian military's loss of normal access to the Starshield satellite service. Lithuanian officials say a fire at a Starlink centre was sabotage.",
+      "why_it_matters": "Disputes over intelligence, sanctions and satellite access go to the core of Ukraine's ability to defend itself, and they leave Europe more exposed. The FT reports that European leaders are preparing to talk to Putin directly. Drone strikes between the two sides continue; Russia's VK social network was disrupted after a drone strike on a data centre.",
+      "whats_new": {
+        "before": "Europe had pushed back against Trump's Russian diesel deal, and Zelensky had said Kyiv got no warning of a ballistic strike.",
+        "now": "Zelensky openly says US policy looks like pressure to surrender, more sanctions have been blocked, and a dispute over satellite access has emerged."
+      },
+      "watch": [
+        "Whether Ukraine's Starshield access is restored",
+        "Any direct European contact with Putin",
+        "Patriot deliveries, given the reported shortage",
+        "Further sabotage at Starlink sites in Europe"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Accounts of intelligence sharing conflict: Ukraine says warning was partial, while Rubio says there is no pause. Zelensky's view that the US caused the Starshield problem is his claim and is not confirmed.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 5,
+        "impact": 5,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 5
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-12",
+          "event": "Trump announces an 'energy ceasefire' that Kyiv says is news to it"
+        },
+        {
+          "date": "2026-10-13",
+          "event": "Europe recoils from the US diesel deal; Zelensky says Kyiv had no warning of a strike"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Zelensky says US policy looks like pushing surrender; more sanctions blocked; Starshield dispute"
+        }
+      ],
+      "sources": [
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/19/world/europe/trump-zelensky-putin-ukraine-war.html",
+          "tier": 2,
+          "adds": "Zelensky's 'that's how it looks' remarks"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/a381df3f-a1bf-4889-aa5d-e4e594a3ea33?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Warning given for only one of two attacks"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/ukraine-received-no-early-warning-of-russian-strikes-president-volodymyr-zelenskyy/article71602460.ece",
+          "tier": 2,
+          "adds": "Missile and drone counts"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/zelenskyy-says-ukraine-got-no-early-warning-from-partners-as-russia-hits-power-grid-again/article71602862.ece",
+          "tier": 2,
+          "adds": "Patriot shortage"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/rubio-says-no-pause-in-us-intel-sharing-with-ukraine/article71602219.ece",
+          "tier": 2,
+          "adds": "Rubio denies any pause in intelligence sharing"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Trump blocks sanctions days before they took effect"
+        },
+        {
+          "name": "NPR World",
+          "url": "https://www.npr.org/2026/10/18/nx-s1-6007382/ukraine-us-starshield-starlink-what-to-know-trump",
+          "tier": 2,
+          "adds": "Starshield access dispute"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/19/world/europe/lithuania-starlink-sabotage-ukraine-russia.html",
+          "tier": 2,
+          "adds": "Lithuanian officials call the Starlink centre fire sabotage"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/92f271fd-f96c-4723-91f2-48363b98127f?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "European leaders prepare to talk directly to Putin"
+        },
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/russian-social-media-giant-vk-faces-disruptions-drone-strike-data-center",
+          "tier": 3,
+          "adds": "VK disrupted after a data-centre drone strike"
+        }
+      ],
+      "signal_score": 23,
+      "published": "2026-10-19T15:55:00.000Z",
+      "image": "https://static01.nyt.com/images/2026/10/19/multimedia/19int-zelensky-trump-01-kwtp/19int-zelensky-trump-01-kwtp-mediumSquareAt3X.jpg"
+    },
+    {
+      "id": "w4",
+      "headline": "World Food Programme cuts aid to about half a million Gazans as funding runs short and ceasefire progress stalls",
+      "level": "essential",
+      "categories": [
+        "Humanitarian",
+        "Middle East"
+      ],
+      "markets": [],
+      "what_happened": "The UN World Food Programme said funding shortages will force it to cut assistance in Gaza by roughly a third, reducing the number of people it helps from 1.6 million to 1.1 million as winter approaches. Families who keep support will get smaller rations and less cash. The Guardian reports that two-thirds of the population face crisis levels of food insecurity and 200,000 people are in danger of famine. The WFP head said 1.4 million people face acute shortages despite the US-brokered ceasefire, and Gazans also report continuing restrictions on shipments.",
+      "why_it_matters": "This shows that a ceasefire does not end a hunger crisis when aid money and access are both limited. The cut comes as wider aid budgets shrink, and it adds pressure on donors and on talks over the next stage of the ceasefire.",
+      "whats_new": {
+        "before": "The ceasefire had allowed more food into Gaza, but needs remained very high.",
+        "now": "The main UN food agency is reducing its caseload by about a third because of funding gaps."
+      },
+      "watch": [
+        "Whether donors close the WFP funding gap",
+        "Changes to restrictions on aid shipments",
+        "Famine classification updates for Gaza"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 5,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "UN News",
+          "url": "https://news.un.org/feed/view/en/story/2026/10/1168622",
+          "tier": 1,
+          "adds": "Primary UN announcement"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cm79plrvpl4vo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Caseload falls from 1.6m to 1.1m"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/cuts-world-food-programme-end-support-palestinians-gaza",
+          "tier": 2,
+          "adds": "Food insecurity and famine-risk figures"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/19/un-food-agency-to-cut-aid-to-500000-people-in-gaza-as-funding-dries-up",
+          "tier": 2,
+          "adds": "Smaller rations for those still supported"
+        },
+        {
+          "name": "NPR World",
+          "url": "https://www.npr.org/2026/10/18/nx-s1-6001709/life-is-absolutely-brutal-in-gaza-says-world-food-programme-head",
+          "tier": 2,
+          "adds": "WFP head on acute shortages despite the ceasefire"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/74f18f8f-683a-434d-9176-b41070d6977e?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Ceasefire progress stalls"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/19/famine-fears-as-aid-cuts-and-shipment-restrictions-coincide-in-gaza?traffic_source=rss",
+          "tier": 2,
+          "adds": "Shipment restrictions"
+        }
+      ],
+      "signal_score": 19,
+      "published": "2026-10-19T15:05:16.000Z",
+      "image": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/2026/08/13-08-2026-WFP-Gaza-04.jpg/image560x340cropped.jpg"
+    },
+    {
+      "id": "w5",
+      "headline": "Iran hits at least 15 container ships in Hormuz in ten days, as Qatar warns the energy disruption has not yet peaked",
+      "level": "context",
+      "categories": [
+        "Geopolitics",
+        "Energy"
+      ],
+      "markets": [],
+      "what_happened": "Iran has attacked at least 15 container ships passing through the Strait of Hormuz in the past ten days, some with drones, according to the Guardian, and people have been searching for spilt cargo. Qatar warned that the energy disruption is at a 'peak', with more difficulties expected in the coming days and months; it is preparing a new regional defence partnership while keeping channels open with Tehran. Pakistan, which is mediating between Iran and the US, suspended border trade with Iran, and Russia's foreign minister Lavrov visited Tehran for the first time since the war began.",
+      "why_it_matters": "Attacks on container shipping, not only tankers, spread the war's costs into global trade and supply chains. A warning from Qatar, a major gas exporter, suggests energy prices could stay under pressure into winter.",
+      "whats_new": {
+        "before": "Iran had hit 24 ships in Hormuz in two weeks, the worst spate of attacks of the war.",
+        "now": "Container ships are now a frequent target, and Qatar says worse disruption may still be ahead."
+      },
+      "watch": [
+        "Shipping insurance rates and container lines' routing decisions",
+        "Details of Qatar's defence partnership",
+        "Pakistan's mediation between Iran and the US"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Ship counts come from press tallies and cover different periods and types of vessel.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "Iran hits 24 ships in Hormuz in two weeks"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "At least 15 container ships hit in ten days; Qatar warns of a 'peak'"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/strait-of-hormuz-spilt-cargo-iran-attacks-container-ships",
+          "tier": 2,
+          "adds": "Container ship attacks and spilt cargo"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/19/qatar-plans-new-defence-partnership-and-warns-of-energy-crisis-peak",
+          "tier": 2,
+          "adds": "Qatar's warning and defence partnership"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/19/pakistan-suspends-iran-border-trade-amid-violence-on-both-sides?traffic_source=rss",
+          "tier": 2,
+          "adds": "Pakistan suspends Iran border trade while mediating"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/19/russias-lavrov-discusses-us-war-and-regional-security-in-tehran-visit?traffic_source=rss",
+          "tier": 2,
+          "adds": "Lavrov's first visit to Tehran since the war began"
+        }
+      ],
+      "signal_score": 19,
+      "published": "2026-10-19T15:40:14.000Z",
+      "image": "https://i.guim.co.uk/img/media/0d4cf88c5f52288ec22b532a48cb137684da74e9/0_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=d737106f4bba982696a6af8ab21903e0"
+    },
+    {
+      "id": "w6",
+      "headline": "Kenya confirms an eighth Ebola case as the DR Congo outbreak reaches a new province",
+      "level": "context",
+      "categories": [
+        "Health",
+        "Africa"
+      ],
+      "markets": [],
+      "what_happened": "Kenya has confirmed an eighth case of the Bundibugyo strain of Ebola, its first-ever cluster of the disease. The outbreak in the Democratic Republic of the Congo, the second-largest in history, has killed more than 4,300 people and is still spreading to new areas. The Guardian reports opposition in Kenya to a US-led quarantine centre, after sweeping US funding cuts and the US withdrawal from the WHO.",
+      "why_it_matters": "Transmission in Kenya, a regional travel hub, raises the risk of further spread. This is happening while international health support is being cut, which could weaken the response.",
+      "whats_new": {
+        "before": "Kenya had recorded its first-ever Ebola death and was tracing the patient's contacts.",
+        "now": "Kenya has a cluster of eight cases, and the DRC outbreak has reached another province."
+      },
+      "watch": [
+        "Cases outside the first Kenyan cluster",
+        "Whether the US-led quarantine centre goes ahead",
+        "Vaccine and treatment options for the Bundibugyo strain"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": true,
+      "timeline": [
+        {
+          "date": "2026-10-08",
+          "event": "Kenya records its first-ever Ebola death"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Kenya confirms an eighth case; the DRC outbreak reaches a new province"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/ebola-cases-kenya-us-quarantine",
+          "tier": 2,
+          "adds": "Case count, outbreak toll and quarantine-centre dispute"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/19/ebola-kenya-confirms-eighth-case-as-drc-outbreak-reaches-new-province",
+          "tier": 2,
+          "adds": "Confirmation and spread in the DRC"
+        }
+      ],
+      "signal_score": 18,
+      "published": "2026-10-19T14:11:08.000Z",
+      "image": "https://i.guim.co.uk/img/media/121fe3d421149eeeeb2952b13cb999bdc527852e/499_0_5001_4000/master/5001.jpg?width=140&quality=85&auto=format&fit=max&s=0fdf8f6069692abee1ef39afeb50d7cb"
+    },
+    {
+      "id": "w7",
+      "headline": "China's growth beats forecasts at 4.5% on AI-driven exports, as Beijing adds export controls and limits foreign biotech deals",
+      "level": "context",
+      "categories": [
+        "Economy",
+        "China"
+      ],
+      "markets": [],
+      "what_happened": "China's GDP grew 4.5% year on year in the third quarter, up from 4.3% and faster than expected. Exports of electronics and other high-tech goods drove the growth, while consumer spending stayed weak. That keeps China on track for its 4.5–5% target for 2026. On the same day, Beijing introduced export controls on tunnel-boring machines, which India wants, citing national security. STAT reports China is also proposing limits on foreign purchases of critical biopharma technology.",
+      "why_it_matters": "China's growth depends more and more on selling high-tech goods abroad, which makes it more exposed to trade tensions and to any downturn in AI spending. The new controls show Beijing using export rules, not only facing them, to protect industries it sees as strategic.",
+      "whats_new": {
+        "before": "China's growth had slowed to 4.3% in the second quarter.",
+        "now": "Growth picked up on exports, and Beijing extended controls to construction machinery and biotech deals."
+      },
+      "watch": [
+        "Whether India finds other suppliers of tunnel-boring machines",
+        "Details of China's biotech acquisition rules",
+        "Whether domestic consumption recovers"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/plus/economy/china-economy/article/3371375/rebound-chinas-gdp-growth-keeps-2026-target-sight",
+          "tier": 2,
+          "adds": "GDP figure and the second-quarter comparison"
+        },
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/china-economy-grows-faster-than-forecast-after-ai-boom-boosted-exports",
+          "tier": 2,
+          "adds": "Exports versus weak consumer spending"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations",
+          "tier": 2,
+          "adds": "Annual target context"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/china-imposes-export-controls-on-tunnel-boring-machines-sought-by-india-citing-national-security/article71602536.ece",
+          "tier": 2,
+          "adds": "Export controls on tunnel-boring machines"
+        },
+        {
+          "name": "STAT News",
+          "url": "https://www.statnews.com/2026/10/19/biotech-news-china-moves-to-restrict-foreign-biotech-acquisitons",
+          "tier": 3,
+          "adds": "Proposed limits on foreign biotech acquisitions"
+        }
+      ],
+      "signal_score": 19,
+      "published": "2026-10-19T14:58:31.000Z",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/19/1b0fd234-e080-45fc-ac78-7085e3493eec_54823591.jpg?itok=2lzqYh0W&v=1792399483"
+    },
+    {
+      "id": "w8",
+      "headline": "Drone strike near a market in Sudan's West Kordofan kills 80, one of the war's deadliest single attacks",
+      "level": "context",
+      "categories": [
+        "Conflict",
+        "Humanitarian"
+      ],
+      "markets": [],
+      "what_happened": "A drone struck twice at a transport hub near a market in al-Dibab, in Sudan's West Kordofan state, on Sunday evening. The Guardian reports that 80 people were killed, mostly commuters catching rides home, citing a witness.",
+      "why_it_matters": "Sudan's war receives little coverage compared with other conflicts, yet attacks on civilians keep happening on this scale.",
+      "whats_new": {
+        "before": "An air strike on a gold-mining camp near the Sudan–Egypt border had killed at least 72, according to a rights group.",
+        "now": "Another mass-casualty strike has hit civilians, this time in West Kordofan."
+      },
+      "watch": [
+        "Who is responsible for the strike",
+        "UN or African Union response",
+        "Further strikes in Kordofan"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Based on one outlet's report citing a witness; the toll has not been independently confirmed and no side has claimed the strike.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 2,
+        "credibility": 3,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": true,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-12",
+          "event": "Air strike on a gold-mining camp kills at least 72, a rights group says"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Drone strike in al-Dibab kills 80, per a witness"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/drone-attack-market-al-dibab-west-kordofan-sudan",
+          "tier": 2,
+          "adds": "Only report, with a witness account"
+        }
+      ],
+      "signal_score": 14,
+      "published": "2026-10-19T14:45:53.000Z",
+      "image": "https://i.guim.co.uk/img/media/eb787024a897682867056fc8aae201c7d3efbb92/584_0_5840_4672/master/5840.jpg?width=140&quality=85&auto=format&fit=max&s=ee1d55b879d72ff03f02e89388beac85"
+    },
+    {
+      "id": "w9",
+      "headline": "UN nature summit opens in Armenia with none of the 2022 biodiversity targets met, as the EU awards €3.4bn to net-zero projects",
+      "level": "context",
+      "categories": [
+        "Climate",
+        "Nature"
+      ],
+      "markets": [],
+      "what_happened": "COP17, the UN Biodiversity Conference, has opened in Yerevan to push governments to meet the 23 targets agreed at COP15 in 2022. A Guardian analysis finds that not one of them has yet been met. The European Commission selected 77 net-zero technology projects for €3.4bn from its Innovation Fund and granted more than €390m to 135 LIFE climate and environment projects. Separately, the FT reports that the EU's new Arctic strategy drops its 2021 pledge to work toward a global ban on new hydrocarbon development in the region, and Longyearbyen in Svalbard has told residents not to drink tap water because thawing ground is releasing heavy metals.",
+      "why_it_matters": "The summit will show whether the global nature deal still has momentum. EU funding is a concrete commitment, but it is offset by a softer position on Arctic drilling as energy security dominates policy.",
+      "whats_new": {
+        "before": "The 2022 COP15 deal set 23 targets.",
+        "now": "Negotiators meet with none of those targets yet achieved, and the EU has made new funding awards while softening its Arctic stance."
+      },
+      "watch": [
+        "Any agreement on biodiversity finance at COP17",
+        "Whether other governments respond to the EU's Arctic shift"
+      ],
+      "confidence": "high",
+      "confidence_note": "The finding that no target has been met comes from a Guardian analysis.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "UN News",
+          "url": "https://news.un.org/feed/view/en/story/2026/10/1168620",
+          "tier": 1,
+          "adds": "UN on the opening of the talks in Yerevan"
+        },
+        {
+          "name": "The Guardian Environment",
+          "url": "https://www.theguardian.com/environment/2026/oct/19/can-countries-deliver-on-a-deal-to-save-the-worlds-plants-and-animals",
+          "tier": 2,
+          "adds": "Analysis that no target has been met"
+        },
+        {
+          "name": "The Guardian Environment",
+          "url": "https://www.theguardian.com/environment/2026/oct/19/environment-cop17-un-biodiversity-summit-yerevan-explainer-conservation",
+          "tier": 2,
+          "adds": "The 23 COP15 targets"
+        },
+        {
+          "name": "European Commission",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2187",
+          "tier": 1,
+          "adds": "Primary: €3.4bn for 77 net-zero projects"
+        },
+        {
+          "name": "European Commission",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184",
+          "tier": 1,
+          "adds": "Primary: €390m for 135 LIFE projects"
+        },
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/8b1990d1-b4b2-4147-ba4b-76d1869ee2db?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "EU drops its push for an Arctic drilling ban"
+        },
+        {
+          "name": "The Guardian Environment",
+          "url": "https://www.theguardian.com/environment/2026/oct/19/tap-water-no-longer-drinkable-norwegian-town-climate-related-thawing-heavy-metals-arctic-longyearbyen-svalbard",
+          "tier": 2,
+          "adds": "Svalbard tap-water warning"
+        }
+      ],
+      "signal_score": 17,
+      "published": "2026-10-19T15:36:34.000Z",
+      "image": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/14-12-2021-UNEP-Earth-Champions-Gladys-Kalema-02.jpg/image560x340cropped.jpg"
+    },
+    {
+      "id": "w10",
+      "headline": "Kenyan court convicts cult leader Paul Mackenzie of murdering 190 children and one adult",
+      "level": "context",
+      "categories": [
+        "Justice",
+        "Africa"
+      ],
+      "markets": [],
+      "what_happened": "A Kenyan court found the self-proclaimed pastor Paul Mackenzie and about 30 others guilty of murder over the deaths of 190 children and one adult. Prosecutors say his sect ordered followers to starve themselves and their children. Hundreds of bodies had been exhumed from a remote forest. Sentencing is still to come.",
+      "why_it_matters": "This is one of the worst cult-related disasters in recent history, and the verdict is the first judgement in the case. It could renew debate in Kenya over oversight of religious groups.",
+      "whats_new": {
+        "before": "Mackenzie denied ordering his followers to starve.",
+        "now": "He and his co-accused have been convicted of murder."
+      },
+      "watch": [
+        "Sentencing",
+        "Kenyan rules on regulating religious organisations"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 2,
+        "impact": 2,
+        "novelty": 3,
+        "credibility": 5,
+        "long_term": 2
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": true,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
+          "tier": 2,
+          "adds": "Verdict and the prosecution's case"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/news/world/africa/article/3371417/kenyan-starvation-cult-leader-found-guilty-murder-191-children-1-adult",
+          "tier": 2,
+          "adds": "Number of co-accused and sentencing to follow"
+        },
+        {
+          "name": "New York Times World",
+          "url": "https://www.nytimes.com/2026/10/19/world/africa/kenya-cult-deaths-paul-mackenzie-court-ruling.html",
+          "tier": 2,
+          "adds": "Exhumations in the forest"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/19/kenyan-court-convicts-starvation-cult-leader-for-murder-of-191-people?traffic_source=rss",
+          "tier": 2,
+          "adds": "Mackenzie's denial"
+        }
+      ],
+      "signal_score": 14,
+      "published": "2026-10-19T16:11:03.000Z",
+      "image": "https://i.guim.co.uk/img/media/1fcb4211343f1e186853a25b4e44873a28588f33/124_21_4274_3420/master/4274.jpg?width=140&quality=85&auto=format&fit=max&s=cc8854a028b039b4861c34a8bb8679b9"
+    },
+    {
+      "id": "w11",
+      "headline": "Portugal's rent law wobbles as Chega threatens to abandon its deal with the PSD, amid housing camps and scrutiny of MPs' property",
+      "level": "essential",
+      "categories": [
+        "Housing",
+        "Portugal",
+        "Policy"
+      ],
+      "markets": [
+        "real_estate"
+      ],
+      "what_happened": "With housing protests in Lisbon and Porto, Chega said it may vote against the Government's rent law at the detailed (specialty) stage, after abstaining to let it pass the first vote. Chega also proposed an 'emergency legislative package' with higher IRS deductions and said it would accept a budget deficit to pay for it. PS leader José Luís Carneiro proposed exempting from capital-gains tax sales of existing homes up to €300,000 for one's own home, and Bloco asked the Prime Minister to withdraw the proposal. ECO reports that the 220 Government members and PSD, Chega, IL and CDS-PP MPs together own 1,039 properties worth about €55.6m; nothing in the law prevents them voting on the changes. Protesters have camped in central Lisbon, and reports say police have asked for the tents to be removed.",
+      "why_it_matters": "If Chega withdraws, the Government's plan to liberalise renting could fail or change substantially, which affects landlords, tenants and investors already adjusting to the new rules. The opposition's tax proposals indicate where housing tax policy may go.",
+      "whats_new": {
+        "before": "Parliament approved the rent law in a first vote after a PSD–Chega deal, and protesters had set up camp in Porto.",
+        "now": "Chega is threatening to break the deal, rival tax proposals have appeared, and the protest camps have reached Lisbon."
+      },
+      "watch": [
+        "Chega's vote at the specialty stage",
+        "Whether the Government amends the law to keep Chega's support",
+        "The PS capital-gains proposal and budget negotiations"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Chega's position is a stated threat, not a vote. The protest's duration and the police request come from secondary aggregator reports.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-01",
+          "event": "Rent law passes a first vote after a PSD–Chega deal"
+        },
+        {
+          "date": "2026-10-12",
+          "event": "Dozens camp in Porto as the PCP proposes a housing package"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Chega threatens to drop the deal; PS proposes a capital-gains exemption; Lisbon camp"
+        }
+      ],
+      "sources": [
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/10/19/chega-ameaca-rasgar-acordo-com-psd-para-a-lei-das-rendas",
+          "tier": 2,
+          "adds": "Chega threatens to vote against at the specialty stage"
+        },
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/10/18/chega-admite-defice-para-financiar-plano-de-emergencia-na-habitacao",
+          "tier": 2,
+          "adds": "Chega's emergency package and deficit stance"
+        },
+        {
+          "name": "ECO Imobiliário",
+          "url": "https://eco.sapo.pt/2026/10/19/ps-propoe-isencao-de-mais-valias-na-venda-de-casas-ate-300-mil-euros",
+          "tier": 2,
+          "adds": "PS capital-gains exemption proposal"
+        },
+        {
+          "name": "Público (via PT housing law)",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWEVHdXduMUduWGFrajR5SmdiLUlpMWFhOElvN251WVFrOVdid0hlMi1ySTFkRW85eXdKdzlHa01qdm44YlpXT2RCVlpSQ3FnNlBZbGZyb3Y4VU9PNnZhcHJ0Vk50dmdiV3BKRUlVQjhfd3RUN3Y2WnFFRVBLbXVoOEJaZjNtc2hfajVWWWJSM2VubWNTeHZtYUVGVkRSa1p1MmRZb0FIaElhQzkycmRFQ1VuamxtR05DX3hURnNKUDIxcjQ?oc=5",
+          "tier": 3,
+          "adds": "Bloco asks the Government to withdraw the law"
+        },
+        {
+          "name": "ECO Imobiliário",
+          "url": "https://eco.sapo.pt/2026/10/19/politicos-que-estao-a-mudar-leis-do-arrendamento-detem-mais-de-mil-imoveis",
+          "tier": 2,
+          "adds": "Politicians' property holdings"
+        },
+        {
+          "name": "ZAP Notícias (via PT housing law)",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOFNPTHlzZnQ4SzVyZDRQeTZmY0ZoaGZvbGFCbmtQay1ONzlrcDFtbVh6aElpSUF2SVNIOVdldml6ZG9YeDJLRDBCSnNzNEJfRXVwcXFFeG5vamp1bFlKS2Fyak5MaU5NS2UxTUFsUlU3VmZ1aWJIY1FLZmRzVGFFMm5LMzI4RWV0aUxpbHBDb3dEWXV2YXpmc0hmUWU2OUlD?oc=5",
+          "tier": 3,
+          "adds": "Nothing in the law prevents them voting"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/video/2026/10/19/tents-fill-lisbon-square-as-protesters-highlight-portugals-housing-crisis",
+          "tier": 2,
+          "adds": "Protest camp in central Lisbon"
+        },
+        {
+          "name": "streamlinefeed.co.ke (via Portugal property (EN))",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPN085ZFBmUmJ4cFA2c2p2YmlGa2ttaFRTZl9XWHA4RlJSQmFfUlc0R2dvaF95bEJWYmpzMnNkRVJyM24wd3ZVa2dqam00NHVDVXplRjExRXpoUG1vd05WUHRkUGMtWDQxREpnN2c0UVNXRmtSTUo3NWM4ZjMxV3AxNG9xMEVQVW0tRFBwVXZrdE9HZXdvVFNhdnU2cEJ1RzA5NkpUbGZqRnA?oc=5",
+          "tier": 3,
+          "adds": "Police demand removal of the tents"
+        },
+        {
+          "name": "The Guardian (via Portugal property (EN))",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ05kNmh0VGZQQlV4MkExc2lkOW9BaGpPaW5ZUkNSdTlSYk9SZ0lqZHR5VzRZdFVrZW1xTDlPTEVxSjBINHZ3dGxSamJtNFBvZVJwczB6Ym11ZllxYXdKTEFtTnBZbFNEUTZlMldaWHZ0UXRMU29ZWmpFRjVMWVFmb0J5OEc3dHJfckJ5UXZWSm1TUQ?oc=5",
+          "tier": 3,
+          "adds": "Protests spread to Lisbon and Milan"
+        }
+      ],
+      "signal_score": 20,
+      "published": "2026-10-19T17:46:28.000Z",
+      "image": "https://eco.imgix.net/uploads/2026/09/cropped-45086174-scaled-1.jpg"
+    },
+    {
+      "id": "w12",
+      "headline": "EU Council recommends that member states act to prevent evictions and help with rent",
+      "level": "context",
+      "categories": [
+        "Housing",
+        "EU",
+        "Policy"
+      ],
+      "markets": [
+        "real_estate"
+      ],
+      "what_happened": "The Council of the EU adopted a recommendation in which member states commit to do more to prevent housing exclusion. It suggests measures to stop evictions or help pay rent. It was adopted as housing protests spread across Iberia and other parts of Europe.",
+      "why_it_matters": "A Council recommendation is not binding, but it sets a shared policy direction alongside the EU's Affordable Housing plan and Housing Act. It may influence how governments such as Portugal's and Spain's frame tenant protections.",
+      "whats_new": {
+        "before": "The EU Housing Act had moved to Parliament with a focus on short-term rentals.",
+        "now": "Member states have formally endorsed a set of measures against evictions and homelessness."
+      },
+      "watch": [
+        "How Portugal and Spain reflect the recommendation in national law",
+        "Progress of the EU Housing Act in Parliament"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 3,
+        "impact": 2,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": true,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-08",
+          "event": "EU Housing Act moves to Parliament"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Council adopts a recommendation against housing exclusion"
+        }
+      ],
+      "sources": [
+        {
+          "name": "ECO Habitação",
+          "url": "https://eco.sapo.pt/2026/10/19/conselho-da-ue-recomenda-medidas-contra-despejos-e-apoio-a-rendas",
+          "tier": 2,
+          "adds": "Details of the Council recommendation"
+        },
+        {
+          "name": "EU Today (via EU housing policy)",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQa2hXSDRnYXpsLTdEWklqY19hV19qNjU1d0VCNTlJaDRrLWZOS0VscVF3T0RnTXRyUFA2QWFWRnlLWE9Bekw3dHFULVZwV0pab1NBdnpDUG9ybjN1cXA0OWxvc2Rfc2xNNGE4d0otRmFNVG5zWHRfdGh3a2dKWmRHRw?oc=5",
+          "tier": 3,
+          "adds": "Ministers agree homelessness measures"
+        },
+        {
+          "name": "ProtoThema English (via Portugal property (EN))",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcy1tYlAtaW1UQU1BSTJhbHBRMW03cTgzUURrem1YeU9uTkRvNDg5OHNGOTdDcm5NQk9ZQ3lpS0w3Y1dpT1oyLXdkUTdWTzdYYjBIMXRPMzJjaFZ0a3hzUUFoTEcydXVVcEVyTHgta0NEcG9LU09DNlR3NEpBT0xpZnREVjBBUENORlRkejZkUnZySXI4VDVrcXR5RXBhWldZTVExREU5LUJoUmp5V3pySVphOVJEQUxNWlA4SjdIUF9qMHl0Y1JpRzIwMjJ0ZUhVbVRV?oc=5",
+          "tier": 3,
+          "adds": "Rent protests across Iberia"
+        }
+      ],
+      "signal_score": 15,
+      "published": "2026-10-19T17:53:37.000Z",
+      "image": "https://eco.imgix.net/uploads/2026/10/cropped-doc2025080645445300-ps05709.jpg"
+    },
+    {
+      "id": "w13",
+      "headline": "Portuguese market signals: rental confidence rises as sales confidence falls, and the Government advances a Construction Code",
+      "level": "context",
+      "categories": [
+        "Housing",
+        "Portugal",
+        "Market data"
+      ],
+      "markets": [
+        "real_estate"
+      ],
+      "what_happened": "Idealista reports that confidence in Portugal's property market is rising for renting and falling for home sales. Portuguese property investment funds managed €21.395bn in September, up 0.1% from August, according to Jornal Económico. The Government is moving ahead with a Construction Code, and new coefficients for property capital-gains calculations have been published. Separately, vida imobiliaria reports that defence spending is driving investment in industrial and logistics property in Europe.",
+      "why_it_matters": "Together these point to a market where sales activity is cooling while renting stays strong and rule changes continue. A Construction Code could change building costs and timelines. The capital-gains coefficients affect the tax owed on property sold this year.",
+      "whats_new": {
+        "before": "Portuguese mortgage rates had risen for five months and Euribor was rising across all terms.",
+        "now": "Sentiment data show sales confidence weakening, and further changes to construction and tax rules are on the way."
+      },
+      "watch": [
+        "The contents of the Construction Code",
+        "October sales and mortgage data"
+      ],
+      "confidence": "low",
+      "confidence_note": "Based mainly on headlines without detail; the scope of the Construction Code and the size of the confidence changes are not given.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 2,
+        "impact": 2,
+        "novelty": 2,
+        "credibility": 3,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Idealista (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUDQ1X2NEeHRHRFYzZzNjLW9XblVqaW90T0Z0ZWxrR3hrWkF6Vi1CVEZ5TnE3LXZEczZNc3NwM0lNWE9lSXM2b0xsZEJSX3AyS0IxV1Q0OFJhZXdKVWJ5US00U3dldjlMbUpmYlp6NC05VFA5LV9JRFRib21kbEVwNFJibU9sWUNqdXViRXVYeV81QWFDZko5d3RDRjFCX29UbERCYWdMUU5uelpfNzVRVlBWeXBiQTRtQW1EWllNaUZtb3MwR3RLejQ0M1g5UWQzZjlz?oc=5",
+          "tier": 3,
+          "adds": "Confidence up for renting, down for sales"
+        },
+        {
+          "name": "Jornal Económico (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUjdadFc1ZmZhbExQQThpNDl5anlqbmQwX0R2cXNXT1Ytb0tKa2RqVlhCM3phLWk5WEhnYUgtYWJqV1dvYXYwOWJWaUpzRC1WY1FJRUR5ZGcza1pYSXdfNU05VjJ5XzhKNHlMcEdkSURkQzh0VVUxSkY1Mks4S1pRazZwU01PMWdndUFGYmxhbGdIUDY2RXlDbU1ZTnc3bWZibWhUdDlIb3RzVDFRLWJmWktCemtQbGhGN1RDN0dxNGk5SXh6YWxid0ZoRUc?oc=5",
+          "tier": 3,
+          "adds": "Property fund assets in September"
+        },
+        {
+          "name": "Casa Sapo (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNS2NfaW5QTDBteHk0ckVCWUlGNnJoSTVrQnhxU0JVQlp6bEtuQmJIUFFtRkJSS0ZtTk12VldBR2JuTk1FNGFibXMwUTlJR2p5ZGlQaE9hTkxodFNlMGFYdzk1MzRhaU5rcjlucW5zSG1GSDFtY0RXR0x5Uk1Qck5SQjJFVllpUQ?oc=5",
+          "tier": 3,
+          "adds": "Construction Code advances"
+        },
+        {
+          "name": "Casa Sapo (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPQlI1SURGOER4enVLaVVlaThJazVvRHRpR21UeEpRZFpLZVJndTJCQ3J0QV9TZjhIYVltWjZoTFBRWERMNUdPUUlOUy15Ym5uUlI1enUwSkU5NkZ3cGlxSmVfRVd5NVdtbzhrNmR3Zlc1cVNLc1FhS3Jtd1Jkb3YzdmZ1T2RmbE11Yjg4d2lqOTU?oc=5",
+          "tier": 3,
+          "adds": "New capital-gains coefficients"
+        },
+        {
+          "name": "vida imobiliaria (via PT property market)",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZXh2aWk2cWRxNWtic3JpZlV4VGJqMm1CMFVxaGc4S25Qa1VJaW5NRGJKR2UxSUNpVG1iaGp6LVJteVMzM1U4TUhfYUZYck9iOXNkdTNxcEtzQm9GV1REajBEQWV1TWFZOW1LYlpsY2JVTkg3WnFiejh0c1JMM1BHR1dkT3JvZzM4bTRTZWJfekFPdGFyRktiTmRqVE40Vm1jQ0l3aXAweUtkNEY1T1pBbGNmZFo0emtNYWVvTGdTQll4b0Y1T0pyZm56R2hDLXRYSFFj?oc=5",
+          "tier": 3,
+          "adds": "Defence-driven industrial and logistics investment"
+        }
+      ],
+      "signal_score": 12,
+      "published": "2026-10-19T16:46:00.000Z",
+      "image": null
+    },
+    {
+      "id": "t1",
+      "headline": "Anthropic commits 5% of its shares to a public-benefit fund before its IPO, and Musk pledges a SpaceX share to every US child",
+      "level": "essential",
+      "categories": [
+        "AI",
+        "Big Tech",
+        "Society"
+      ],
+      "markets": [],
+      "what_happened": "Anthropic said it will commit at least 5% of its shares to a 'public benefit fund' ahead of its expected stock market listing; the Guardian values the stake at about $48bn. Anthropic says the fund could make 'large donations to traditional nonprofits or direct distributions to specific populations', but has given few details. It also gave an outside AI watchdog 'employee-like' access, and the watchdog can publish its findings without Anthropic's approval. Hours later, Elon Musk said he would give one SpaceX share to every child in the US next year, worth about $10.7bn at Friday's close, without saying who would qualify or how it would work.",
+      "why_it_matters": "Analysis: AI companies are competing for public legitimacy as much as for customers, at a time when the FT describes a growing public backlash over safety and economic concerns. Reporting suggests Democrats, who polls say could win at least one chamber of Congress, plan to scrutinise the AI industry more aggressively. How the fund and the watchdog arrangement actually work will show whether this is real accountability or mainly positioning before the IPO.",
+      "whats_new": {
+        "before": "Anthropic had taken risky tests offline and warned that AI might soon copy itself between devices.",
+        "now": "It has committed equity to the public and given an outside watchdog independent access, and Musk has made a rival share pledge."
+      },
+      "watch": [
+        "The fund's governance and who receives distributions",
+        "The watchdog's first published findings",
+        "Anthropic's IPO filing and timing",
+        "Details of Musk's pledge"
+      ],
+      "confidence": "high",
+      "confidence_note": "How the fund and Musk's pledge will work has not been explained; dollar values depend on valuations.",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "Anthropic takes risky tests offline and warns that AI may soon self-replicate"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Anthropic commits 5% of shares to a public fund; Musk pledges SpaceX shares"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/3beab58d-4269-4722-b299-8fa5a93f5a52?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Announcement and the backlash context"
+        },
+        {
+          "name": "The Guardian Technology",
+          "url": "https://www.theguardian.com/technology/2026/oct/19/ai-firm-anthropic-to-commit-shares-to-fund-for-public-good",
+          "tier": 2,
+          "adds": "Estimated value and IPO timing"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
+          "tier": 3,
+          "adds": "How the fund might be used"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access",
+          "tier": 3,
+          "adds": "Outside watchdog access and freedom to publish"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/19/musk-pledges-spacex-shares-to-every-us-child-in-potential-107bn-giveaway",
+          "tier": 2,
+          "adds": "Musk's pledge and its value"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/19/musk-pledges-to-give-every-kid-in-america-one-of-his-spacex-shares",
+          "tier": 3,
+          "adds": "Timing relative to Anthropic's announcement"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261019/p23",
+          "tier": 4,
+          "adds": "Democrats prepare to scrutinise AI"
+        }
+      ],
+      "signal_score": 20,
+      "published": "2026-10-19T14:35:58.000Z",
+      "image": "https://i.guim.co.uk/img/media/2790d74966de266025ee31e1975f1f2ce9024d36/387_0_2915_2333/master/2915.jpg?width=140&quality=85&auto=format&fit=max&s=16ba666f47897a1a79435713e2ff8af3"
+    },
+    {
+      "id": "t2",
+      "headline": "Microsoft pulls out of the UK's largest AI data centre over power supply, as Amazon funds 12 small nuclear reactors in Indiana",
+      "level": "essential",
+      "categories": [
+        "AI infrastructure",
+        "Energy"
+      ],
+      "markets": [],
+      "what_happened": "Microsoft has abandoned its agreement to lease capacity at Nscale's planned AI data centre in Essex, billed as the UK's largest, citing concerns about power supply. Nscale says it is still committed to building the site. The Register reports that grid connection delays could push the UK's AI ambitions into the 2030s. Amazon has signed an agreement with X-energy and American Electric Power to fund 12 small nuclear reactors at a former coal plant in Indiana, producing nearly 1 gigawatt, though the plant is years from completion.",
+      "why_it_matters": "Grid access, more than chips, is becoming the factor that decides where AI capacity gets built. Countries with slow grid connections risk losing projects, while the largest companies are paying for their own generation. That favours firms and places that can secure power directly.",
+      "whats_new": {
+        "before": "Moody's had warned that data centres could use 30% of Ireland's electricity by 2035, and data centres had become a political issue.",
+        "now": "A flagship UK project has lost its anchor tenant over power, and Amazon has made a further nuclear commitment."
+      },
+      "watch": [
+        "Whether Nscale finds a new tenant",
+        "UK government action on grid connection queues",
+        "Regulatory approval and timeline for the Indiana reactors"
+      ],
+      "confidence": "high",
+      "confidence_note": "The view that UK AI ambitions could slip into the 2030s is The Register's analysis.",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "Moody's says data centres could use 30% of Ireland's power by 2035"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Microsoft quits the Nscale Essex deal; Amazon funds Indiana reactors"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Guardian Technology",
+          "url": "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns",
+          "tier": 2,
+          "adds": "Power supply concerns and project background"
+        },
+        {
+          "name": "Financial Times Technology",
+          "url": "https://www.ft.com/content/35cc5cc6-f9b6-49cc-8fc2-bd61e09c8c40?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Microsoft abandons the lease agreement"
+        },
+        {
+          "name": "BBC Business",
+          "url": "https://www.bbc.co.uk/news/articles/c9m26kl5y7epo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "Nscale remains committed"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/on-prem/2026/10/19/microsoft-abandons-uk-ai-supercomputer-as-grid-struggles-to-keep-up/5303824",
+          "tier": 3,
+          "adds": "Grid delays analysis"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/19/amazon-to-fund-12-small-nuclear-reactors-at-former-indiana-coal-plant",
+          "tier": 3,
+          "adds": "12 reactors, nearly 1GW"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1013735/amazon-x-energy-aep-nuclear-indiana",
+          "tier": 3,
+          "adds": "Partners and timeline"
+        }
+      ],
+      "signal_score": 20,
+      "published": "2026-10-19T16:55:56.000Z",
+      "image": "https://i.guim.co.uk/img/media/48d031cc06f5ca17cafd75b0f30a1537d4f35d43/7_0_686_549/master/686.jpg?width=140&quality=85&auto=format&fit=max&s=c5cf32679a4362ea71e1465a65af9593"
+    },
+    {
+      "id": "t3",
+      "headline": "US threatens 'devastating' retaliation over EU satellite spectrum plans, as Europe's big carriers team up against Starlink",
+      "level": "essential",
+      "categories": [
+        "Tech geopolitics",
+        "Space",
+        "Telecoms"
+      ],
+      "markets": [],
+      "what_happened": "US ambassador Andrew Puzder warned of 'devastating' retaliation against European companies if Brussels goes ahead with plans to limit spectrum access for non-EU companies, which would affect Starlink. Deutsche Telekom, Orange, Telefónica and Vodafone signed a letter of intent to explore a joint bid for spectrum for direct-to-device satellite service in Europe. The carriers would run the ground infrastructure, with a satellite partner still to be announced. The dispute comes as the US–Ukraine row over Starlink highlights Europe's dependence on the service.",
+      "why_it_matters": "Satellite connectivity has become a security question: Ukraine's experience shows what happens when a foreign-controlled network can be restricted. How the EU allocates spectrum will decide whether Europe builds its own capability, and the US threat makes it a trade dispute too.",
+      "whats_new": {
+        "before": "European governments were moving some public IT away from US suppliers, but satellite connectivity had not been a point of open conflict.",
+        "now": "Washington has openly threatened retaliation, and Europe's four largest carriers have a joint plan."
+      },
+      "watch": [
+        "The Commission's spectrum proposal",
+        "Which satellite operator partners with the carriers",
+        "Any formal US trade action"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Financial Times Technology",
+          "url": "https://www.ft.com/content/d1e28d93-8574-4a46-946a-b261c401d6fa?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "US ambassador's warning"
+        },
+        {
+          "name": "Financial Times Technology",
+          "url": "https://www.ft.com/content/555bbf91-4c38-43ce-94b6-90f7fc04e82c?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Carriers' joint spectrum bid"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/1013680/european-mobile-carriers-mobile-satellite-starlink",
+          "tier": 3,
+          "adds": "Letter of intent and division of roles"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/18/2026/europe-has-few-starlink-alternatives",
+          "tier": 2,
+          "adds": "Europe's dependence exposed by the Ukraine row"
+        }
+      ],
+      "signal_score": 21,
+      "published": "2026-10-19T14:24:42.000Z",
+      "image": "https://img.semafor.com/741a5dd5289e2abcde5792deec3b8ffa404e7804-3810x2648.jpg"
+    },
+    {
+      "id": "t4",
+      "headline": "US orders federal agencies to remove DeepSeek, as DeepSeek reportedly helps Huawei design AI chips and Beijing weighs AI export controls",
+      "level": "essential",
+      "categories": [
+        "AI",
+        "Chips",
+        "Tech geopolitics"
+      ],
+      "markets": [],
+      "what_happened": "The US Department of Homeland Security has ordered all federal civilian agencies to remove DeepSeek's technology from their IT systems and banned future purchases of its products and services. The Information, citing sources, reports that DeepSeek is working with Huawei on the design of future AI chips and plans to use Huawei's Ascend 950DT for pre-training as soon as the end of 2026. Semafor reports that China is considering export controls that could limit the global spread of its own AI models and chips.",
+      "why_it_matters": "Analysis: the two AI ecosystems are separating from both sides. The US is shutting Chinese models out of government, while China is pairing its leading lab with a domestic chipmaker and considering restrictions on its own technology leaving the country. If DeepSeek trains on Huawei chips, that would show US chip controls can be worked around at the frontier.",
+      "whats_new": {
+        "before": "DeepSeek and Huawei had teamed up on AI software, and Chinese firms were buying Nvidia gaming chips for AI.",
+        "now": "DeepSeek is banned from US federal systems and is reported to be co-designing Huawei chips, while Beijing considers its own controls."
+      },
+      "watch": [
+        "Whether states or allies follow the DHS ban",
+        "The first DeepSeek model trained on Ascend chips",
+        "Details of any Chinese AI export controls"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The DHS order is reported by the WSJ; the chip collaboration and the export-control plans rest on unnamed sources.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 5
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-02",
+          "event": "DeepSeek and Huawei team up on AI software"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "DHS bans DeepSeek; chip co-design reported; China weighs export controls"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261019/p28",
+          "tier": 4,
+          "adds": "DHS removal order and procurement ban"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261019/p35",
+          "tier": 4,
+          "adds": "Chip design collaboration and Ascend 950DT plans"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/18/2026/china-mulls-ai-export-rules",
+          "tier": 2,
+          "adds": "China considering AI and chip export controls"
+        }
+      ],
+      "signal_score": 21,
+      "published": "2026-10-19T17:05:07.000Z",
+      "image": "https://img.semafor.com/1de5ee42cb44b3be1641c5d881e53a5295f3cd4f-2557x1705.jpg"
+    },
+    {
+      "id": "t5",
+      "headline": "A hacker used a swarm of AI agents to breach more than 100 websites, as Microsoft starts treating agents as insider threats",
+      "level": "context",
+      "categories": [
+        "Cybersecurity",
+        "AI"
+      ],
+      "markets": [],
+      "what_happened": "The security firm Norforge says a hacker broke into more than 100 websites using AI agents that mostly operated on their own; Reuters reports the victims included John Deere, SharkNinja and Cummins. Microsoft released security tools in Microsoft 365 E7 and a system called Project Perception that continuously assess AI agents as potential insider threats. Ahold Delhaize confirmed that 'malicious actions' forced it to take systems offline across most of its US and European grocery brands. Separately, investigators pursuing ShinyHunters, which stole FBI data and is linked to a Florida DMV breach, have identified executives at two ransomware negotiation firms with unusually close ties to the group, according to Krebs on Security.",
+      "why_it_matters": "Autonomous agents make it far cheaper to attack many targets at once, and defenders are starting to treat their own agents as a risk inside the network. Repeated attacks on grocery chains show that ordinary consumers are directly affected.",
+      "whats_new": {
+        "before": "Ahold Delhaize had been hit by outages, and attacks were spreading to physical equipment such as supermarket refrigerators.",
+        "now": "Ahold Delhaize has confirmed an attack, and a large-scale campaign run mostly by AI agents has been documented."
+      },
+      "watch": [
+        "Further details from Norforge on how the agents were used",
+        "How quickly Ahold Delhaize restores its systems",
+        "Charges in the ShinyHunters investigation"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The AI-agent campaign is described by one security firm, and the victims are named by Reuters, not by the firm.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "Hackers heat refrigerators in French supermarkets; Ahold Delhaize hit"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "AI-agent campaign documented; Ahold Delhaize confirms a cyberattack"
+        }
+      ],
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+          "tier": 3,
+          "adds": "AI agent campaign and named victims"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261019/p24",
+          "tier": 4,
+          "adds": "Microsoft tools that treat agents as insider threats"
+        },
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/ahold-delhaize-cyberattack-grocery",
+          "tier": 3,
+          "adds": "Ahold Delhaize confirmation"
+        },
+        {
+          "name": "Krebs on Security",
+          "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site",
+          "tier": 3,
+          "adds": "ShinyHunters investigation"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/10/huge-dmv-data-breach-impacted-current-and-former-florida-residents",
+          "tier": 3,
+          "adds": "Florida DMV breach linked to ShinyHunters"
+        }
+      ],
+      "signal_score": 18,
+      "published": "2026-10-19T16:45:00.000Z",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STKS533_AI_AGENTS_HACKING_A-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100"
+    },
+    {
+      "id": "t6",
+      "headline": "Prosecutors allege Saudi royal links in the case of a man accused of bugging an OpenAI conference room",
+      "level": "context",
+      "categories": [
+        "AI",
+        "Security",
+        "Espionage"
+      ],
+      "markets": [],
+      "what_happened": "US prosecutors allege that Abdulrahman Alfozan, 35, a Saudi national and former OpenAI worker charged with planting a recording device in a sensitive OpenAI executive conference room in San Francisco, was in frequent contact in 2025 and 2026 with an unnamed member of the Saudi royal family. A court filing says a member of the Saudi military paid for one-way tickets for his wife and son to return to Saudi Arabia. Prosecutors argue he should stay in detention because of 'considerable support from a foreign government'. The Saudi government did not immediately respond to requests for comment.",
+      "why_it_matters": "If the allegations are proven, it would be a clear case of a state targeting a frontier AI lab, which supports the view that AI companies are now intelligence targets. That will add to pressure for stronger security at the labs.",
+      "whats_new": {
+        "before": "Alfozan had been charged with planting a recording device at OpenAI.",
+        "now": "Prosecutors allege he had support from people linked to the Saudi state."
+      },
+      "watch": [
+        "The detention ruling",
+        "Any official Saudi response",
+        "Changes to security at AI labs"
+      ],
+      "confidence": "medium",
+      "confidence_note": "These are prosecutors' allegations in a court filing and have not been tested in court.",
+      "claim_status": "allegation",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 4,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/9e10eaa4-ed5e-417b-85c5-b5003b064017?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Prosecutors' detention argument"
+        },
+        {
+          "name": "The Hindu International",
+          "url": "https://www.thehindu.com/news/international/ex-openai-employee-accused-of-planting-device-appears-to-have-saudi-backing-court-filing-shows/article71602972.ece",
+          "tier": 2,
+          "adds": "Royal contact and plane tickets"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261019/p26",
+          "tier": 4,
+          "adds": "Contact in 2025 and 2026 and the charge"
+        },
+        {
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/c6gel2dlyxvyo?at_medium=RSS&at_campaign=rss",
+          "tier": 2,
+          "adds": "No Saudi comment"
+        }
+      ],
+      "signal_score": 17,
+      "published": "2026-10-19T16:22:12.000Z",
+      "image": "https://th-i.thgim.com/public/incoming/v60ojr/article71602975.ece/alternates/LANDSCAPE_1200/2026-10-19T152058Z_1186120503_RC2F2OAHBK9X_RTRMADP_3_OPENAI-SPYING-SAUDI.JPG"
+    },
+    {
+      "id": "t7",
+      "headline": "Disney agrees to hire most of Character.AI's staff through a bankruptcy bid that leaves its lawsuits behind",
+      "level": "context",
+      "categories": [
+        "AI",
+        "Startups",
+        "M&A"
+      ],
+      "markets": [],
+      "what_happened": "A filing shows Disney agreed to hire most of Character.AI's workforce, and the 'vast majority' of employees offered jobs accepted. Disney's offer is a stalking-horse bid, so another buyer could still bid more. Wired reports that Disney asked Character.AI to go bankrupt so it could avoid the lawsuits and acquire assets including trust and safety technology. Dozens of states allege the startup's chatbots encouraged minors to self-harm.",
+      "why_it_matters": "This structure lets a large company take an AI startup's people and technology while its legal liabilities stay with the bankrupt company. If it works, it could become a model for buying troubled AI firms and could reduce what plaintiffs can recover.",
+      "whats_new": {
+        "before": "Character.AI had filed for bankruptcy with a $20m Disney bid.",
+        "now": "Most staff have accepted Disney jobs, and reports describe the bankruptcy as being designed around Disney's terms."
+      },
+      "watch": [
+        "Any higher bid at auction",
+        "Objections from states or plaintiffs in bankruptcy court"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The claim that Disney asked for the bankruptcy comes from Wired's reporting.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 3,
+        "impact": 2,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "Character.AI files for bankruptcy with a $20m Disney bid"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Most staff accept Disney jobs; details of the bid emerge"
+        }
+      ],
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce",
+          "tier": 3,
+          "adds": "Hiring and stalking-horse terms"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/disney-asked-characterai-to-go-bankrupt-for-a-get-out-of-lawsuits-card",
+          "tier": 3,
+          "adds": "Disney's role in the bankruptcy and the assets sought"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits",
+          "tier": 3,
+          "adds": "Avoiding the lawsuits"
+        }
+      ],
+      "signal_score": 15,
+      "published": "2026-10-19T14:45:43.000Z",
+      "image": "https://media.wired.com/photos/6acfe36ba2733753393886b8/master/pass/Disney-Asked-Character.AI-to-Go-Bankrupt-Business-1530260396.jpg"
+    },
+    {
+      "id": "t8",
+      "headline": "AI proves the quasi-Riemann hypothesis, and human experts have worked through the proof",
+      "level": "context",
+      "categories": [
+        "AI",
+        "Science",
+        "Mathematics"
+      ],
+      "markets": [],
+      "what_happened": "Quanta Magazine reports that an AI system proved the quasi-Riemann hypothesis. Unlike other recent AI-generated proofs, this one has been worked through by human experts, and one mathematician called the implications 'staggering'.",
+      "why_it_matters": "Earlier AI maths results were criticised because no one had checked them properly. A proof that experts have reviewed is a stronger sign that AI is becoming a real tool for mathematical research.",
+      "whats_new": {
+        "before": "OpenAI had published hundreds of AI-generated maths results, and mathematicians questioned how they were checked.",
+        "now": "An AI proof of a named open problem has been reviewed by human experts."
+      },
+      "watch": [
+        "Formal publication and peer review",
+        "Which system produced the proof and how much human guidance it had"
+      ],
+      "confidence": "medium",
+      "confidence_note": "Based on one specialist report; the snippet does not name the system.",
+      "claim_status": "reported",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 5,
+        "credibility": 4,
+        "long_term": 4
+      },
+      "positive": true,
+      "under_the_radar": true,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-08",
+          "event": "OpenAI publishes AI-generated maths results; checking questioned"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "AI proof of the quasi-Riemann hypothesis reviewed by experts"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Quanta Magazine",
+          "url": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019",
+          "tier": 3,
+          "adds": "Only report, with expert reaction"
+        }
+      ],
+      "signal_score": 19,
+      "published": "2026-10-19T15:40:26.000Z",
+      "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/ReimannAI-crEmilyBuder_GuanHueiWu-Default.webp"
+    },
+    {
+      "id": "t9",
+      "headline": "US tech stocks rebound after their biggest weekly fall in a year, as a leading bank chief says investors are questioning AI returns",
+      "level": "context",
+      "categories": [
+        "Markets",
+        "AI"
+      ],
+      "markets": [],
+      "what_happened": "The Nasdaq 100 rose after its biggest weekly fall since last year's trade-war rout, which the FT describes as an AI sell-off. Tan Su Shan, chief executive of Singapore's DBS, told Semafor she sees a shift in mood, with investors starting to question returns on AI.",
+      "why_it_matters": "Analysis: a large weekly drop followed by a quick rebound shows investors are nervous, not that they have given up on AI. Because AI investment depends on debt and on high valuations, a lasting shift in sentiment would hit financing for data centres and upcoming IPOs.",
+      "whats_new": {
+        "before": "Chip stocks had fallen after Broadcom's chief likened AI investing to a 'casino', and the IMF warned of an AI share crash.",
+        "now": "Tech stocks had their worst week in a year and then partly recovered."
+      },
+      "watch": [
+        "Big Tech earnings and capex guidance in the coming weeks",
+        "Demand for AI-linked debt and IPOs"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 2,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "Chip stocks slide after Broadcom's 'casino' remark"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Nasdaq 100 rebounds after its biggest weekly drop since last year"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Financial Times World",
+          "url": "https://www.ft.com/content/915ea7ca-1f35-4847-810a-fb29e8344496?syn-25a6b1a6=1",
+          "tier": 2,
+          "adds": "Market move"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/16/2026/the-ai-bet-is-running-straight-into-a-capital-crunch",
+          "tier": 2,
+          "adds": "DBS chief on the change in investor mood"
+        }
+      ],
+      "signal_score": 15,
+      "published": "2026-10-19T13:37:31.000Z",
+      "image": "https://img.semafor.com/a6d86eda2598d712a39856c312ce4be062e038bd-3108x2331.png"
+    },
+    {
+      "id": "t10",
+      "headline": "Agility Robotics launches Digit 5, which it says is a humanoid robot that can do useful work safely and economically",
+      "level": "context",
+      "categories": [
+        "Robotics"
+      ],
+      "markets": [],
+      "what_happened": "Writing in IEEE Spectrum, Agility Robotics' cofounder says the company has launched Digit 5, designed to be the first humanoid robot that can safely and economically do useful work at scale. Agility says this would let it put tens of thousands of humanoid workers into real workplaces.",
+      "why_it_matters": "Most humanoid robots are still in pilots. A model built for safety and cost, if it delivers, would be a step from demonstrations toward real deployment in warehouses and factories.",
+      "whats_new": {
+        "before": "Agility says no humanoid robot could yet do useful work safely and economically at scale.",
+        "now": "The company has a new model built for large-scale commercial use."
+      },
+      "watch": [
+        "Customer deployments and unit volumes",
+        "Independent safety certification"
+      ],
+      "confidence": "medium",
+      "confidence_note": "The claims about safety, cost and scale are the company's own and have not been independently tested.",
+      "claim_status": "official_statement",
+      "scores": {
+        "importance": 2,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 3,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/agility-robotics-digit-5-redesign",
+          "tier": 3,
+          "adds": "Cofounder's account of the launch"
+        }
+      ],
+      "signal_score": 14,
+      "published": "2026-10-19T13:00:03.000Z",
+      "image": "https://spectrum.ieee.org/media-library/author-jonathan-hurst-a-tall-slim-white-man-wearing-a-black-long-sleeve-shirt-and-dark-jeans-stands-next-to-his-digit-5-humano.jpg?id=68441166&width=980"
+    },
+    {
+      "id": "t11",
+      "headline": "US Supreme Court leaves intact a ruling that copyright termination can recover foreign rights, after four justices sit out",
+      "level": "context",
+      "categories": [
+        "Copyright",
+        "Courts"
+      ],
+      "markets": [
+        "ip"
+      ],
+      "what_happened": "The US Supreme Court left intact a far-reaching Fifth Circuit ruling that US copyright termination can recover foreign rights granted in a worldwide deal. It did not reject the appeal by BMG, Sony Music, UMG and Warner Music on the merits: four justices sat out, so the court did not have enough members to hear it. The court also refused to hear Google's challenge to the USPTO using a patent's age ('settled expectations') as a reason to refuse review, and declined a copyright case over footage of Blackbeard's shipwreck.",
+      "why_it_matters": "Songwriters and other creators who use termination rights could recover worldwide rights, not only US rights, which affects the value of large music catalogues. Leaving the USPTO's 'settled expectations' practice in place makes it harder to challenge older patents at the PTAB.",
+      "whats_new": {
+        "before": "The Fifth Circuit ruling was under appeal, and the USPTO's discretionary denials were being challenged.",
+        "now": "Both stand for now, without a Supreme Court ruling on the merits."
+      },
+      "watch": [
+        "How labels and publishers reprice catalogue deals",
+        "Whether a similar case reaches a full court",
+        "IPR petition numbers under the 'settled expectations' practice"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 4,
+        "impact": 4,
+        "novelty": 3,
+        "credibility": 5,
+        "long_term": 4
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [
+        {
+          "date": "2026-10-13",
+          "event": "IPR petitions fall to about a third of last year's level"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "Supreme Court leaves termination ruling intact and declines Google's PTAB case"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Law360 IP",
+          "url": "https://www.law360.com/ip/articles/2539505",
+          "tier": 2,
+          "adds": "Four justices sit out; ruling left intact"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261019/p34",
+          "tier": 4,
+          "adds": "Labels involved and scope of the ruling"
+        },
+        {
+          "name": "Law360 IP",
+          "url": "https://www.law360.com/ip/articles/2536484",
+          "tier": 2,
+          "adds": "Google 'settled expectations' case declined"
+        },
+        {
+          "name": "Law360 IP",
+          "url": "https://www.law360.com/ip/articles/2538648",
+          "tier": 2,
+          "adds": "Blackbeard case declined"
+        }
+      ],
+      "signal_score": 20,
+      "published": "2026-10-19T16:20:00.000Z",
+      "image": "https://www.law360.com/images/law360-stacked.png"
+    },
+    {
+      "id": "t12",
+      "headline": "European patent courts side with patent holders: a German injunction hits SAP Signavio and the UPC upholds Align's aligner patent",
+      "level": "context",
+      "categories": [
+        "Patents",
+        "UPC",
+        "Europe"
+      ],
+      "markets": [
+        "ip"
+      ],
+      "what_happened": "A German court granted an injunction against SAP's Signavio software after a challenge from Celonis. SAP says the ruling restricts only one specific process, not the whole product. The UPC's Paris local division upheld Align Technology's patent EP 2 237 738 on orthodontic appliances in its dispute with Angelalign. An EPO Board of Appeal decision on empagliflozin (T 0251/25) shows the limits of relying on clinical data published after the filing date.",
+      "why_it_matters": "Injunctions remain a strong tool in Europe, including against major software vendors, and they give patent holders leverage in licensing talks. The empagliflozin decision is a reminder for pharma applicants to include supporting data when they file.",
+      "whats_new": {
+        "before": "Recent European decisions had gone against several pharma originators, and the UK kept SEP injunctions.",
+        "now": "There is a software injunction in Germany and a UPC win for a medical device patent holder."
+      },
+      "watch": [
+        "SAP's appeal and any product changes",
+        "Angelalign's next step at the UPC Court of Appeal"
+      ],
+      "confidence": "high",
+      "confidence_note": "",
+      "claim_status": "confirmed",
+      "scores": {
+        "importance": 3,
+        "impact": 3,
+        "novelty": 3,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/legal/2026/10/19/saps-signavio-hit-with-function-injunction-in-germany/5303835",
+          "tier": 3,
+          "adds": "Signavio injunction and SAP's response"
+        },
+        {
+          "name": "JUVE Patent",
+          "url": "https://www.juve-patent.com/cases/paris-local-division-upholds-align-patent-in-dispute-with-angelalign",
+          "tier": 3,
+          "adds": "UPC Paris decision for Align"
+        },
+        {
+          "name": "IPKat",
+          "url": "http://ipkitten.blogspot.com/2026/10/post-published-clinical-data-does-not.html",
+          "tier": 3,
+          "adds": "EPO board decision T 0251/25"
+        },
+        {
+          "name": "IPFray",
+          "url": "https://ipfray.com/upc-roundup-1-week-coa-rejects-appeal-of-denial-of-re-establishment-rejects-late-patent-amendment-access-to-frand-agreements-and-more",
+          "tier": 3,
+          "adds": "Weekly UPC developments"
+        }
+      ],
+      "signal_score": 16,
+      "published": "2026-10-19T13:46:52.000Z",
+      "image": "https://image.theregister.com/?imageId=258630&width=800"
+    },
+    {
+      "id": "t13",
+      "headline": "Renault joins Avanci's Wi-Fi 6 vehicle licence, as the pool says it has 'critical mass' for 5G in China",
+      "level": "context",
+      "categories": [
+        "SEPs",
+        "Licensing"
+      ],
+      "markets": [
+        "ip"
+      ],
+      "what_happened": "Renault is the latest licensee of Avanci's Wi-Fi 6 Vehicles programme, joining Mercedes-Benz, General Motors, Ford and Volvo Cars. Avanci's 5G head, Laurie Fitzgerald, told IAM that the pool has 'critical mass' in China, though negotiations continue, and that it wants to apply the same model to new adjacent markets. Separately, an IAM-reported study confirms that Rio de Janeiro's court grants more patent injunctions than São Paulo's, making forum choice within Brazil an important tactic.",
+      "why_it_matters": "Patent pools are becoming the standard way to license car connectivity, and they are expanding from cellular into Wi-Fi and other markets. Brazil is emerging as a jurisdiction where SEP holders can obtain injunctions.",
+      "whats_new": {
+        "before": "Avanci's Wi-Fi 6 programme had four announced carmaker licensees.",
+        "now": "Renault has joined, and Avanci says it is gaining ground in China."
+      },
+      "watch": [
+        "More Chinese carmakers signing Avanci 5G licences",
+        "Which adjacent markets Avanci targets"
+      ],
+      "confidence": "high",
+      "confidence_note": "Avanci's 'critical mass' claim is its own characterisation.",
+      "claim_status": "mixed",
+      "scores": {
+        "importance": 2,
+        "impact": 3,
+        "novelty": 2,
+        "credibility": 4,
+        "long_term": 3
+      },
+      "positive": false,
+      "under_the_radar": false,
+      "outside_interests": false,
+      "timeline": [],
+      "sources": [
+        {
+          "name": "IPFray",
+          "url": "https://ipfray.com/renault-revealed-as-latest-licensee-to-avanci-wi-fi-6-vehicles-program",
+          "tier": 3,
+          "adds": "Renault joins as a licensee"
+        },
+        {
+          "name": "IAM",
+          "url": "https://www.iam-media.com/article/avanci-now-has-critical-mass-in-china-negotiations-continue-says-5g-boss",
+          "tier": 3,
+          "adds": "China progress and expansion plans"
+        },
+        {
+          "name": "IAM",
+          "url": "https://www.iam-media.com/article/rio-court-grants-more-patent-injunctions-sao-paulo-court-new-study-confirms",
+          "tier": 3,
+          "adds": "Brazil injunction study"
+        }
+      ],
+      "signal_score": 14,
+      "published": "2026-10-19T10:00:41.000Z",
+      "image": "https://d2qu5xmcgmzxnb.cloudfront.net/ewogICAgICAgICAgICAgICAgICAgICAgICAiYnVja2V0IjogImZpbGVzLmxici5jbG91ZCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJrZXkiOiAicHVibGljLzIwMjYtMTAvTGF1cmllIEZpdHpnZXJhbGQgNC5qcGciLAogICAgICAgICAgICAgICAgICAgICAgICAiZWRpdHMiOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgInJlc2l6ZSI6IHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ3aWR0aCI6IDk0NSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJoZWlnaHQiOiA1MjYsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiZml0IjogImNvdmVyIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJwb3NpdGlvbiI6ICJjZW50ZXIiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgImJhY2tncm91bmQiOiB7ICJyIjogMjU1LCAiZyI6IDI1NSwgImIiOiAyNTUsICJhbHBoYSI6IDEgfQogICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIH0="
+    }
+  ],
+  "signals": [
+    {
+      "title": "Cost-of-living anger is spreading across Europe and reaching bond markets",
+      "domain": "world",
+      "what": "In one weekend, protests over living costs turned violent in France and spread to Italy, Belgium and Albania, while housing protesters camped in Lisbon and Porto and Portugal's rent law began to lose its parliamentary support.",
+      "evidence_story_ids": [
+        "w1",
+        "w11",
+        "w12"
+      ],
+      "why_it_matters": "Energy costs from the Iran war, housing shortages and tight budgets are combining. Unrest is already lifting French borrowing costs and changing what governments can pass, from rent reform in Portugal to budgets in France.",
+      "would_confirm": "Protests continuing for weeks, more governments retreating on budget or housing reforms, and a further widening of southern European bond spreads.",
+      "would_invalidate": "Protests fading after the curfews and bond spreads narrowing again."
+    },
+    {
+      "title": "Power, not chips, is becoming the limit on AI expansion",
+      "domain": "tech",
+      "what": "Microsoft abandoned the UK's largest planned AI data centre over grid supply, while Amazon is paying for its own nuclear reactors. This follows warnings about data-centre power demand in Ireland.",
+      "evidence_story_ids": [
+        "t2",
+        "t9"
+      ],
+      "why_it_matters": "Where electricity can be secured will shape where AI capacity, jobs and tax revenue end up. Combined with investors' doubts about AI returns, power delays could hold back the build-out.",
+      "would_confirm": "More hyperscaler withdrawals from projects with grid delays, and more own-generation deals.",
+      "would_invalidate": "Rapid grid-connection reforms in the UK and EU that restore cancelled projects."
+    },
+    {
+      "title": "Tech supply chains are separating from both sides",
+      "domain": "cross",
+      "what": "The US banned DeepSeek from federal systems and threatened Europe over satellite spectrum. China added export controls on construction machinery, is considering controls on AI models and chips, and is restricting foreign biotech deals.",
+      "evidence_story_ids": [
+        "t4",
+        "t3",
+        "w7"
+      ],
+      "why_it_matters": "Technology access is becoming a lever in relations between the US, China and Europe, so companies face rising compliance costs and less certain access to markets.",
+      "would_confirm": "Formal Chinese AI export rules, EU spectrum rules that exclude non-EU operators, or US trade action against Europe.",
+      "would_invalidate": "A US–China deal on technology trade, or the EU backing away from spectrum limits."
+    },
+    {
+      "title": "AI companies are trying to win public trust",
+      "domain": "tech",
+      "what": "Anthropic committed equity to a public fund and gave an outside watchdog independent access, Musk matched with a share pledge, and Democrats are preparing to scrutinise the industry, while a court filing alleges a state-linked effort to spy on OpenAI.",
+      "evidence_story_ids": [
+        "t1",
+        "t6"
+      ],
+      "why_it_matters": "With public fears about AI rising before the midterms and before large IPOs, companies are offering visible commitments. Whether they hold up will affect future regulation.",
+      "would_confirm": "Other labs announcing similar funds or external oversight, or such commitments written into law.",
+      "would_invalidate": "The pledges stalling for lack of detail, or regulation going ahead regardless of them."
+    }
+  ],
+  "watchlist": [
+    {
+      "item": "Brazil's presidential runoff on 25 October",
+      "why": "The result will shape Amazon protection, and the campaign has turned personal."
+    },
+    {
+      "item": "Chega's vote on Portugal's rent law at the specialty stage",
+      "why": "Without Chega, the Government's rent liberalisation may fail or be rewritten."
+    },
+    {
+      "item": "France after the curfews",
+      "why": "Further unrest or a wider bond spread would put pressure on the government and on eurozone markets."
+    },
+    {
+      "item": "Ukraine's Starshield access and US intelligence sharing",
+      "why": "Both directly affect Ukraine's defence and the state of US–European relations."
+    },
+    {
+      "item": "Alberta's referendum result",
+      "why": "A vote for a binding independence referendum would open a constitutional crisis in Canada."
+    },
+    {
+      "item": "EU satellite spectrum rules",
+      "why": "They will decide whether Europe builds an alternative to Starlink and whether the US retaliates."
+    }
+  ],
+  "trends": [
+    {
+      "name": "Agentic AI incidents and safety pauses",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Agent incidents now include an offensive campaign run mostly by agents, and defenders are starting to treat their own agents as insider threats.",
+      "recent_developments": [
+        "Hacker uses AI agents to breach 100+ sites, per Norforge",
+        "Microsoft tools treat AI agents as insider threats",
+        "Anthropic gives an outside watchdog employee-like access",
+        "Anthropic takes risky tests offline after models reached government sites"
+      ],
+      "evidence_story_ids": [
+        "t5",
+        "t1"
+      ],
+      "what_to_watch": "More agent-driven attacks and whether outside watchdogs publish findings",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Agents moving into commerce and business",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Agents are moving from chat apps into operating systems and business tools.",
+      "recent_developments": [
+        "Nvidia releases open models for enterprise and on-device agents",
+        "Copilot gains file and OS control in Windows",
+        "Nous Research launches agents for business",
+        "Shopify lets agents complete checkout"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Security defaults for OS-level agents",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "AI governance through voluntary pledges and courts",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Governments are moving to concrete decisions such as procurement bans and mandatory reporting, while companies offer voluntary oversight and public funds.",
+      "recent_developments": [
+        "DHS bans DeepSeek from federal civilian systems",
+        "Anthropic commits 5% of shares to a public fund and opens access to a watchdog",
+        "Democrats prepare to scrutinise the AI industry",
+        "UK explores compulsory AI safety reporting"
+      ],
+      "evidence_story_ids": [
+        "t1",
+        "t4"
+      ],
+      "what_to_watch": "Midterm results and whether watchdog access becomes standard",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Frontier AI economics go public",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "AI financing depends on debt and on IPOs, and investors are now openly questioning returns.",
+      "recent_developments": [
+        "Nasdaq 100 has its worst week in a year, then rebounds",
+        "DBS chief says investors question AI returns",
+        "Anthropic prepares its IPO with a public-benefit fund",
+        "IMF warns an AI share crash could threaten financial stability"
+      ],
+      "evidence_story_ids": [
+        "t9",
+        "t1"
+      ],
+      "what_to_watch": "Big Tech capex guidance and Anthropic's IPO filing",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "US–China chip controls",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "China is pairing its leading AI lab with Huawei chips and considering its own export controls, while the US shuts Chinese AI out of government.",
+      "recent_developments": [
+        "DeepSeek reportedly helps design Huawei chips and plans to train on Ascend 950DT",
+        "China considers export controls on AI models and chips",
+        "DHS bans DeepSeek from federal systems",
+        "Chinese firms buy Nvidia gaming chips for AI"
+      ],
+      "evidence_story_ids": [
+        "t4",
+        "w7"
+      ],
+      "what_to_watch": "The first DeepSeek model trained on Ascend chips and Chinese export rules",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "AI hardware supply squeeze",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "steady",
+      "summary": "Memory shortages have reached consumers, and hyperscalers are making it easier to use their own chips.",
+      "recent_developments": [
+        "Amazon's TorchNeuron runs PyTorch on Trainium without rewriting",
+        "Memory stocks sell off on doubts about the boom",
+        "Microsoft plans multi-gigawatt Maia deployments",
+        "Samsung's operating profit rises about ninefold"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Memory prices and whether hyperscalers' own chips reduce demand for Nvidia",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "AI-enabled cyber threats",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Attackers are using autonomous agents at scale and keep hitting retailers and government databases.",
+      "recent_developments": [
+        "AI-agent swarm breaches 100+ websites",
+        "Ahold Delhaize confirms a cyberattack across US and European brands",
+        "Florida DMV breach linked to ShinyHunters",
+        "Hackers heat refrigerators in 400+ French supermarkets"
+      ],
+      "evidence_story_ids": [
+        "t5"
+      ],
+      "what_to_watch": "Charges against ShinyHunters and further attacks on retailers",
+      "first_detected": "2026-10-02",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "European digital sovereignty",
+      "domain": "tech",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Europe's efforts to build alternatives have reached satellite connectivity, and the US is threatening retaliation.",
+      "recent_developments": [
+        "US threatens 'devastating' retaliation over EU spectrum plans",
+        "Deutsche Telekom, Orange, Telefónica and Vodafone plan a joint satellite bid",
+        "Dutch tax office moves off Microsoft 365",
+        "UK searches for an alternative to Palantir"
+      ],
+      "evidence_story_ids": [
+        "t3"
+      ],
+      "what_to_watch": "The Commission's spectrum proposal and any US trade action",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Space infrastructure and heavy launch",
+      "domain": "tech",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Satellite networks have become strategic infrastructure, and Starlink is now at the centre of disputes over Ukraine and EU spectrum.",
+      "recent_developments": [
+        "US–Ukraine dispute over Starshield access",
+        "Lithuania says a fire at a Starlink centre was sabotage",
+        "Google puts its first data-centre chip in orbit",
+        "Starship's first Starlink V3 deployment"
+      ],
+      "evidence_story_ids": [
+        "t3",
+        "w3"
+      ],
+      "what_to_watch": "EU spectrum decisions and Starship flight cadence",
+      "first_detected": "2026-10-02",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Iran war energy shock",
+      "domain": "world",
+      "markets": [],
+      "status": "established",
+      "direction": "up",
+      "summary": "Attacks now hit container ships as well as tankers, and Qatar warns the disruption has not peaked.",
+      "recent_developments": [
+        "At least 15 container ships hit in Hormuz in ten days",
+        "Qatar warns of an energy disruption 'peak'",
+        "Visegrad Four ask to ease the EU's Russian energy phase-out",
+        "European gas hits a wartime high"
+      ],
+      "evidence_story_ids": [
+        "w5"
+      ],
+      "what_to_watch": "Container shipping routes and European gas prices into winter",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Russian pressure on Ukraine and NATO",
+      "domain": "world",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "US–Ukraine relations have worsened over sanctions, intelligence and satellite access, while sabotage in Europe continues.",
+      "recent_developments": [
+        "Zelensky says US policy looks like pushing surrender",
+        "Allies warn of only one of two missile attacks",
+        "Trump blocks Russia sanctions days before they take effect",
+        "Starlink centre fire in Lithuania ruled sabotage"
+      ],
+      "evidence_story_ids": [
+        "w3"
+      ],
+      "what_to_watch": "Starshield access and any direct European talks with Putin",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Renewed conflict in the Horn of Africa",
+      "domain": "world",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Ethiopia has installed a new administration in Tigray, but tensions with Eritrea raise fears of a wider war.",
+      "recent_developments": [
+        "Ethiopia installs a new Tigray administration",
+        "Government-allied forces take Mekelle",
+        "139 migrants, mostly Ethiopian, die off Djibouti",
+        "Ethiopia and Eritrea sever ties"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Diplomacy between Ethiopia and Eritrea and humanitarian access to Tigray",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Conflict-driven disease outbreaks",
+      "domain": "world",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Ebola is now spreading in a cluster in Kenya while international health support is being cut.",
+      "recent_developments": [
+        "Kenya confirms an eighth Ebola case",
+        "DRC outbreak reaches a new province",
+        "Kenya records its first Ebola death",
+        "Pennsylvania measles outbreak tops 1,000 cases"
+      ],
+      "evidence_story_ids": [
+        "w6"
+      ],
+      "what_to_watch": "Cases outside Kenya's first cluster",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Third-country deportation deals",
+      "domain": "world",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "The US and EU states are moving toward return hubs and tougher asylum rules, while bilateral deals falter.",
+      "recent_developments": [
+        "European states seek Taliban help to deport Afghans",
+        "EU ministers discuss return hubs; Greece proposes suspending asylum in crises",
+        "UK–France returns deal abandoned"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "The Commission's emergency migration proposals",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Ocean and climate records",
+      "domain": "world",
+      "markets": [],
+      "status": "established",
+      "direction": "up",
+      "summary": "Warming is producing local effects in the Arctic, while nature targets go unmet.",
+      "recent_developments": [
+        "Svalbard town's tap water undrinkable as thaw releases heavy metals",
+        "No COP15 biodiversity target met as COP17 opens",
+        "El Niño reaches 'unprecedented levels'",
+        "El Niño sets a record in a key Pacific zone"
+      ],
+      "evidence_story_ids": [
+        "w9"
+      ],
+      "what_to_watch": "COP17 outcomes and El Niño's peak",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Forest protection results",
+      "domain": "world",
+      "markets": [],
+      "status": "unclear",
+      "direction": "steady",
+      "summary": "The Amazon is a central issue in Brazil's runoff, and nature summit talks have opened in Armenia.",
+      "recent_developments": [
+        "Amazon becomes a battleground in Brazil's runoff",
+        "Lula and Flávio Bolsonaro clash in their first debate",
+        "Borneo wildfires force orangutan rescues",
+        "Flávio Bolsonaro leads Brazil's first round"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Brazil's 25 October runoff",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Rules for AI and IP",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "The patent profession is preoccupied with AI, and governments face pressure over AI training rules.",
+      "recent_developments": [
+        "Australian music body says tech firms are pressuring the government over AI training",
+        "AI dominates the AIPPI World Congress",
+        "IPKat warns of prompt injection in AI patent tools",
+        "Copyright Office examines AI's effect on streaming royalties"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Australia's decision on AI training exceptions",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Copyright enforcement moves into infrastructure",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Rights holders are pushing for blocking at ISP, DNS and VPN level and are using platform subpoenas to identify pirates.",
+      "recent_developments": [
+        "Denuvo wins subpoenas to Discord, Valve and Reddit to identify a game cracker",
+        "MovieBox passes 300 million downloads; rights holders alert the EU",
+        "Quad9 weighs leaving France over blocking penalties",
+        "Site-blocking bills introduced in both chambers of Congress"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Progress of the site-blocking bills",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Patent system recalibration",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "US patent challenges have collapsed, and the Supreme Court left the USPTO's 'settled expectations' denials in place.",
+      "recent_developments": [
+        "Supreme Court declines Google's 'settled expectations' challenge",
+        "IPR petitions fall to about a third of FY2025",
+        "UK keeps SEP injunctions and drops a FRAND rate-setting track",
+        "German injunction hits SAP Signavio"
+      ],
+      "evidence_story_ids": [
+        "t11",
+        "t12"
+      ],
+      "what_to_watch": "District court and ITC volumes as IPR falls away",
+      "first_detected": "2026-09-30",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Pharma patent strategies under challenge",
+      "domain": "world",
+      "markets": [
+        "ip"
+      ],
+      "status": "developing",
+      "direction": "steady",
+      "summary": "Drug patents are being tested in the US and Europe, with EPO boards strict on supporting data.",
+      "recent_developments": [
+        "EPO board decision T 0251/25 on empagliflozin limits post-published data",
+        "EPO revokes Novo's cardiovascular semaglutide patent",
+        "Dutch court bans Keytruda SC in eight countries",
+        "Janssen wins Delaware's first biosimilar preliminary injunction"
+      ],
+      "evidence_story_ids": [
+        "t12"
+      ],
+      "what_to_watch": "Novo's response and semaglutide generic filings",
+      "first_detected": "2026-09-29",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Trade secrets as the frontline of tech competition",
+      "domain": "tech",
+      "markets": [
+        "ip"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Companies use trade secret suits to protect know-how, and AI labs are now alleged targets of state-linked espionage.",
+      "recent_developments": [
+        "Prosecutors allege Saudi royal links in the OpenAI bugging case",
+        "Criminal trade secrets case against ex-Deloitte staff continues",
+        "o9's AI trade secret suit against SAP stays in Texas",
+        "Novartis must face hedge fund trade secrets suit"
+      ],
+      "evidence_story_ids": [
+        "t6"
+      ],
+      "what_to_watch": "The Alfozan detention ruling and security at AI labs",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Portugal liberalises its rental market",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "unclear",
+      "direction": "steady",
+      "summary": "The Government's rent liberalisation is in doubt as Chega threatens to withdraw its support amid protests.",
+      "recent_developments": [
+        "Chega threatens to vote against the rent law at the specialty stage",
+        "PS proposes a capital-gains exemption on homes up to €300,000",
+        "Politicians voting on the law own 1,039 properties, per ECO",
+        "RSAA rent caps published: €224–€2,066"
+      ],
+      "evidence_story_ids": [
+        "w11"
+      ],
+      "what_to_watch": "The specialty vote and any Government concessions to Chega",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Portuguese prices outpace Europe",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "developing",
+      "direction": "steady",
+      "summary": "Prices and rents are still rising, but confidence in sales is now weakening as mortgage costs climb.",
+      "recent_developments": [
+        "Confidence rises for renting and falls for sales (Idealista)",
+        "Property funds manage €21.4bn in September",
+        "Euribor rises across all terms",
+        "Porto rents up 76% in five years"
+      ],
+      "evidence_story_ids": [
+        "w13"
+      ],
+      "what_to_watch": "October sales and new-loan rates",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Faster permitting to unlock supply",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Portugal is reforming building rules to speed up supply, now with a Construction Code.",
+      "recent_developments": [
+        "Government advances a Construction Code",
+        "The revised RJUE takes effect"
+      ],
+      "evidence_story_ids": [
+        "w13"
+      ],
+      "what_to_watch": "The contents of the Construction Code and municipal deadlines",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Europe splits on housing policy",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Housing protests are spreading across Iberia and Italy, while EU governments agree non-binding measures against evictions.",
+      "recent_developments": [
+        "EU Council recommends measures against evictions and for rent support",
+        "Housing camps spread to Lisbon",
+        "Spanish decrees pull 4,000+ homes from the rental market, per Expansión",
+        "Commission warns national priority in housing may breach EU law"
+      ],
+      "evidence_story_ids": [
+        "w12",
+        "w11"
+      ],
+      "what_to_watch": "Spain's 29 November election and the EU Housing Act",
+      "first_detected": "2026-10-01",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Capital returns to southern European property",
+      "domain": "world",
+      "markets": [
+        "real_estate"
+      ],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Investors are raising large funds for southern Europe, and defence demand is supporting logistics property.",
+      "recent_developments": [
+        "Defence drives European industrial and logistics investment",
+        "Belgian group to invest €432m in Portugal",
+        "Portuguese commercial property investment above €1.4bn",
+        "DWS to buy Peakside Capital Advisors"
+      ],
+      "evidence_story_ids": [
+        "w13"
+      ],
+      "what_to_watch": "Q4 investment volumes and deals in Portugal",
+      "first_detected": "2026-10-02",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "AI output overwhelming open systems",
+      "domain": "tech",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Machine-generated submissions are swamping the volunteers who run open-source security and open science.",
+      "recent_developments": [
+        "FT: academic publishing fights 'AI slop'",
+        "Google freezes its open-source bug bounty",
+        "Debian ships 1,313 kernel fixes",
+        "arXiv rate-limits submissions"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "More programmes restricting AI submissions",
+      "first_detected": "2026-10-05",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "EU hardens trade defences against China",
+      "domain": "world",
+      "markets": [],
+      "status": "developing",
+      "direction": "up",
+      "summary": "Brussels is tightening trade measures, but they also hit partners such as Ukraine, and China is answering with its own controls.",
+      "recent_developments": [
+        "Ukrainian steel boss says EU tariffs aimed at China hit Ukraine",
+        "China adds export controls on tunnel-boring machines",
+        "EU and China agree to halve hybrid car shipments",
+        "Macron pushes 'Made in Europe' state aid"
+      ],
+      "evidence_story_ids": [
+        "w7"
+      ],
+      "what_to_watch": "Details of 'Made in Europe' proposals and further Chinese controls",
+      "first_detected": "2026-10-05",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "War reaches Gulf and Red Sea infrastructure",
+      "domain": "world",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "The Saudi–Houthi war is escalating and drawing in Egypt and Pakistan, and it has forced Riyadh to postpone its flagship investment forum.",
+      "recent_developments": [
+        "Houthi strike kills at least 53 at a Shabwa training camp",
+        "Saudi Arabia postpones the Future Investment Initiative",
+        "Egypt and Pakistan pledge support to Saudi Arabia",
+        "Saudi strikes on Houthi oil depots near Sanaa"
+      ],
+      "evidence_story_ids": [
+        "w2",
+        "w5"
+      ],
+      "what_to_watch": "Any strike on Aramco and the role of Egyptian or Pakistani forces",
+      "first_detected": "2026-10-08",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Data centres as targets and political flashpoints",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Data centres are military targets, political issues and now limited by power supply.",
+      "recent_developments": [
+        "Microsoft leaves the Nscale Essex project over power",
+        "VK disrupted after a drone strike on a data centre",
+        "FT: data centres need protection from drone warfare",
+        "Moody's: data centres could use 30% of Ireland's power by 2035"
+      ],
+      "evidence_story_ids": [
+        "t2",
+        "w3"
+      ],
+      "what_to_watch": "UK grid reforms and further strikes on data centres",
+      "first_detected": "2026-10-12",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Frontier model race widens",
+      "domain": "tech",
+      "markets": [],
+      "status": "accelerating",
+      "direction": "up",
+      "summary": "Labs released more than a dozen models in a month, and Chinese open-weight releases keep pace.",
+      "recent_developments": [
+        "MiniMax launches M3.1 Flash, with weights due 23 October",
+        "Anthropic reportedly prepares a model with better reasoning",
+        "Gemini 4 Argon rolls out to paying users",
+        "Meta releases Muse Wonder"
+      ],
+      "evidence_story_ids": [],
+      "what_to_watch": "Independent evaluations and API price moves",
+      "first_detected": "2026-10-13",
+      "last_updated": "2026-10-19"
+    },
+    {
+      "name": "Cost-of-living unrest in Europe",
+      "domain": "world",
+      "markets": [],
+      "status": "emerging",
+      "direction": "up",
+      "summary": "Protests over living costs and housing have turned violent in France and spread to Italy, Belgium, Albania and Portugal, and they are affecting bond markets.",
+      "recent_developments": [
+        "France orders curfews after riots and 2,400 arrests",
+        "French bonds sell off as the spread with Germany widens",
+        "Looting in Milan, Brussels, Liège and Tirana",
+        "Housing camps in Lisbon and Porto"
+      ],
+      "evidence_story_ids": [
+        "w1",
+        "w11"
+      ],
+      "what_to_watch": "Whether protests continue after the curfews and the French bond spread",
+      "first_detected": "2026-10-19",
+      "last_updated": "2026-10-19"
+    }
+  ],
+  "stats": {
+    "items": 550,
+    "sources_ok": 68,
+    "sources_total": 69,
+    "clusters": 120
+  },
+  "generated_by": "chat"
+}
