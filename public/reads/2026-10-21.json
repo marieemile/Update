@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-21",
+  "source": "Founder Weekly",
+  "issue": 753,
+  "title": "Founder Weekly (Issue 753 October 21 2026)",
+  "source_url": "https://www.founderweekly.com/p/founder-weekly-issue-753-october-21-2026",
+  "generated_at": "2026-10-21T19:36:26.752Z",
+  "ai_lens": {
+    "headline": "This week's founder reading is about how to price, measure and limit AI work. The essays agree that output is cheap and the hard part is knowing what it's worth.",
+    "summary": "The AI pieces this week share a premise: model output has become cheap, so the open questions are pricing, measurement and control. Elena Verna, who leads growth at Lovable, argues AI pricing pages built on credits, tokens and unexplained multipliers work for early adopters but may not hold up in the mass market, and the Focused Chaos author shows how usage-based AI products break old SaaS assumptions such as near-zero marginal cost and churn that shows up as a cancellation. The Product Mindset essay puts the same ideas in PM terms: cost per solved task rather than price per token, compounding error across agent steps, and an 'autonomy dial' with locks on irreversible actions. On go-to-market, the Growth Unhinged survey reports AI search becoming a core channel, while respondents rate personal networks and small events as the best channels and say AI SDRs have fallen short of the hype. The news is louder on agent risk (agent swarms breaching websites, Microsoft treating agents as insider threats) and on investors questioning AI returns. The essays treat those problems as things to design around, and their claims rest mostly on the authors' own experience and self-reported survey data.",
+    "themes": [
+      {
+        "name": "Nobody has worked out how to price AI work",
+        "what": "Verna argues credits and tokens are a reasonable way to bundle variable model costs but are badly explained, and says outcome-based pricing isn't viable for Lovable yet. The Focused Chaos author notes that in AI products usage drives cost as well as revenue and that free trials carry real compute costs. The Product Mindset essay argues the useful unit is cost per solved task, and Sammy Abdullah's review of SaaS earnings calls (blurb only) reports agents driving demand for outcome-based pricing.",
+        "read_ids": [
+          "r6",
+          "r4",
+          "r3",
+          "r5"
+        ],
+        "related_trend": "Frontier AI economics go public"
+      },
+      {
+        "name": "Measure the whole workflow, not the output",
+        "what": "The Focused Chaos author warns that AI can make one step look productive while pushing work onto everyone else ('workslop'), and says to measure time to a usable decision, rework and quality across the workflow. The Product Mindset essay makes the eval suite the successor to the product spec, and Ahrefs describes automating dull content tasks while keeping a human review before publishing.",
+        "read_ids": [
+          "r4",
+          "r3",
+          "r7"
+        ],
+        "related_trend": ""
+      },
+      {
+        "name": "Autonomy as a setting, with locks on one-way doors",
+        "what": "The Product Mindset essay argues autonomy should be raised step by step per workflow (suggest, draft, act with approval, act and report) and that spending, sending, deleting and publishing should always be gated, citing a Replit agent that deleted a production database. That fits the news on agent breaches and on defenders treating their own agents as insider threats.",
+        "read_ids": [
+          "r3"
+        ],
+        "related_trend": "Agentic AI incidents and safety pauses"
+      },
+      {
+        "name": "Distribution is the bottleneck, and AI search is now a channel",
+        "what": "The Growth Unhinged survey of 300 GTM leaders reports AI search as a core channel for 39% of respondents, up 11 points, while the top-rated channels were networks and intimate events and AI SDRs were said to be falling short. Ahrefs makes a related point from the content side: refresh useful pages for search and AI assistants rather than publish more AI content.",
+        "read_ids": [
+          "r8",
+          "r7"
+        ],
+        "related_trend": ""
+      }
+    ]
+  },
+  "reads": [
+    {
+      "id": "r1",
+      "pick": "skip",
+      "summary": "Idealab.ai, from Bill Gross, offers a large free database of business ideas (the newsletter says more than 1.2 million) matched to a founder's skills, capital and location. Each idea comes with supporting research, estimated startup costs and suggestions for what to build first.",
+      "why_read": "A product page rather than a read; worth a look only if you're hunting for an idea, and the generated idea pages read as repetitive.",
+      "ai_angle": "An example of AI being used to mass-produce startup ideas from news, patents and filings, which shows how cheap idea generation has become.",
+      "tags": [
+        "Tools",
+        "Ideas"
+      ],
+      "title": "Idealab.ai",
+      "url": "https://idealab.ai",
+      "section": "General",
+      "format": "article",
+      "site": "idealab.ai"
+    },
+    {
+      "id": "r2",
+      "pick": "worth",
+      "summary": "First Round profiles Danielle Strachman, a former educator and school founder who helped design how the Thiel Fellowship selected and supported the teenagers it paid $100,000 to skip college. The piece covers her selection methods, such as a quick thumbs-up or thumbs-down vote borrowed from teaching fourth graders, and her aim of giving young founders permission to pursue their ideas.",
+      "why_read": "A well-told history with practical lessons on judging people early, for anyone who hires, invests or mentors.",
+      "ai_angle": "",
+      "tags": [
+        "Talent",
+        "Venture",
+        "History"
+      ],
+      "title": "Permission to Think For Yourself: Inside the Thiel Fellowship’s Early Years",
+      "url": "https://review.firstround.com/inside-thiel-fellowship",
+      "section": "General",
+      "format": "article",
+      "site": "review.firstround.com"
+    },
+    {
+      "id": "r3",
+      "pick": "must",
+      "summary": "Product Mindset updates familiar mental models for products built on agents, covering 15 in depth grouped by the five decisions they govern with a 46-model reference at the end. Its arguments include measuring cost per solved task rather than price per token, designing around compounding error (95% per step over ten steps is about 60% end to end), and treating autonomy as a dial with gates on irreversible actions.",
+      "why_read": "The most usable toolkit in the issue for deciding what to hand to an agent and how much to trust it.",
+      "ai_angle": "Shows product thinking moving from what agents can do to how to price, test and limit them; the author argues the eval suite is becoming the product spec.",
+      "tags": [
+        "AI agents",
+        "Product",
+        "Mental models"
+      ],
+      "title": "Mental Models in the Agentic Era",
+      "url": "https://productmindset.substack.com/p/mental-models-in-the-agentic-era",
+      "section": "General",
+      "format": "article",
+      "site": "productmindset.substack.com"
+    },
+    {
+      "id": "r4",
+      "pick": "must",
+      "summary": "The Focused Chaos author, a Lean Analytics co-author, argues that systems thinking was always essential and that AI makes measurement more urgent, because speeding up one step can quietly push work onto others. Using their AI product Candor, they show which old SaaS assumptions break for usage-based AI products: usage drives cost as well as revenue, customers can leave without cancelling, trials cost real compute, and a completed job isn't the same as a useful one.",
+      "why_read": "A practical way to measure an AI product or AI-assisted workflow, with a new business model diagram for usage-priced AI products.",
+      "ai_angle": "Makes the case that AI changes the economics and the metrics of software products, not just their features, and pushes back on the 'AI hype machine' along the way.",
+      "tags": [
+        "Metrics",
+        "AI products",
+        "Pricing"
+      ],
+      "title": "Systems Thinking Needs a Scorecard",
+      "url": "https://www.focusedchaos.co/p/systems-thinking-needs-a-scorecard",
+      "section": "General",
+      "format": "article",
+      "site": "focusedchaos.co"
+    },
+    {
+      "id": "r5",
+      "pick": "worth",
+      "summary": "Sammy Abdullah of Blossom Street Ventures reviews 67 public SaaS companies' earnings calls and pulls out 15 themes on how AI is changing enterprise software, from faster product development to new revenue and bigger markets for existing platforms. According to the newsletter, he finds proprietary data, customer relationships and integrated workflows remain advantages, while agents drive demand for security, observability and outcome-based pricing.",
+      "why_read": "A useful read on how incumbents talk about AI; the Medium article couldn't be fetched, so this rests on the blurb, and earnings-call themes reflect what companies say about themselves.",
+      "ai_angle": "Gives the incumbents' view, that AI expands rather than replaces their platforms, which is a counterpoint to market worries about AI eating SaaS.",
+      "tags": [
+        "SaaS",
+        "Earnings",
+        "Enterprise AI"
+      ],
+      "title": "The 15 Themes on AI from SaaS Earnings Calls",
+      "url": "https://blossomstreetventures.medium.com/the-15-themes-on-ai-from-saas-earnings-calls-f9607b073dc5",
+      "section": "General",
+      "format": "article",
+      "site": "blossomstreetventures.medium.com"
+    },
+    {
+      "id": "r6",
+      "pick": "must",
+      "summary": "Elena Verna, who leads growth at Lovable, walks through AI pricing pages and finds unexplained usage multipliers, hard-to-value tokens and credits, and products with no public pricing at all, while admitting Lovable has the same problem. She argues credits are a reasonable way to bundle variable model costs, but are badly explained, and that early adopters may tolerate this while the mass market may not.",
+      "why_read": "A candid, funny insider's view of the least solved business problem in AI products, with ideas on what clearer pricing would look like.",
+      "ai_angle": "Shows that AI companies still can't predict their own costs per customer, which is why they hide behind credits; Verna says outcome-based pricing isn't viable for Lovable yet.",
+      "tags": [
+        "Pricing",
+        "AI products",
+        "Growth"
+      ],
+      "title": "What on earth is going on with AI pricing and packaging?",
+      "url": "https://www.elenaverna.com/p/what-on-earth-is-going-on-with-ai",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "elenaverna.com"
+    },
+    {
+      "id": "r7",
+      "pick": "worth",
+      "summary": "Ahrefs gives a step-by-step guide to automating repetitive content tasks with AI agents: document the workflow, connect data sources, test and schedule. Its example, a Data Refresh Hub, updates datasets, rebuilds charts and prepares WordPress drafts, with humans reviewing before anything is published.",
+      "why_read": "Useful if you run content marketing; it is a vendor's guide, but it argues against mass-producing AI articles.",
+      "ai_angle": "An example of agents taking the boring, repeatable parts of a job while people keep the judgment, and of companies avoiding 'slop' as platforms push back on it.",
+      "tags": [
+        "Content",
+        "Automation",
+        "SEO"
+      ],
+      "title": "How to Automate Content Creation: A Follow-Along Guide",
+      "url": "https://ahrefs.com/blog/automated-content-creation",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "ahrefs.com"
+    },
+    {
+      "id": "r8",
+      "pick": "worth",
+      "summary": "Growth Unhinged and Maja Voje surveyed 300 software GTM leaders in September 2026 and report that founder-led sales is the leading motion up to $1M ARR and persists well beyond it. AI search is now a core channel for 39% of respondents (up 11 points), but the best-rated channels were networks and introductions and intimate events, and the authors say cold outreach is oversaturated and AI SDRs haven't lived up to the hype.",
+      "why_read": "One of the few data sets on what's working in B2B go-to-market, with a clear note on who answered (mostly US companies at $1–10M ARR).",
+      "ai_angle": "Suggests AI is changing how buyers find products (AI search) faster than it is changing how companies sell to them (AI SDRs).",
+      "tags": [
+        "GTM",
+        "Survey",
+        "AI search"
+      ],
+      "title": "What's working in B2B GTM in 2026",
+      "url": "https://www.growthunhinged.com/p/2026-state-of-b2b-gtm-report",
+      "section": "Marketing, Sales and PR",
+      "format": "article",
+      "site": "growthunhinged.com"
+    },
+    {
+      "id": "r9",
+      "pick": "worth",
+      "summary": "The author argues that private valuations are financing prices, not trading prices, and are biased upward because only the better startups manage to raise. Using Seed-to-Series A graduation rates to estimate the valuations of seed startups that don't raise, the author concludes, per the newsletter, that new seed rounds are priced at about four times the average existing seed startup.",
+      "why_read": "A careful, data-heavy correction for any founder or investor who benchmarks against peers' rounds.",
+      "ai_angle": "",
+      "tags": [
+        "Valuations",
+        "Seed",
+        "Venture data"
+      ],
+      "title": "Valuations Need a Correction",
+      "url": "https://whoisnnamdi.substack.com/p/valuations-need-a-correction",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "whoisnnamdi.substack.com"
+    },
+    {
+      "id": "r10",
+      "pick": "worth",
+      "summary": "Rob Go of NextView argues every seed company is both overvalued (most fail) and undervalued (each is an option on a huge outcome). He cites AngelList data on more than 6,000 pre-seed and seed rounds from 2015–2021 showing the share reaching 10x is roughly similar across valuation deciles, while noting the data is imperfect and relies partly on paper marks.",
+      "why_read": "Pairs well with the Valuations piece; short and useful for anyone deciding whether a cheap round is a good deal.",
+      "ai_angle": "",
+      "tags": [
+        "Seed",
+        "Valuations",
+        "Venture"
+      ],
+      "title": "Seed Valuations Are Like Schrödinger’s Cat",
+      "url": "https://nextview.vc/blog/seed-valuations-schrodingers-cat",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "nextview.vc"
+    },
+    {
+      "id": "r11",
+      "pick": "skip",
+      "summary": "Bilal Zuberi applies Ben Horowitz's peacetime and wartime CEO idea to investors, arguing founders should choose backers who stay involved when things go wrong. He says this matters most at pre-seed and seed, when setbacks are inevitable.",
+      "why_read": "Sound but familiar advice built on a well-known framework; the title says most of it.",
+      "ai_angle": "",
+      "tags": [
+        "Fundraising",
+        "Investors"
+      ],
+      "title": "Wartime Investors",
+      "url": "https://notes.redglass.vc/p/wartime-investors",
+      "section": "Money and Finance",
+      "format": "article",
+      "site": "notes.redglass.vc"
+    }
+  ]
+}
